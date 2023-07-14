@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Models\Investment;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class CompanyName extends Model
+{
+    use HasFactory;
+    protected $table='company_name';
+    protected $id='id';
+    protected $fillable = ['name','investment_id','created_at','updated_at'];
+    public function Investment()
+    {
+        return $this->belongsTo(Investment::class,'investment_id','id');
+    }
+}

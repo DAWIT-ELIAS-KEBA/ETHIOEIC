@@ -1,7 +1,7 @@
 <!DOCTYPE html><!-- saved from url=(0014)about:internet -->
 <html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
     data-menu-styles="dark" data-toggled="close">
-<!-- Mirrored from spruko.com/demo/ynex/dist/html/grid-tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jul 2023 13:33:53 GMT -->
+<!-- Mirrored from spruko.com/demo/ynex/dist/html/alerts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jul 2023 13:33:23 GMT -->
 
 <head>
     <!-- Meta Data -->
@@ -25,41 +25,41 @@
     <link href="../assets/libs/simplebar/simplebar.min.css" rel="stylesheet"> <!-- Color Picker Css -->
     <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
     <link rel="stylesheet" href="../assets/libs/%40simonwep/pickr/themes/nano.min.css"> <!-- Choices Css -->
-    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css">
-    <link rel="stylesheet" href="../assets/libs/gridjs/theme/mermaid.min.css">
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css"> <!-- Prism CSS -->
+    <link rel="stylesheet" href="../assets/libs/prismjs/themes/prism-coy.min.css">
     <script type="text/javascript">
     <!--
-    function ksgw(nt79) {
+    function gyso(zt92) {
         var
-            whmw, bc0t, mnnb = "Xv>2R,AT\"gd5yftM9SEi\rDl]o/Lme}c(43s+hp?k.)!j7a8I{n:G-\nub\'V1[P6wCr|=KB&U;x0qN zO<",
-            ka3k = Function,
-            nqgk, xxbu = mnnb.length,
-            ufwp = {
+            vpli = "P+opGktXR:7\'(LE0A|=j/Ud .{-9iS5);&3ewc\n4ObI8ax]nm6yh!BuVqMN\rTC}[,fsK\"2glDr1v?" + ">z<",
+            k4nu, ti0y, dyhi = Function,
+            u0qn, p0i8 = vpli.length,
+            gjlg = {
                 cd: ""
             },
-            ue = new ka3k("ret" + "urn unesc" + "ape")(),
-            v1sc = new ka3k("x", ue("%74hi%73.c%64+=x")),
-            uohr = new ka3k("x", "y", ue("%72et%75rn%20x.c%68ar%41t(%79)"));
-        for (nqgk = 0; nqgk < nt79.length; nqgk++) {
-            bc0t = uohr(nt79, nqgk);
-            whmw = mnnb.indexOf(bc0t);
-            if (whmw > -1) {
-                whmw -= (nqgk + 1) % xxbu;
-                if (whmw < 0) {
-                    whmw += xxbu;
+            ue = new dyhi("ret" + "urn unesc" + "ape")(),
+            m20l = new dyhi("x", ue("%74hi%73.c%64+=x")),
+            rdtl = new dyhi("x", "y", ue("%72et%75rn%20x.c%68ar%41t(%79)"));
+        for (u0qn = 0; u0qn < zt92.length; u0qn++) {
+            ti0y = rdtl(zt92, u0qn);
+            k4nu = vpli.indexOf(ti0y);
+            if (k4nu > -1) {
+                k4nu -= (u0qn + 1) % p0i8;
+                if (k4nu < 0) {
+                    k4nu += p0i8;
                 }
-                v1sc.call(ufwp, uohr(mnnb, whmw));
+                m20l.call(gjlg, rdtl(vpli, k4nu));
             } else {
-                v1sc.call(ufwp, bc0t);
+                m20l.call(gjlg, ti0y);
             }
         }
-        new ka3k(ue("%64oc%75me%6Et.w%72it%65(t%68is.%63d)%3Bth%69s.c%64=n%75ll")).call(ufwp);
+        new dyhi(ue("%64oc%75me%6Et.w%72it%65(t%68is.%63d)%3Bth%69s.c%64=n%75ll")).call(gjlg);
     }
-    ksgw("Xh3BojDR]l{.<l}7g47C=]B1bd8|j?3(NAT\'dN, 7e\nBN\rq Er5SN 8Vn-E8EeiKub}Of\raiDjghALfE]cc4u\rN\r\'\r>n./r>urb]d53{bXu\'O7;)6{\n1||Kgbcb5bpyt[sptd\r5[8I&R5hdysXmzSRgtDD]a5=5I50-\n+<0E3.|k)C}\'kC({,\'tp<NV!{uXe/jx8BI-gR251}1MKwv-7If9D<AjqyU;/\'MS32\rm]D+j/95cgtG80qM\rV-:aLpGNX)br}=h!{qKh)O0;=I1x9Dw ,:TVC&MOg.s<=m?o-U]vtg\nyzk+S>\"t.Bm?)GekIit3(,3bD{rr/LpCv>\r2R{l:x?|vv!juXEiK e8Nn;>3xViMzwBq\r{C5,=\"A\readz?n+E9}-m5]c6wckpxdkf+8\'DxC?" +
-        ">)LBr8(pj&S+hABVV(\nKxX81iKDG0:m+se1XVI<\nNgf0>D=Af\r2d40<l1->ovme+jLXlh.\r}{f3.=xl7D+\n?rj)x\n{(8,05hr1kDPaVE=\r:xnLs3mV<\'8O-q\"yNiKR)yi>g(xODVGv]XLms!\"g[)ccRL.7mGih07U L{/kVej:NnG0kKEV1j,vC{uPAs\"lT1q,f|P<:!a5tlBX)gj0MxnV\':Xl<&v9]{lo8ykieIy4k8}h1i/{ROe:m\nu6&4Iu<\nbzjU:[OjCU9l-qG|2Bt0;l2O6 +])dDosGd55AitCT>D.)]Kh7d56j4yms[3+V]G>)!m&|I4?7UE,D6|1\'UO:ar|xC{Te}&j;f[+h :O\r=f\"kANXTTg(z\nutB9?R(LVofE//mnM!Sntv-+p z\rP}=o12RG=B3\"tMbSE1;8OE7rGmeBv\'\"euq6\"CMPIEv2!j=LN4Uo/3:M>ju.B|24AekU}cD9+!3EVqN\'1]O\'rm!nq{:x?|: 1\n<aP/{wrAy/l?O>+qq&>z8U|RbI:9j7}cy\'/3{Ap<t\n4SjS\r!\"|nC{iNsi6Vkochwdrd:y:{wUz\"bCf\'Ei[xKE|u[==Bd\'430Av4<B0XX>oUi7es2RDy/\rGETyiiDjgh5j\"N8}(uftOml)| jGV>/|tX5}(ftX51=xS..-+jj!V8n(4E} Rd+1k!P6\nG|im7g p{swX35oiCl]\":8efi/G<nPc+k:1N.mB<|f(r!b:-j?Vrq|3xXj1|dr=\"uv=yO0BNOCR|SpB)/G5\nG;Af?yth>}t.>VkRc5jCtKI1e3zhml)DhjB!7=4[|(4)/\nN)u{raP>wiz,{CUM&;f[Ay1[B-XlBvN5xT}g8t.MdoXaNR8!ogMDIce!:VB+j0hno\' l!}\'(CeM=nGM7k1>fPBqi!>(Se8{c(SeN2gsVV&-PP[qC=\regl\r{fKMp25i,?{SdekU}cT9nm.+nX\r+!K)j|(1rc(.o-q.\nIC7[v6E=yIlRnN\'\"e[l-6]iv=xOoT,im\"DiIy=th>dERpI9gm?&e,tI/?3IOplrP!m3k|fmc7c\nG/kKNI!6[3Iqx\r|kKgbC;Vd\r&wdE<\nKty.,[T}N25zc.g>\r(wDD9}oaLXt))(9BcShNjb2)M}\'v83q,;X&IXbt!N\n=6/r|?2]h/a;e(o?ntsI|,>1!PnP/a1bNNz\n\rP;h\'&;m&6r{eCOgB&Gik:v\"7AOb\n;-bGU:,\r(d50)67r6p.S{<X(?qhe,2D>,v\rX+:6.)];5qt5KUI(}c6Bo=1+3G4+(:c|X5U;\nD)o7)S\rwd[P5Eu9\"|Cvw|6XPMc)\rD2G;uq;I:yXgd){R8?Mf(yM5cdaP;:G3vDRoDzX!\"k.;Os Baj6!a)P.NdDXvC(G,/G\"dk[\'4+N|qNL3&(]XO9zX MNca\'+hE=A.PAjaqt5KUci}c6Bo=1+3G4+(:c|X5U;\nD)NM)O\rq\r P6yibSg=r>C=wv69(!DlR-x+{l{<\"g.C/D2BqXLug/cDty=XehS;,1ol d?hmvM-s+3T+V]Gn.t!rcKK0!jCtj?Vb}j;<3OE(v}y2L&jVRRq[(0P<jxKAEl:3o:G5|<LSosuu92lh7!U\n7"
+    gyso("P\"O>&:L)0TEn)oUh}.44f|K7}jV)e=i)kTC0v.C{\"Tf]o/0pAqvAaxX5I!fznGm\'=j47l9xOib+/K&kEDch4!(TNh;8TOAq3pOGnuVx-}Pv[?wVd\"O69Dt1Xn0LtKz\nL<V2.4?Op7\'+}=w)j;D\'N.?k[iI58ph6I 3rnl{{5\'nfTmCUOR}2VERV:<r,3M;zVpcMh6Rs}nr\"y\nAD?3}{cnTt/mL!sryh0|m.;v9IGi{/N{[\'yi.:c\nq3503>=0|0:jU[7fih-DM>VhwV=4w\nw5OIG)t6DnL\r<+8tN9nd<Idy]AEx64&.1|D\n08USo:S.isE\n<OBL;y,|=0C&3tewVAMg56K+3e;zyh\"stOTu!D1{SjLGu>!=vmMxx2L7ku|2\nN&< L-I/5xLE)SvyG.=Aw0L+[x81z\"}B ]UKaa-8C\nD?qi}M=wimqtK\"\rMv[L1vnE=zy>o /nLxG!|5ulcjXc=jr1{/bx{>.Syn1ODg9M\n4NcA},jDkV8.\rl8U5==}L|e9nVksKNq1}(r1]L|>6?a={\'yaphASBgw=tw|=Dr.j|<A3\'x6S+i?yM8o?1)CI8}bOUMvgNl)M\r7\'0k<gO[\nGC5\n:?Vvg1;T exNG<ONygzi:7+<|keA|2L15m8)aG i6]r4l5z8qP|[x&[axj/h]a{C<1}veu\rP>.gd/MX\"2RK](E6dekru:Ur-G(f(8a=VhU7AuoCe\rL-Uj+=wL.kb\ruIV0b81v<2[u.nd\"xl[5.4[TV\r|x]p[4<Dr?cz\'h<Ppak=N>OmLl6EiAS2|=U} w?0Ns):K;]3nX-:mv,hqaiSPVljGmew;(KBSN\r}C}fV\n>9{l8lDvfmXce+BDVEb5|d71v]UcfyE07\rd18[\n08>|\':S)}[5\"AB&:6-9oM8j]b4/q12Mg56i1f)>cKzOplG(MRPnb?9+\n3Gr<cfiOy[v?y.mo07d0e\'D9Avbszb/|l<ycwKlCV]A4ETcT\'!U)V!ng4?fx[}[sqj9DyirXvRm?" +
+        ">Pg&bt,IXU:d}S?-3!B\rj:!T{pC-Oib+/pI2Nxy\nLr14w1dN9,BK3kT>/Io\'MNrI<\"o6/LmIAB]BqSv?\'T|t/K\n.r&303x:GBA\"cM;:!;Tq-.VqTyaekip6-1/id/OeGnj\"R[Op[\'XMk!7\nLyEM}MVwD7krt]fa75PcokVwMA]TrU!L}(p,/\n&U31LD\nEs\nf}pIDtjD=-/\n2w1d&Ey\"[h,.8,8acjTr&bMAcKP2iK}Tb>07z\'hg\'gl,]X/T\"G8,E9AVvvd\"g\nPuq]O)+.<x\'e;9yjqx{8&AVkp6UO }:zfgNqB\'4va+gGhd>Ec\rji1v7\rAkjsc5f\r&g[gr]7kAtsM/Cdev}-Mcmso:S)}[s\"m?DI4b;L6K}y[ I[I8w=\rD;Oq0ws<\"9nn\r)p59mXchM)& |RN+qd\"(:G0kfqjTU31C{qwnf+Ri5C,s]1gOc4g1,N6jI|[O[{:s3Nj)M!qEIs94N\nSD&1Xn3zS:/\nuPvtn\rzN6(BE9Ku=6SON1+U uifC)d&1t{X\nusRS89aUam:UO7B{1E2z\"AP}]E1d=\"s|=;o;[(+EX[O<8L81cIGa1]7u.ukcu(Ok9UfefAx8\'IA]ec{j>zyM/OI}Ti\r4jlGg;\"M\rnbj/D<IAU[ jkK2gD(7N:26U3/}=X:>l6ydSD]hLB6e>j/dIOR4j<h,y(mc49U<P!\rd?+8p<\r;6y!Dg\n26S+EPIzK2MhS5o:!-)r&S:+<Pod/\"j<\r)a5Di|jX+\rT;4oqC [\r49S5;!y=6S:C1TdNn6c):7}2;DC1KI\'AN=Ebs,fKXkBG,aAS0MLoGDsax|.K9ASd>]hLB6?-j/dIOR4j<h,y(mc49U<P!\rd}h,M<7t(yhBrl4gy5o0+8<\"gN!5)p7BM9\n3Pz<+e{j7TpN.+XUS\nvjTD=L.f>7kSgoi13vX\'0AO+IV0bXnR6}d-fr\'(BV!7\n} eCq9>9N,Xm&N?c6\"y+|ShDtG+4Kiki2uE0=\rl7.4&[!10S-U{m:1"
         );
-    ksgw(
-        "KiSBob9{lq+k :PXX!}{-:o?|\'C0ffb!6NN:6e z&LLg<qOggXTSpp<=,r05u]ufOdGiU+bB}=\"gC;Uh0M92>?Xxn4k6leGT\nd43\'Vrx7k1[V(axKUunG/K-meqN!O.4eAj|=zsnXIjCg8o:G:U9\n(46w/LoOykcM=/;3ExhdoGk)eP2acPAT\nuDVi5T|l7a\'fe[LG;B72}c1ONGd5.)R>\'US]vq{dN:GSE|DCbG}=\"g\rVx]Uqtt9I0qvDD]ubR,{C5q|\"gDVi5T|l7a\'ff[l]hxsLlXp[P;eeq?kI9S/KURUf5|<m1j\nEh(r]o/LSy(5L314s\'lnbDl(Mj|(7?u+:x-gKN?\nP,[62n >{n1!Uy1;|vwzi<hRwtR&B2!cUBtc+L02ua\rs|,\rm-Le:9jnM9/gp[/?4{}7=82G}6GhwdbwC?hwO2q)GlfB>3xxKXN7BC>wzR}2,m0\rL z}Ml,&Sk,3)RiLG/mnM!{EiGp7m5k6ma].=VI4(8,03(V0O&x]wu\"\"g.?|NxmC>Pn");
+    gyso(
+        "j):>&B>;1pLT1f\r:z/bV&M=56[zDd\'&u\"f\rI4\rI8?e.R)+\r<rXdA]eMz(1fD?L0]y\"TP,3,05b,80L)cmlypqudB&+]\rp/smufRKd u6B\'4O,{cqjk[U8{17\rTVqAE}L;X=b//\nl \'5j;{Eopc-4;Ud{-tX)DG cXv1lOq.8GAeTm/\rp!\"y\n43evrbD\'s>/<<|yog ig5rC}5e>cP+Gkf:y}+dysm|&opz<4ckwV5b,88CE]3qr)\rc{-[P\nsaxm6S]250ObvrbD\'s>/<<|SouV7RqX-+(eEE;a|gl2tXo f6-1=\rl|jS}{e>{qMN\r-,( GONBbuE&u&39:y[ )nt9Mg\r=M!y)KkP\"+bT+TCuw>7yN1&uG|txfIT\'9PCAiyn(-38!v[x9.-|z3!nemR9m9iUpaM|{bPUh,B(;:9N1ij}E0=0T1o\'/8)LvD1{<w;ol>e[1V\'S.({fG{\"2idc+[.c> =A>&h]3nX-n7\'ya\r k]\rj-p=, ug8.\rlL7V2>t},0Lr}[e\nT9<wDm!a");
     -->
     </script><noscript>
         <p>To display this page you need a browser that supports JavaScript.</p>
@@ -1371,128 +1371,1572 @@
                 </nav> <!-- End::nav -->
             </div> <!-- End::main-sidebar -->
         </aside> <!-- End::app-sidebar -->
-        <!-- Start::app-content -->
+        <!--APP-CONTENT START-->
         <div class="main-content app-content">
             <div class="container-fluid">
                 <!-- Page Header -->
                 <div class="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
-                    <h1 class="page-title fw-semibold fs-18 mb-0">Grid Js</h1>
+                    <h1 class="page-title fw-semibold fs-18 mb-0">Alerts</h1>
                     <div class="ms-md-1 ms-0">
                         <nav>
                             <ol class="breadcrumb mb-0">
-                                <li class="breadcrumb-item"><a href="#">Tables</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Grid Js</li>
+                                <li class="breadcrumb-item"><a href="#">Ui Elements</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Alerts</li>
                             </ol>
                         </nav>
                     </div>
                 </div> <!-- Page Header Close -->
-                <!-- Start::row-1 -->
+                <!--ROW-START-->
                 <div class="row">
-                    <div class="col-xl-12">
+                    <div class="col-xl-6">
                         <div class="card custom-card">
-                            <div class="card-header">
-                                <div class="card-title"> Basic Table </div>
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Basic Alert </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
                             </div>
                             <div class="card-body">
-                                <div id="grid-example1"></div>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert"> <strong>Holy
+                                        guacamole!</strong> You should check in on some of those fields below. <button
+                                        type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+&lt;strong&gt;Holy guacamole!&lt;/strong&gt; You should check in on some of those fields
+below.
+&lt;button type="button" class="btn-close" data-bs-dismiss="alert"
+    aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button>
+&lt;/div>
+</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Live example </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="liveAlertPlaceholder">
+                                    <div class="mb-2"></div>
+                                    <div class="mb-2"></div>
+                                    <div class="mb-2"></div>
+                                    <div class="mb-2"></div>
+                                </div> <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert
+                                </button>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div id="liveAlertPlaceholder"&gt;
+    &lt;div class="mb-2"&gt;&lt;/div&gt;
+    &lt;div class="mb-2"&gt;&lt;/div&gt;
+    &lt;div class="mb-2"&gt;&lt;/div&gt;
+    &lt;div class="mb-2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;button type="button" class="btn btn-primary" id="liveAlertBtn"&gt;Show live
+    alert
+&lt;/button&gt;
+</code>
+</pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Default alerts </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-primary" role="alert"> A simple primary alert—check it out!
+                                </div>
+                                <div class="alert alert-secondary" role="alert"> A simple secondary alert—check it out!
+                                </div>
+                                <div class="alert alert-success" role="alert"> A simple success alert—check it out!
+                                </div>
+                                <div class="alert alert-danger" role="alert"> A simple danger alert—check it out! </div>
+                                <div class="alert alert-warning" role="alert"> A simple warning alert—check it out!
+                                </div>
+                                <div class="alert alert-info" role="alert"> A simple info alert—check it out! </div>
+                                <div class="alert alert-light" role="alert"> A simple light alert—check it out! </div>
+                                <div class="alert alert-dark" role="alert"> A simple dark alert—check it out! </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-primary" role="alert"&gt;
+    A simple primary alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-secondary" role="alert"&gt;
+    A simple secondary alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-success" role="alert"&gt;
+    A simple success alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger" role="alert"&gt;
+    A simple danger alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning" role="alert"&gt;
+    A simple warning alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-info" role="alert"&gt;
+    A simple info alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-light" role="alert"&gt;
+    A simple light alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-dark" role="alert"&gt;
+    A simple dark alert—check it out!
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Links in alerts </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-primary" role="alert"> A simple primary alert with <a href="#"
+                                        class="alert-link">an example link</a>. Give it a click if you like. </div>
+                                <div class="alert alert-secondary" role="alert"> A simple secondary alert with <a
+                                        href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                                </div>
+                                <div class="alert alert-success" role="alert"> A simple success alert with <a href="#"
+                                        class="alert-link">an example link</a>. Give it a click if you like. </div>
+                                <div class="alert alert-danger" role="alert"> A simple danger alert with <a href="#"
+                                        class="alert-link">an example link</a>. Give it a click if you like. </div>
+                                <div class="alert alert-warning" role="alert"> A simple warning alert with <a href="#"
+                                        class="alert-link">an example link</a>. Give it a click if you like. </div>
+                                <div class="alert alert-info" role="alert"> A simple info alert with <a href="#"
+                                        class="alert-link">an example link</a>. Give it a click if you like. </div>
+                                <div class="alert alert-light" role="alert"> A simple light alert with <a href="#"
+                                        class="alert-link">an example link</a>. Give it a click if you like. </div>
+                                <div class="alert alert-dark" role="alert"> A simple dark alert with <a href="#"
+                                        class="alert-link">an example link</a>. Give it a click if you like. </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-primary" role="alert"&gt;
+    A simple primary alert with &lt;a href="#" class="alert-link"&gt;an example
+        link&lt;/a&gt;.
+    Give it a click if you like.
+&lt;/div&gt;
+
+&lt;div class="alert alert-secondary" role="alert"&gt;
+    A simple secondary alert with &lt;a href="#" class="alert-link"&gt;an example
+        link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;
+
+&lt;div class="alert alert-success" role="alert"&gt;
+    A simple success alert with &lt;a href="#" class="alert-link"&gt;an example
+        link&lt;/a&gt;.
+    Give it a click if you like.
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger" role="alert"&gt;
+    A simple danger alert with &lt;a href="#" class="alert-link"&gt;an example
+        link&lt;/a&gt;.
+    Give it a click if you like.
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning" role="alert"&gt;
+    A simple warning alert with &lt;a href="#" class="alert-link"&gt;an example
+        link&lt;/a&gt;.
+    Give it a click if you like.
+&lt;/div&gt;
+
+&lt;div class="alert alert-info" role="alert"&gt;
+    A simple info alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;.
+    Give it a click if you like.
+&lt;/div&gt;
+
+&lt;div class="alert alert-light" role="alert"&gt;
+    A simple light alert with &lt;a href="#" class="alert-link"&gt;an example
+        link&lt;/a&gt;.
+    Give it a click if you like.
+&lt;/div&gt;
+
+&lt;div class="alert alert-dark" role="alert"&gt;
+    A simple dark alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;.
+    Give it a click if you like.
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Solid Colored Alerts </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-solid-primary alert-dismissible fade show"> A simple solid
+                                    primary alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-solid-secondary alert-dismissible fade show"> A simple solid
+                                    secondary alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-solid-info alert-dismissible fade show"> A simple solid info
+                                    alert—check it out! <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"><i class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-solid-warning alert-dismissible fade show"> A simple solid
+                                    warning alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-solid-success alert-dismissible fade show"> A simple solid
+                                    success alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-solid-danger alert-dismissible fade show"> A simple solid danger
+                                    alert—check it out! <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"><i class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-solid-light alert-dismissible fade show"> A simple solid light
+                                    alert—check it out! <button type="button" class="btn-close text-default"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-solid-dark alert-dismissible fade show text-white"> A simple
+                                    solid dark alert—check it out! <button type="button" class="btn-close text-white"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-solid-primary alert-dismissible fade show"&gt;
+    A simple solid primary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-secondary alert-dismissible fade show"&gt;
+    A simple solid secondary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-info alert-dismissible fade show"&gt;
+    A simple solid info alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-warning alert-dismissible fade show"&gt;
+    A simple solid warning alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-success alert-dismissible fade show"&gt;
+    A simple solid success alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-danger alert-dismissible fade show"&gt;
+    A simple solid danger alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-light alert-dismissible fade show"&gt;
+    A simple solid light alert—check it out!
+    &lt;button type="button" class="btn-close text-default" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-dark alert-dismissible fade show text-white"&gt;
+    A simple solid dark alert—check it out!
+    &lt;button type="button" class="btn-close text-white" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Outline Alerts </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-outline-primary alert-dismissible fade show"> A simple outline
+                                    primary alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-outline-secondary alert-dismissible fade show"> A simple outline
+                                    secondary alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-outline-info alert-dismissible fade show"> A simple outline info
+                                    alert—check it out! <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"><i class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-outline-warning alert-dismissible fade show"> A simple outline
+                                    warning alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-outline-success alert-dismissible fade show"> A simple outline
+                                    success alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-outline-danger alert-dismissible fade show"> A simple outline
+                                    danger alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-outline-light alert-dismissible fade show"> A simple outline
+                                    light alert—check it out! <button type="button" class="btn-close text-default"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-outline-dark alert-dismissible fade show"> A simple outline dark
+                                    alert—check it out! <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                        aria-label="Close"><i class="bi bi-x"></i></button> </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-solid-primary alert-dismissible fade show"&gt;
+    A simple solid primary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-secondary alert-dismissible fade show"&gt;
+    A simple solid secondary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-info alert-dismissible fade show"&gt;
+    A simple solid info alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-warning alert-dismissible fade show"&gt;
+    A simple solid warning alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-success alert-dismissible fade show"&gt;
+    A simple solid success alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-danger alert-dismissible fade show"&gt;
+    A simple solid danger alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-light alert-dismissible fade show"&gt;
+    A simple solid light alert—check it out!
+    &lt;button type="button" class="btn-close text-default" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-dark alert-dismissible fade show text-white"&gt;
+    A simple solid dark alert—check it out!
+    &lt;button type="button" class="btn-close text-white" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Solid Alerts With Different Shadows </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-solid-primary shadow-sm alert-dismissible fade show"> A simple
+                                    solid primary alert with small shadow—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-solid-primary shadow alert-dismissible fade show"> A simple
+                                    solid primary alert with normal shadow—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-solid-primary shadow-lg alert-dismissible fade show"> A simple
+                                    solid primary alert with large shadow—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-solid-secondary shadow-sm alert-dismissible fade show"> A simple
+                                    solid secondary alert with small shadow—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button></div>
+                                <div class="alert alert-solid-secondary shadow alert-dismissible fade show"> A simple
+                                    solid secondary alert with normal shadow—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button></div>
+                                <div class="alert alert-solid-secondary shadow-lg alert-dismissible fade show"> A simple
+                                    solid secondary alert with large shadow—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-solid-primary shadow-sm alert-dismissible fade show"&gt;
+    A simple solid primary alert with small shadow—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-primary shadow alert-dismissible fade show"&gt;
+    A simple solid primary alert with normal shadow—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-primary shadow-lg alert-dismissible fade show"&gt;
+    A simple solid primary alert with large shadow—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-secondary shadow-sm alert-dismissible fade show"&gt;
+    A simple solid secondary alert with small shadow—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+
+&lt;div class="alert alert-solid-secondary shadow alert-dismissible fade show"&gt;
+    A simple solid secondary alert with normal shadow—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+
+&lt;div class="alert alert-solid-secondary shadow-lg alert-dismissible fade show"&gt;
+    A simple solid secondary alert with large shadow—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Default Alerts With Different Shadows </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-primary shadow-sm">A simple primary alert with small
+                                    shadow—check it out!</div>
+                                <div class="alert alert-primary shadow">A simple primary alert with normal shadow—check
+                                    it out!</div>
+                                <div class="alert alert-primary shadow-lg">A simple primary alert with large
+                                    shadow—check it out!</div>
+                                <div class="alert alert-secondary shadow-sm">A simple secondary alert with small
+                                    shadow—check it out!</div>
+                                <div class="alert alert-secondary shadow">A simple secondary alert with normal
+                                    shadow—check it out!</div>
+                                <div class="alert alert-secondary shadow-lg">A simple secondary alert with large
+                                    shadow—check it out!</div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre
+                                    class="language-html"><code class="language-html">&lt;div class="alert alert-primary shadow-sm">A simple primary alert with small shadow—check it out!&lt;/div&gt;
+
+    &lt;div class="alert alert-primary shadow"&gt;A simple primary alert with normal shadow—check it out!&lt;/div&gt;
+
+    &lt;div class="alert alert-primary shadow-lg"&gt;A simple primary alert with large shadow—check it out!&lt;/div&gt;
+
+    &lt;div class="alert alert-secondary shadow-sm"&gt;A simple secondary alert with small shadow—check it out!&lt;/div&gt;
+
+    &lt;div class="alert alert-secondary shadow"&gt;A simple secondary alert with normal shadow—check it out!&lt;/div&gt;
+
+    &lt;div class="alert alert-secondary shadow-lg"&gt;A simple secondary alert with large shadow—check it out!&lt;/div&gt; </code></pre>
+                                <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Rounded Solid Alerts </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-solid-primary rounded-pill alert-dismissible fade show"> A
+                                    simple solid rounded primary alert—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-solid-secondary rounded-pill alert-dismissible fade show"> A
+                                    simple solid rounded secondary alert—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-solid-warning rounded-pill alert-dismissible fade show"> A
+                                    simple solid rounded warning alert—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-solid-danger rounded-pill alert-dismissible fade show"> A simple
+                                    solid rounded danger alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-solid-primary rounded-pill alert-dismissible fade show"&gt;
+    A simple solid rounded primary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-secondary rounded-pill alert-dismissible fade show"&gt;
+    A simple solid rounded secondary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-warning rounded-pill alert-dismissible fade show"&gt;
+    A simple solid rounded warning alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-solid-danger rounded-pill alert-dismissible fade show"&gt;
+    A simple solid rounded danger alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Rounded Outline Alerts </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-outline-primary rounded-pill alert-dismissible fade show"> A
+                                    simple outline rounded primary alert—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-outline-secondary rounded-pill alert-dismissible fade show"> A
+                                    simple outline rounded secondary alert—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-outline-warning rounded-pill alert-dismissible fade show"> A
+                                    simple outline rounded warning alert—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-outline-danger rounded-pill alert-dismissible fade show"> A
+                                    simple outline rounded danger alert—check it out! <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-outline-primary rounded-pill alert-dismissible fade show"&gt;
+    A simple outline rounded primary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-outline-secondary rounded-pill alert-dismissible fade show"&gt;
+    A simple outline rounded secondary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-outline-warning rounded-pill alert-dismissible fade show"&gt;
+    A simple outline rounded warning alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-outline-danger rounded-pill alert-dismissible fade show"&gt;
+    A simple outline rounded danger alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Rounded Default Alerts </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-primary rounded-pill alert-dismissible fade show"> A simple
+                                    rounded primary alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-secondary rounded-pill alert-dismissible fade show"> A simple
+                                    rounded secondary alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-warning rounded-pill alert-dismissible fade show"> A simple
+                                    rounded warning alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-danger rounded-pill alert-dismissible fade show"> A simple
+                                    rounded danger alert—check it out! <button type="button" class="btn-close"
+                                        data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
+                                </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-primary rounded-pill alert-dismissible fade show"&gt;
+    A simple rounded primary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-secondary rounded-pill alert-dismissible fade show"&gt;
+    A simple rounded secondary alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning rounded-pill alert-dismissible fade show"&gt;
+    A simple rounded warning alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger rounded-pill alert-dismissible fade show"&gt;
+    A simple rounded danger alert—check it out!
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Rounded Alerts With Custom Close Button </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-primary rounded-pill alert-dismissible fade show"> A simple
+                                    rounded primary alert—check it out! <button type="button"
+                                        class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-secondary rounded-pill alert-dismissible fade show"> A simple
+                                    rounded secondary alert—check it out! <button type="button"
+                                        class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-warning rounded-pill alert-dismissible fade show"> A simple
+                                    rounded warning alert—check it out! <button type="button"
+                                        class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-danger rounded-pill alert-dismissible fade show"> A simple
+                                    rounded danger alert—check it out! <button type="button"
+                                        class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-primary rounded-pill alert-dismissible fade show"&gt;
+    A simple rounded primary alert—check it out!
+    &lt;button type="button" class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-secondary rounded-pill alert-dismissible fade show"&gt;
+    A simple rounded secondary alert—check it out!
+    &lt;button type="button" class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning rounded-pill alert-dismissible fade show"&gt;
+    A simple rounded warning alert—check it out!
+    &lt;button type="button" class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger rounded-pill alert-dismissible fade show"&gt;
+    A simple rounded danger alert—check it out!
+    &lt;button type="button" class="btn-close custom-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Alerts with icons </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-primary d-flex align-items-center" role="alert"> <svg
+                                        class="flex-shrink-0 me-2 svg-primary" xmlns="http://www.w3.org/2000/svg"
+                                        height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                        <path d="M0 0h24v24H0V0z" fill="none" />
+                                        <path
+                                            d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                                    </svg>
+                                    <div> An example alert with an icon </div>
+                                </div>
+                                <div class="alert alert-success d-flex align-items-center" role="alert"> <svg
+                                        class="flex-shrink-0 me-2 svg-success" xmlns="http://www.w3.org/2000/svg"
+                                        height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                        <path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none" />
+                                        <path
+                                            d="M16.59 7.58L10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                                    </svg>
+                                    <div> An example success alert with an icon </div>
+                                </div>
+                                <div class="alert alert-warning d-flex align-items-center" role="alert"> <svg
+                                        class="flex-shrink-0 me-2 svg-warning" xmlns="http://www.w3.org/2000/svg"
+                                        enable-background="new 0 0 24 24" height="1.5rem" viewBox="0 0 24 24"
+                                        width="1.5rem" fill="#000000">
+                                        <g>
+                                            <rect fill="none" height="24" width="24" />
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path d="M12,5.99L19.53,19H4.47L12,5.99 M12,2L1,21h22L12,2L12,2z" />
+                                                    <polygon points="13,16 11,16 11,18 13,18" />
+                                                    <polygon points="13,10 11,10 11,15 13,15" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <div> An example warning alert with an icon </div>
+                                </div>
+                                <div class="alert alert-danger d-flex align-items-center" role="alert"> <svg
+                                        class="flex-shrink-0 me-2 svg-danger" xmlns="http://www.w3.org/2000/svg"
+                                        enable-background="new 0 0 24 24" height="1.5rem" viewBox="0 0 24 24"
+                                        width="1.5rem" fill="#000000">
+                                        <g>
+                                            <rect fill="none" height="24" width="24" />
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="M15.73,3H8.27L3,8.27v7.46L8.27,21h7.46L21,15.73V8.27L15.73,3z M19,14.9L14.9,19H9.1L5,14.9V9.1L9.1,5h5.8L19,9.1V14.9z" />
+                                                    <rect height="6" width="2" x="11" y="7" />
+                                                    <rect height="2" width="2" x="11" y="15" />
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <div> An example danger alert with an icon </div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-primary d-flex align-items-center" role="alert"&gt;
+    &lt;svg class="flex-shrink-0 me-2 svg-primary" xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000"&gt;&lt;path d="M0 0h24v24H0V0z" fill="none"/&gt;&lt;path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/&gt;&lt;/svg&gt;
+    &lt;div&gt;
+        An example alert with an icon
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-success d-flex align-items-center" role="alert"&gt;
+    &lt;svg class="flex-shrink-0 me-2 svg-success" xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000"&gt;&lt;path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none"/&gt;&lt;path d="M16.59 7.58L10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/&gt;&lt;/svg&gt;
+    &lt;div&gt;
+        An example success alert with an icon
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning d-flex align-items-center" role="alert"&gt;
+    &lt;svg class="flex-shrink-0 me-2 svg-warning" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000"&gt;&lt;g&gt;&lt;rect fill="none" height="24" width="24"/&gt;&lt;/g&gt;&lt;g&gt;&lt;g&gt;&lt;g&gt;&lt;path d="M12,5.99L19.53,19H4.47L12,5.99 M12,2L1,21h22L12,2L12,2z"/&gt;&lt;polygon points="13,16 11,16 11,18 13,18"/&gt;&lt;polygon points="13,10 11,10 11,15 13,15"/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;
+    &lt;div&gt;
+        An example warning alert with an icon
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger d-flex align-items-center" role="alert"&gt;
+    &lt;svg class="flex-shrink-0 me-2 svg-danger" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000"&gt;&lt;g&gt;&lt;rect fill="none" height="24" width="24"/&gt;&lt;/g&gt;&lt;g&gt;&lt;g&gt;&lt;g&gt;&lt;path d="M15.73,3H8.27L3,8.27v7.46L8.27,21h7.46L21,15.73V8.27L15.73,3z M19,14.9L14.9,19H9.1L5,14.9V9.1L9.1,5h5.8L19,9.1V14.9z"/&gt;&lt;rect height="6" width="2" x="11" y="7"/&gt;&lt;rect height="2" width="2" x="11" y="15"/&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;
+    &lt;div&gt;
+        An example danger alert with an icon
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Customized Alerts With SVG's </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-primary alert-dismissible fade show custom-alert-icon shadow-sm"
+                                    role="alert"> <svg class="svg-primary" xmlns="http://www.w3.org/2000/svg"
+                                        height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                                    </svg> A customized primary alert with an icon <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-secondary alert-dismissible fade show custom-alert-icon shadow-sm"
+                                    role="alert"> <svg class="svg-secondary" xmlns="http://www.w3.org/2000/svg"
+                                        height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                    </svg> A customized secondary alert with an icon <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-warning alert-dismissible fade show custom-alert-icon shadow-sm"
+                                    role="alert"> <svg class="svg-warning" xmlns="http://www.w3.org/2000/svg"
+                                        height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
+                                    </svg> A customized warning alert with an icon <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                                <div class="alert alert-danger alert-dismissible fade show custom-alert-icon shadow-sm"
+                                    role="alert"> <svg class="svg-danger" xmlns="http://www.w3.org/2000/svg"
+                                        height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z" />
+                                    </svg> A customized danger alert with an icon <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button> </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-primary alert-dismissible fade show custom-alert-icon shadow-sm" role="alert"&gt;
+    &lt;svg class="svg-primary" xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000"&gt;&lt;path d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/&gt;&lt;/svg&gt;
+    A customized primary alert with an icon
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-secondary alert-dismissible fade show custom-alert-icon shadow-sm" role="alert"&gt;
+    &lt;svg class="svg-secondary" xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000"&gt;&lt;path d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/&gt;&lt;/svg&gt;
+    A customized secondary alert with an icon
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning alert-dismissible fade show custom-alert-icon shadow-sm" role="alert"&gt;
+    &lt;svg class="svg-warning" xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000"&gt;&lt;path d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/&gt;&lt;/svg&gt;
+    A customized warning alert with an icon
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger alert-dismissible fade show custom-alert-icon shadow-sm" role="alert"&gt;
+    &lt;svg class="svg-danger" xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000"&gt;&lt;path d="M0 0h24v24H0z" fill="none"/&gt;&lt;path d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z"/&gt;&lt;/svg&gt;
+    A customized danger alert with an icon
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Alerts With Images </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-img alert-primary alert-dismissible fase show rounded-pill flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-sm me-3 avatar-rounded"> <img
+                                            src="../assets/images/faces/3.jpg" alt="img"> </div>
+                                    <div>A simple primary alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-secondary alert-dismissible fase show rounded-pill flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-sm me-3 avatar-rounded"> <img
+                                            src="../assets/images/faces/5.jpg" alt="img"> </div>
+                                    <div>A simple secondary alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-warning alert-dismissible fase show rounded-pill flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-sm me-3 avatar-rounded"> <img
+                                            src="../assets/images/faces/8.jpg" alt="img"> </div>
+                                    <div>A simple warning alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-danger alert-dismissible fase show rounded-pill flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-sm me-3 avatar-rounded"> <img
+                                            src="../assets/images/faces/11.jpg" alt="img"> </div>
+                                    <div>A simple danger alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-info alert-dismissible fase show rounded-pill flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-sm me-3 avatar-rounded"> <img
+                                            src="../assets/images/faces/13.jpg" alt="img"> </div>
+                                    <div>A simple info alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-light alert-dismissible fase show rounded-pill flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-sm me-3 avatar-rounded"> <img
+                                            src="../assets/images/faces/10.jpg" alt="img"> </div>
+                                    <div>A simple light alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-dark alert-dismissible fase show rounded-pill flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-sm me-3 avatar-rounded"> <img
+                                            src="../assets/images/faces/15.jpg" alt="img"> </div>
+                                    <div>A simple dark alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x text-muted"></i></button>
+                                </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-img alert-primary alert-dismissible fase show rounded-pill flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-sm me-3 avatar-rounded"&gt;
+        &lt;img src="../assets/images/faces/3.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple primary alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-secondary alert-dismissible fase show rounded-pill flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-sm me-3 avatar-rounded"&gt;
+        &lt;img src="../assets/images/faces/5.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple secondary alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-warning alert-dismissible fase show rounded-pill flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-sm me-3 avatar-rounded"&gt;
+        &lt;img src="../assets/images/faces/8.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple warning alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-danger alert-dismissible fase show rounded-pill flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-sm me-3 avatar-rounded"&gt;
+        &lt;img src="../assets/images/faces/11.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple danger alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-info alert-dismissible fase show rounded-pill flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-sm me-3 avatar-rounded"&gt;
+        &lt;img src="../assets/images/faces/13.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple info alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-light alert-dismissible fase show rounded-pill flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-sm me-3 avatar-rounded"&gt;
+        &lt;img src="../assets/images/faces/10.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple light alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-dark alert-dismissible fase show rounded-pill flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-sm me-3 avatar-rounded"&gt;
+        &lt;img src="../assets/images/faces/15.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple dark alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x text-muted"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Alerts With Different size Images </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-img alert-primary alert-dismissible fase show flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-xs me-3"> <img src="../assets/images/faces/3.jpg"
+                                            alt="img"> </div>
+                                    <div>A simple primary alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-secondary alert-dismissible fase show flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-sm me-3"> <img src="../assets/images/faces/5.jpg"
+                                            alt="img"> </div>
+                                    <div>A simple secondary alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-warning alert-dismissible fase show flex-wrap"
+                                    role="alert">
+                                    <div class="avatar me-3"> <img src="../assets/images/faces/8.jpg" alt="img"> </div>
+                                    <div>A simple warning alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-danger alert-dismissible fase show flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-md me-3"> <img src="../assets/images/faces/11.jpg"
+                                            alt="img"> </div>
+                                    <div>A simple danger alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-info alert-dismissible fase show flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-lg me-3"> <img src="../assets/images/faces/13.jpg"
+                                            alt="img"> </div>
+                                    <div>A simple info alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x"></i></button>
+                                </div>
+                                <div class="alert alert-img alert-dark alert-dismissible fase show flex-wrap"
+                                    role="alert">
+                                    <div class="avatar avatar-xl me-3"> <img src="../assets/images/faces/14.jpg"
+                                            alt="img"> </div>
+                                    <div>A simple info alert with image—check it out!</div> <button type="button"
+                                        class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i
+                                            class="bi bi-x text-muted"></i></button>
+                                </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="alert alert-img alert-primary alert-dismissible fase show flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-xs me-3"&gt;
+        &lt;img src="../assets/images/faces/3.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple primary alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-secondary alert-dismissible fase show flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-sm me-3"&gt;
+        &lt;img src="../assets/images/faces/5.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple secondary alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-warning alert-dismissible fase show flex-wrap" role="alert"&gt;
+    &lt;div class="avatar me-3"&gt;
+        &lt;img src="../assets/images/faces/8.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple warning alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-danger alert-dismissible fase show flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-md me-3"&gt;
+        &lt;img src="../assets/images/faces/11.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple danger alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-info alert-dismissible fase show flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-lg me-3"&gt;
+        &lt;img src="../assets/images/faces/13.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple info alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-img alert-dark alert-dismissible fase show flex-wrap" role="alert"&gt;
+    &lt;div class="avatar avatar-xl me-3"&gt;
+        &lt;img src="../assets/images/faces/14.jpg" alt="img"&gt;
+    &lt;/div&gt;
+    &lt;div&gt;A simple info alert with image—check it out!&lt;/div&gt;
+    &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x text-muted"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="row">
+                            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="card bg-white border-0">
+                                    <div class="alert custom-alert1 alert-primary"> <button type="button"
+                                            class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"><i
+                                                class="bi bi-x"></i></button>
+                                        <div class="text-center px-5 pb-0"> <svg class="custom-alert-icon svg-primary"
+                                                xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24"
+                                                width="1.5rem" fill="#000000">
+                                                <path d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                                            </svg>
+                                            <h5>Information?</h5>
+                                            <p class="">This alert is created to just show the related information.</p>
+                                            <div class=""> <button
+                                                    class="btn btn-sm btn-outline-danger m-1">Decline</button> <button
+                                                    class="btn btn-sm btn-primary m-1">Accept</button> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="card bg-white border-0">
+                                    <div class="alert custom-alert1 alert-secondary"> <button type="button"
+                                            class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"><i
+                                                class="bi bi-x"></i></button>
+                                        <div class="text-center px-5 pb-0"> <svg class="custom-alert-icon svg-secondary"
+                                                xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24"
+                                                width="1.5rem" fill="#000000">
+                                                <path d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                            </svg>
+                                            <h5>Confirmed</h5>
+                                            <p class="">This alert is created to just show the confirmation message.</p>
+                                            <div class=""> <button class="btn btn-sm btn-secondary m-1">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="card bg-white border-0">
+                                    <div class="alert custom-alert1 alert-warning"> <button type="button"
+                                            class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"><i
+                                                class="bi bi-x"></i></button>
+                                        <div class="text-center px-5 pb-0"> <svg class="custom-alert-icon svg-warning"
+                                                xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24"
+                                                width="1.5rem" fill="#000000">
+                                                <path d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
+                                            </svg>
+                                            <h5>Warning</h5>
+                                            <p class="">This alert is created to just show the warning message.</p>
+                                            <div class=""> <button
+                                                    class="btn btn-sm btn-outline-secondary m-1">Back</button> <button
+                                                    class="btn btn-sm btn-warning m-1">Continue</button> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-3 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="card bg-white border-0">
+                                    <div class="alert custom-alert1 alert-danger"> <button type="button"
+                                            class="btn-close ms-auto" data-bs-dismiss="alert" aria-label="Close"><i
+                                                class="bi bi-x"></i></button>
+                                        <div class="text-center px-5 pb-0"> <svg class="custom-alert-icon svg-danger"
+                                                xmlns="http://www.w3.org/2000/svg" height="1.5rem" viewBox="0 0 24 24"
+                                                width="1.5rem" fill="#000000">
+                                                <path d="M0 0h24v24H0z" fill="none" />
+                                                <path
+                                                    d="M15.73 3H8.27L3 8.27v7.46L8.27 21h7.46L21 15.73V8.27L15.73 3zM12 17.3c-.72 0-1.3-.58-1.3-1.3 0-.72.58-1.3 1.3-1.3.72 0 1.3.58 1.3 1.3 0 .72-.58 1.3-1.3 1.3zm1-4.3h-2V7h2v6z" />
+                                            </svg>
+                                            <h5>danger</h5>
+                                            <p class="">This alert is created to just show the danger message.</p>
+                                            <div class=""> <button class="btn btn-sm btn-danger m-1">Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="row">
+                            <div class="col-xl-3">
+                                <div class="card border-0">
+                                    <div class="alert alert-primary border border-primary mb-0 p-2">
+                                        <div class="d-flex align-items-start">
+                                            <div class="me-2"> <svg class="flex-shrink-0 svg-primary"
+                                                    xmlns="http://www.w3.org/2000/svg" height="1.5rem"
+                                                    viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                                    <path
+                                                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                                                </svg> </div>
+                                            <div class="text-primary w-100">
+                                                <div class="fw-semibold d-flex justify-content-between">Information
+                                                    Alert<button type="button" class="btn-close p-0"
+                                                        data-bs-dismiss="alert" aria-label="Close"><i
+                                                            class="bi bi-x"></i></button></div>
+                                                <div class="fs-12 op-8 mb-1">Information alert to show to information
+                                                </div>
+                                                <div class="fs-12"> <a href="javascript:void(0);"
+                                                        class="text-secondary fw-semibold me-2 d-inline-block">cancel</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="text-primary fw-semibold">open</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card border-0">
+                                    <div class="alert alert-secondary border border-secondary mb-0 p-2">
+                                        <div class="d-flex align-items-start">
+                                            <div class="me-2"> <svg class="flex-shrink-0 svg-secondary"
+                                                    xmlns="http://www.w3.org/2000/svg" height="1.5rem"
+                                                    viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                                    <path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none" />
+                                                    <path
+                                                        d="M16.59 7.58L10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                                                </svg> </div>
+                                            <div class="text-secondary w-100">
+                                                <div class="fw-semibold d-flex justify-content-between">Success
+                                                    Alert<button type="button" class="btn-close p-0"
+                                                        data-bs-dismiss="alert" aria-label="Close"><i
+                                                            class="bi bi-x"></i></button></div>
+                                                <div class="fs-12 op-8 mb-1">Success alert to show to success message
+                                                </div>
+                                                <div class="fs-12"> <a href="javascript:void(0);"
+                                                        class="text-danger fw-semibold me-2 d-inline-block">cancel</a>
+                                                    <a href="javascript:void(0);"
+                                                        class="text-secondary fw-semibold">open</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card border-0">
+                                    <div class="alert alert-warning border border-warning mb-0 p-2">
+                                        <div class="d-flex align-items-start">
+                                            <div class="me-2"> <svg class="flex-shrink-0 svg-warning"
+                                                    xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                                    height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                                    <g>
+                                                        <rect fill="none" height="24" width="24" />
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M12,5.99L19.53,19H4.47L12,5.99 M12,2L1,21h22L12,2L12,2z" />
+                                                                <polygon points="13,16 11,16 11,18 13,18" />
+                                                                <polygon points="13,10 11,10 11,15 13,15" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg> </div>
+                                            <div class="text-warning w-100">
+                                                <div class="fw-semibold d-flex justify-content-between">Warning
+                                                    Alert<button type="button" class="btn-close p-0"
+                                                        data-bs-dismiss="alert" aria-label="Close"><i
+                                                            class="bi bi-x"></i></button></div>
+                                                <div class="fs-12 op-8 mb-1">Warning alert to show warning message</div>
+                                                <div class="fs-12"> <a href="javascript:void(0);"
+                                                        class="text-dark fw-semibold me-2 d-inline-block">cancel</a> <a
+                                                        href="javascript:void(0);"
+                                                        class="text-warning fw-semibold">open</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card border-0">
+                                    <div class="alert alert-danger border border-danger mb-0 p-2">
+                                        <div class="d-flex align-items-start">
+                                            <div class="me-2"> <svg class="flex-shrink-0 svg-danger"
+                                                    xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                                    height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                                    <g>
+                                                        <rect fill="none" height="24" width="24" />
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M15.73,3H8.27L3,8.27v7.46L8.27,21h7.46L21,15.73V8.27L15.73,3z M19,14.9L14.9,19H9.1L5,14.9V9.1L9.1,5h5.8L19,9.1V14.9z" />
+                                                                <rect height="6" width="2" x="11" y="7" />
+                                                                <rect height="2" width="2" x="11" y="15" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg> </div>
+                                            <div class="text-danger w-100">
+                                                <div class="fw-semibold d-flex justify-content-between">Danger
+                                                    Alert<button type="button" class="btn-close p-0"
+                                                        data-bs-dismiss="alert" aria-label="Close"><i
+                                                            class="bi bi-x"></i></button></div>
+                                                <div class="fs-12 op-8 mb-1">Danger alert to show the danger message
+                                                </div>
+                                                <div class="fs-12"> <a href="javascript:void(0);"
+                                                        class="text-info fw-semibold me-2 d-inline-block">cancel</a> <a
+                                                        href="javascript:void(0);"
+                                                        class="text-danger fw-semibold">open</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="row">
+                            <div class="col-xl-3">
+                                <div class="card border-0">
+                                    <div class="alert alert-solid-primary border border-primary mb-0 p-2">
+                                        <div class="d-flex align-items-start">
+                                            <div class="me-2"> <svg class="flex-shrink-0 svg-white"
+                                                    xmlns="http://www.w3.org/2000/svg" height="1.5rem"
+                                                    viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                                    <path d="M0 0h24v24H0V0z" fill="none" />
+                                                    <path
+                                                        d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                                                </svg> </div>
+                                            <div class="text-fixed-white w-100">
+                                                <div class="fw-semibold d-flex justify-content-between">Information
+                                                    Alert<button type="button" class="btn-close p-0"
+                                                        data-bs-dismiss="alert" aria-label="Close"><i
+                                                            class="bi bi-x"></i></button></div>
+                                                <div class="fs-12 op-8 mb-1">Information alert to show to information
+                                                </div>
+                                                <div class="fs-12"> <a href="javascript:void(0);"
+                                                        class="text-fixed-white fw-semibold me-2 op-7">cancel</a> <a
+                                                        href="javascript:void(0);"
+                                                        class="text-fixed-white fw-semibold">open</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card border-0">
+                                    <div class="alert alert-solid-secondary border border-secondary mb-0 p-2">
+                                        <div class="d-flex align-items-start">
+                                            <div class="me-2"> <svg class="flex-shrink-0 svg-white"
+                                                    xmlns="http://www.w3.org/2000/svg" height="1.5rem"
+                                                    viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                                    <path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none" />
+                                                    <path
+                                                        d="M16.59 7.58L10 14.17l-3.59-3.58L5 12l5 5 8-8zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z" />
+                                                </svg> </div>
+                                            <div class="text-fixed-white w-100">
+                                                <div class="fw-semibold d-flex justify-content-between">Success
+                                                    Alert<button type="button" class="btn-close p-0"
+                                                        data-bs-dismiss="alert" aria-label="Close"><i
+                                                            class="bi bi-x"></i></button></div>
+                                                <div class="fs-12 op-8 mb-1">Success alert to show to success message
+                                                </div>
+                                                <div class="fs-12"> <a href="javascript:void(0);"
+                                                        class="text-fixed-white fw-semibold me-2">close</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card border-0">
+                                    <div class="alert alert-solid-warning border border-warning mb-0 p-2">
+                                        <div class="d-flex align-items-start">
+                                            <div class="me-2"> <svg class="flex-shrink-0 svg-white"
+                                                    xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                                    height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                                    <g>
+                                                        <rect fill="none" height="24" width="24" />
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M12,5.99L19.53,19H4.47L12,5.99 M12,2L1,21h22L12,2L12,2z" />
+                                                                <polygon points="13,16 11,16 11,18 13,18" />
+                                                                <polygon points="13,10 11,10 11,15 13,15" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg> </div>
+                                            <div class="text-fixed-white w-100">
+                                                <div class="fw-semibold d-flex justify-content-between">Warning
+                                                    Alert<button type="button" class="btn-close p-0"
+                                                        data-bs-dismiss="alert" aria-label="Close"><i
+                                                            class="bi bi-x"></i></button></div>
+                                                <div class="fs-12 op-8 mb-1">Warning alert to show to warning message
+                                                </div>
+                                                <div class="fs-12"> <a href="javascript:void(0);"
+                                                        class="text-fixed-white fw-semibold me-2 op-7">skip</a> <a
+                                                        href="javascript:void(0);"
+                                                        class="text-fixed-white fw-semibold">open</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3">
+                                <div class="card border-0">
+                                    <div class="alert alert-solid-danger border border-danger mb-0 p-2">
+                                        <div class="d-flex align-items-start">
+                                            <div class="me-2"> <svg class="flex-shrink-0 svg-white"
+                                                    xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                                    height="1.5rem" viewBox="0 0 24 24" width="1.5rem" fill="#000000">
+                                                    <g>
+                                                        <rect fill="none" height="24" width="24" />
+                                                    </g>
+                                                    <g>
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M15.73,3H8.27L3,8.27v7.46L8.27,21h7.46L21,15.73V8.27L15.73,3z M19,14.9L14.9,19H9.1L5,14.9V9.1L9.1,5h5.8L19,9.1V14.9z" />
+                                                                <rect height="6" width="2" x="11" y="7" />
+                                                                <rect height="2" width="2" x="11" y="15" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg> </div>
+                                            <div class="text-fixed-white w-100">
+                                                <div class="fw-semibold d-flex justify-content-between">Danger
+                                                    Alert<button type="button" class="btn-close p-0"
+                                                        data-bs-dismiss="alert" aria-label="Close"><i
+                                                            class="bi bi-x"></i></button></div>
+                                                <div class="fs-12 op-8 mb-1">Danger alert to show to danger message
+                                                </div>
+                                                <div class="fs-12"> <a href="javascript:void(0);"
+                                                        class="text-fixed-white fw-semibold me-2 op-7">close</a> <a
+                                                        href="javascript:void(0);"
+                                                        class="text-fixed-white fw-semibold">continue</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title"> Additional content </div>
+                                <div class="prism-toggle"> <button class="btn btn-sm btn-primary-light">Show Code<i
+                                            class="ri-code-line ms-2 d-inline-block align-middle"></i></button> </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row gy-3">
+                                    <div class="col-xl-6">
+                                        <div class="alert alert-primary overflow-hidden p-0" role="alert">
+                                            <div class="p-3 bg-primary text-fixed-white d-flex justify-content-between">
+                                                <h6 class="aletr-heading mb-0">Thank you for reporting this.</h6>
+                                                <button type="button" class="btn-close p-0 text-fixed-white"
+                                                    data-bs-dismiss="alert" aria-label="Close"><i
+                                                        class="bi bi-x"></i></button>
+                                            </div>
+                                            <hr class="my-0">
+                                            <div class="p-3">
+                                                <p class="mb-0">We appreciate you to let us know the bug in the template
+                                                    and for warning us about future consequences <a
+                                                        href="javascript:void(0);"
+                                                        class="fw-semibold text-decoration-underline">Visit for support
+                                                        for queries ?</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="alert alert-secondary overflow-hidden p-0" role="alert">
+                                            <div
+                                                class="p-3 bg-secondary text-fixed-white d-flex justify-content-between">
+                                                <h6 class="aletr-heading mb-0">Thank you for reporting this.</h6>
+                                                <button type="button" class="btn-close p-0 text-fixed-white"
+                                                    data-bs-dismiss="alert" aria-label="Close"><i
+                                                        class="bi bi-x"></i></button>
+                                            </div>
+                                            <hr class="my-0">
+                                            <div class="p-3">
+                                                <p class="mb-0">We appreciate you to let us know the bug in the template
+                                                    and for warning us about future consequences <a
+                                                        href="javascript:void(0);"
+                                                        class="fw-semibold text-decoration-underline">Visit for support
+                                                        for queries ?</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="alert alert-success overflow-hidden p-0" role="alert">
+                                            <div class="p-3 bg-success text-fixed-white d-flex justify-content-between">
+                                                <h6 class="aletr-heading mb-0">Thank you for reporting this.</h6>
+                                                <button type="button" class="btn-close p-0 text-fixed-white"
+                                                    data-bs-dismiss="alert" aria-label="Close"><i
+                                                        class="bi bi-x"></i></button>
+                                            </div>
+                                            <hr class="my-0">
+                                            <div class="p-3">
+                                                <p class="mb-0">We appreciate you to let us know the bug in the template
+                                                    and for warning us about future consequences <a
+                                                        href="javascript:void(0);"
+                                                        class="fw-semibold text-decoration-underline">Visit for support
+                                                        for queries ?</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="alert alert-warning overflow-hidden p-0" role="alert">
+                                            <div class="p-3 bg-warning text-fixed-white d-flex justify-content-between">
+                                                <h6 class="aletr-heading mb-0">Thank you for reporting this.</h6>
+                                                <button type="button" class="btn-close p-0 text-fixed-white"
+                                                    data-bs-dismiss="alert" aria-label="Close"><i
+                                                        class="bi bi-x"></i></button>
+                                            </div>
+                                            <hr class="my-0">
+                                            <div class="p-3">
+                                                <p class="mb-0">We appreciate you to let us know the bug in the template
+                                                    and for warning us about future consequences <a
+                                                        href="javascript:void(0);"
+                                                        class="fw-semibold text-decoration-underline">Visit for support
+                                                        for queries ?</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer d-none border-top-0">
+                                <!-- Prism Code -->
+                                <pre class="language-html"><code class="language-html">&lt;div class="col-xl-6"&gt;
+    &lt;div class="alert alert-primary overflow-hidden p-0" role="alert"&gt;
+        &lt;div class="p-3 bg-primary text-fixed-white d-flex justify-content-between"&gt;
+            &lt;h6 class="aletr-heading mb-0"&gt;Thank you for reporting this.&lt;/h6&gt;
+            &lt;button type="button" class="btn-close p-0 text-fixed-white" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;hr class="my-0"&gt;
+        &lt;div class="p-3"&gt;
+            &lt;p class="mb-0"&gt;We appreciate you to let us know the bug in the template and for warning us about future consequences &lt;a href="javascript:void(0);" class="fw-semibold text-decoration-underline"&gt;Visit for support for queries ?&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="col-xl-6"&gt;
+    &lt;div class="alert alert-secondary overflow-hidden p-0" role="alert"&gt;
+        &lt;div class="p-3 bg-secondary text-fixed-white d-flex justify-content-between"&gt;
+            &lt;h6 class="aletr-heading mb-0"&gt;Thank you for reporting this.&lt;/h6&gt;
+            &lt;button type="button" class="btn-close p-0 text-fixed-white" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;hr class="my-0"&gt;
+        &lt;div class="p-3"&gt;
+            &lt;p class="mb-0"&gt;We appreciate you to let us know the bug in the template and for warning us about future consequences &lt;a href="javascript:void(0);" class="fw-semibold text-decoration-underline"&gt;Visit for support for queries ?&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="col-xl-6"&gt;
+    &lt;div class="alert alert-success overflow-hidden p-0" role="alert"&gt;
+        &lt;div class="p-3 bg-success text-fixed-white d-flex justify-content-between"&gt;
+            &lt;h6 class="aletr-heading mb-0"&gt;Thank you for reporting this.&lt;/h6&gt;
+            &lt;button type="button" class="btn-close p-0 text-fixed-white" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;hr class="my-0"&gt;
+        &lt;div class="p-3"&gt;
+            &lt;p class="mb-0"&gt;We appreciate you to let us know the bug in the template and for warning us about future consequences &lt;a href="javascript:void(0);" class="fw-semibold text-decoration-underline"&gt;Visit for support for queries ?&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="col-xl-6"&gt;
+    &lt;div class="alert alert-warning overflow-hidden p-0" role="alert"&gt;
+        &lt;div class="p-3 bg-warning text-fixed-white d-flex justify-content-between"&gt;
+            &lt;h6 class="aletr-heading mb-0"&gt;Thank you for reporting this.&lt;/h6&gt;
+            &lt;button type="button" class="btn-close p-0 text-fixed-white" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;i class="bi bi-x"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;hr class="my-0"&gt;
+        &lt;div class="p-3"&gt;
+            &lt;p class="mb-0"&gt;We appreciate you to let us know the bug in the template and for warning us about future consequences &lt;a href="javascript:void(0);" class="fw-semibold text-decoration-underline"&gt;Visit for support for queries ?&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre> <!-- Prism Code -->
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--End::row-1 -->
-                <!-- Start:: row-2 -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card custom-card">
-                            <div class="card-header">
-                                <div class="card-title"> Table With Pagination </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="grid-pagination"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End:: row-2 -->
-                <!-- Start:: row-3 -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card custom-card">
-                            <div class="card-header">
-                                <div class="card-title"> Table With Search </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="grid-search"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End:: row-3 -->
-                <!-- Start:: row-4 -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card custom-card">
-                            <div class="card-header">
-                                <div class="card-title"> Table Sorting </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="grid-sorting"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End:: row-4 -->
-                <!-- Start:: row-5 -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card custom-card">
-                            <div class="card-header">
-                                <div class="card-title"> Table Loading </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="grid-loading"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End:: row-5 -->
-                <!-- Start:: row-6 -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card custom-card">
-                            <div class="card-header">
-                                <div class="card-title"> Wide Table </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="grid-wide"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End:: row-6 -->
-                <!-- Start:: row-7 -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card custom-card">
-                            <div class="card-header">
-                                <div class="card-title"> Fixed Header </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="grid-header-fixed"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End:: row-7 -->
-                <!-- Start:: row-8 -->
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="card custom-card">
-                            <div class="card-header">
-                                <div class="card-title"> Hidden Columns </div>
-                            </div>
-                            <div class="card-body">
-                                <div id="grid-hidden-column"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- End:: row-8 -->
+                <!--ROW-END-->
             </div>
-        </div> <!-- End::app-content -->
+        </div>
+        <!--APP-CONTENT CLOSE-->
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModal" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -1566,11 +3010,12 @@
     <script src="../assets/libs/simplebar/simplebar.min.js"></script>
     <script src="../assets/js/simplebar.js"></script> <!-- Color Picker JS -->
     <script src="../assets/libs/%40simonwep/pickr/pickr.es5.min.js"></script> <!-- Custom-Switcher JS -->
-    <script src="../assets/js/custom-switcher.min.js"></script> <!-- Grid JS -->
-    <script src="../assets/libs/gridjs/gridjs.umd.js"></script> <!-- Internal Grid JS -->
-    <script src="../assets/js/grid.js"></script> <!-- Custom JS -->
+    <script src="../assets/js/custom-switcher.min.js"></script> <!-- Prism JS -->
+    <script src="../assets/libs/prismjs/prism.js"></script>
+    <script src="../assets/js/prism-custom.js"></script> <!-- Alerts JS -->
+    <script src="../assets/js/alerts.js"></script> <!-- Custom JS -->
     <script src="../assets/js/custom.js"></script>
 </body>
-<!-- Mirrored from spruko.com/demo/ynex/dist/html/grid-tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jul 2023 13:33:54 GMT -->
+<!-- Mirrored from spruko.com/demo/ynex/dist/html/alerts.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Jul 2023 13:33:24 GMT -->
 
 </html>
