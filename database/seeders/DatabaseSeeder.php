@@ -66,6 +66,11 @@ class DatabaseSeeder extends Seeder
                                         "title" => "Update Permission",
                                         "link"=>"/permission/update_permission",
                                         "permission_name"=>"update_permission"
+                                    ],
+                                    [
+                                        "title" => "Update Permission",
+                                        "link"=>"/permission/update_permission",
+                                        "permission_name"=>"update_permission"
                                     ]
                                 ]
                     ],
