@@ -1,38 +1,38 @@
 <!DOCTYPE html><!-- saved from url=(0014)about:internet -->
-<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" 
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
 data-menu-styles="dark" data-toggled="close">
 
 
-<head><!-- Meta Data --> 
+<head><!-- Meta Data -->
 <meta charset="UTF-8"><meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>
-    
+
 Ethiopian Investment Commission </title>
 
 <meta name="Description"><meta name="Author" content="">
-<meta name="keywords" content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit."> 
+<meta name="keywords" content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
 
 
 <link rel="icon" href="" type="image/x-icon">
-<script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script> 
+<script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
 
 
-<!-- Main Theme Js --> <script src="assets/js/main.js"></script> <!-- Bootstrap Css --> 
-<link id="style" href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Style Css --> 
+<!-- Main Theme Js --> <script src="assets/js/main.js"></script> <!-- Bootstrap Css -->
+<link id="style" href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Style Css -->
 <link href="assets/css/styles.min.css" rel="stylesheet"> <!-- Icons Css -->
- <link href="assets/css/icons.css" rel="stylesheet"> <!-- Node Waves Css --> 
- <link href="assets/libs/node-waves/waves.min.css" rel="stylesheet"> <!-- Simplebar Css --> 
- <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet"> <!-- Color Picker Css --> 
+ <link href="assets/css/icons.css" rel="stylesheet"> <!-- Node Waves Css -->
+ <link href="assets/libs/node-waves/waves.min.css" rel="stylesheet"> <!-- Simplebar Css -->
+ <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet"> <!-- Color Picker Css -->
  <link rel="stylesheet" href="assets/libs/flatpickr/flatpickr.min.css">
  <link rel="stylesheet" href="assets/libs/%40simonwep/pickr/themes/nano.min.css"> <!-- Choices Css -->
   <link rel="stylesheet" href="assets/libs/choices.js/public/assets/styles/choices.min.css">
   <link rel="stylesheet" href="assets/libs/jsvectormap/css/jsvectormap.min.css">
-  <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css"> 
+  <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
 
 
-  <link rel="stylesheet" href="https://fontawesome.com/v4/icons/"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 

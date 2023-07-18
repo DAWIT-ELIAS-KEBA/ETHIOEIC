@@ -4,22 +4,28 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Actor\adminController;
 use App\Http\Controllers\Actor\investorController;
+use App\Http\Controllers\Actor\RolePermissionController;
 use App\Http\Controllers\Actor\TempController;
 Route::get('/test', [TempController::class, 'test']);
-
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/dashboard', function () {
     return view('investors.investors_dashboard');
-
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
 })->middleware('auth')->name('verification.notice');
 
+
+Route::middleware('auth')->group(function () {
+    Route::controller(RolePermissionController::class)->group(function(){
+        Route::get('/role/view_roles', 'view_roles');
+        Route::get('/role/load_roles', 'load_roles');
+    })->middleware("permission:view_role");
+});
 
 
 Route::middleware('auth')->group(function () {
@@ -118,5 +124,11 @@ Route::controller(adminController::class)->group(function(){
       //  Route::get('investors_dashboard', ['uses'=>'App\Http\Controllers\investorController@index', 'as'=>'investor.index']);
              });
        Route::get('/logout',  [adminController::class, 'AdminLogout'] )->name('admin.logout');
+
+
+
+
+
+
 
 require __DIR__.'/auth.php';

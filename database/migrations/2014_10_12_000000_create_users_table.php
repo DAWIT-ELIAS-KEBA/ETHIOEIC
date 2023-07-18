@@ -23,11 +23,23 @@ return new class extends Migration
             $table->timestamps();
         });
 
+        Schema::create('permission_group', function (Blueprint $table)
+        {
+            $table->increments('id');
+            $table->string('group_name')->unique();
+            $table->integer('order_num');
+            $table->timestamps();
+        });
+
+
         Schema::create('permissions', function (Blueprint $table)
         {
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('label');
+            $table->integer('order_num');
+            $table->unsignedInteger('group_id');
+            $table->foreign('group_id')->references('id')->on('permission_group')->onDelete('cascade');
             $table->timestamps();
         });
 
@@ -79,6 +91,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('user_type');    // for users or investor
             $table->string('icon');
+            $table->string('code');
             $table->timestamps();
         });
 
@@ -88,6 +101,7 @@ return new class extends Migration
             $table->unsignedInteger('menu_id');
             $table->unsignedInteger('permission_id')->nullable();
             $table->string('link');
+            $table->string('item_code');
             $table->timestamps();
             $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade');
             $table->foreign('menu_id')->references('id')->on('sidebar_menu')->onDelete('cascade');

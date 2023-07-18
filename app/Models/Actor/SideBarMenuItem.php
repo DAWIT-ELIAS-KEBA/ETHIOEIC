@@ -10,7 +10,7 @@ class SideBarMenuItem extends Model
     use HasFactory;
     protected $table='sidebar_menu_item';
     protected $id='id';
-    protected $fillable = ['title','menu_id','permission_id','created_at','updated_at'];
+    protected $fillable = ['title','menu_id','permission_id','item_code','created_at','updated_at'];
     public function Menu()
     {
         return $this->belongsTo(SideBarMenu::class,'menu_id','id');

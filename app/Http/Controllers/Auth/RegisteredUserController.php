@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
-use App\Models\customer;
+use App\Models\Actor\User;
+use App\Models\Actor\Customer;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -48,7 +48,7 @@ class RegisteredUserController extends Controller
         $filename1 = $random1.'.'.$request->file('photo')->getClientOriginalExtension();
         $path1=$request->file('photo')->storeAs('images/'.$folder,$filename1,'public');
         $fpath1='/storage/'.$path1;
-        
+
         if ($request->hasFile('id_card')) {
             $random2 = Str::random(15);
             $folder2 = '/ID';
@@ -57,10 +57,10 @@ class RegisteredUserController extends Controller
             $fpath2 = '/storage/'.$path2;
 
         } else {
-     
+
             $fpath2 = '';
         }
-       
+
         if ($request->hasFile('passport')) {
             $random3 = Str::random(15);
         $folder3 = '/Passport';
@@ -69,7 +69,7 @@ class RegisteredUserController extends Controller
         $fpath3='/storage/'.$path3;
 
         } else {
-     
+
             $fpath3 = '';
         }
 
@@ -78,18 +78,18 @@ class RegisteredUserController extends Controller
         $x = 'Local';
     }
      else {
-        
+
         $x = 'Foreign Country';
     }
-        $customer = customer::create([
+        $customer = Customer::create([
             'phone' => $request->phone,
             'country' => $request->country,
             'passport' => $fpath3,
             'id_card' =>$fpath2,
             'photo' => $fpath1,
             'country_type' => $x,
-            'user_id' => $user->id,    
-             
+            'user_id' => $user->id,
+
         ]);
 
         event(new Registered($customer));

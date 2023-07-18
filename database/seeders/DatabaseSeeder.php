@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Actor\Permission;
+use App\Models\Actor\PermissionGroup;
 use App\Models\Actor\SideBarMenu;
 use App\Models\Actor\SideBarMenuItem;
 use Illuminate\Database\Seeder;
@@ -21,21 +22,66 @@ class DatabaseSeeder extends Seeder
 
     public function PermissionSeeder()
     {
-        $permissions=[
-                         //["name"=>"new_permission","label"=>"New Permission"],
-                         //["name"=>"delete_permission","label"=>"Delete Permission"],
-                         //["name"=>"update_permission","label"=>"Update Permission"],
-                         //["name"=>"review_investment","label"=>"Review investment"]
-                     ];
-        foreach ($permissions as $permission)
+        $permission_data=[
+                            [
+                                "group_name"=>"ROLE PERMISSION MANAGMENT",
+                                "group_order_num"=>1,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"view_role","label"=>"View Role","order_num"=>1],
+                                        ["name"=>"create_new_role","label"=>"Creating New Role","order_num"=>2],
+                                        ["name"=>"assign_role_permission","label"=>"Assign Permission To Role","order_num"=>3],
+                                        ["name"=>"update_role","label"=>"Update Role Information","order_num"=>4],
+                                        ["name"=>"remove_role_permission","label"=>"Remove Permission From Role","order_num"=>5],
+                                    ]
+                            ],
+                            [
+                                "group_name"=>"USER ROLE MANAGMENT",
+                                "group_order_num"=>2,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"assign_user_role","label"=>"Assign User Role","order_num"=>1],
+                                        ["name"=>"remove_user_role","label"=>"Remove User Role","order_num"=>2],
+                                        ["name"=>"view_user_role","label"=>"View User Role","order_num"=>3],
+                                    ]
+                            ],
+                            [
+                                "group_name"=>"USER PERMISSION MANAGMENT",
+                                "group_order_num"=>3,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"view_user_permission","label"=>"View User Permission","order_num"=>1],
+                                        ["name"=>"assign_user_permission","label"=>"Assign User Permission","order_num"=>2],
+                                        ["name"=>"remove_user_permission","label"=>"Remove User Permission","order_num"=>3],
+                                    ]
+                            ]
+                        ];
+        foreach ($permission_data as $permissions)
         {
-            $mypermission=Permission::where("name",$permission["name"])->get()->first();
-            if(!$mypermission)
+            $permission_group=PermissionGroup::where("group_name",$permissions["group_name"])->get()->first();
+            if (!$permission_group)
             {
-                Permission::create([
-                    "name"=>$permission['name'],
-                    "label"=>$permission['label']
+                $permission_group=PermissionGroup::create([
+                    "group_name"=>$permissions["group_name"],
+                    "order_num"=>$permissions["group_order_num"]
                 ]);
+            }
+            foreach($permissions["permissions"] as $permission)
+            {
+                $mypermission=Permission::where("name",$permission["name"])->get()->first();
+                if(!$mypermission)
+                {
+                    Permission::create([
+                        "name"=>$permission['name'],
+                        "label"=>$permission['label'],
+                        "group_id"=>$permission_group->id,
+                        "order_num"=>$permission['order_num']
+                    ]);
+                }
+                else
+                {
+                    $mypermission->update(["order_num"=>$permission['order_num']]);
+                }
             }
 
         }
@@ -43,90 +89,49 @@ class DatabaseSeeder extends Seeder
 
     public function SideBarData()
     {
+
         $data=[
-                    /*[
-                        "menu"=>[
-                                    "title"=>"Permission service",
-                                    "user_type"=>"user",  ///user or customer
-                                    "icon"=>"key"
-                                ],
-                        "menuItems"=>
-                                [
-                                    [
-                                        "title" => "New Permission",
-                                        "link"=>"/permission/new_permission",
-                                        "permission_name"=>"new_permission"
-                                    ],
-                                    [
-                                        "title" => "Delete Permission",
-                                        "link"=>"/permission/delete_permission",
-                                        "permission_name"=>"delete_permission"
-                                    ],
-                                    [
-                                        "title" => "Update Permission",
-                                        "link"=>"/permission/update_permission",
-                                        "permission_name"=>"update_permission"
-                                    ],
-                                    [
-                                        "title" => "Update Permission",
-                                        "link"=>"/permission/update_permission",
-                                        "permission_name"=>"update_permission"
-                                    ]
-                                ]
-                    ],
                     [
                         "menu"=>[
-                                    "title"=>"Role service",
+                                    "title"=>"Role And Permission",
                                     "user_type"=>"user",  ///user or customer
-                                    "icon"=>"key"
+                                    "icon"=>"user",
+                                    "code"=>"MC-01"
                                 ],
                         "menuItems"=>
                                 [
                                     [
-                                        "title" => "New Role",
-                                        "link"=>"/role/new_role",
-                                        "permission_name"=>"new_role"
-                                    ],
-                                    [
-                                        "title" => "Delete Role",
-                                        "link"=>"/role/delete_role",
-                                        "permission_name"=>"delete_role"
-                                    ],
-                                    [
-                                        "title" => "Update Role",
-                                        "link"=>"/role/update_role",
-                                        "permission_name"=>"update_role"
+                                        "title" => "Role management",
+                                        "link"=>"/role/view_roles",
+                                        "permission_name"=>"view_role",
+                                        "item_code"=>"MC-01-MI-01"
                                     ]
-                                ]
-                    ],
-                    [
-                        "menu"=>[
-                                    "title"=>"Investment service",
-                                    "user_type"=>"user",  ///user or customer
-                                    "icon"=>"key"
-                                ],
-                        "menuItems"=>
-                                [
-                                    [
-                                        "title" => "Review Investment",
-                                        "link"=>"/investment/review_investment",
-                                        "permission_name"=>"review_investment"
-                                    ],
 
                                 ]
-                    ]*/
+                    ]
                 ];
         foreach($data as $ele)
         {
-            $side_bar_menu=SideBarMenu::where("title",$ele["menu"]["title"])->get()->first();
+            $side_bar_menu=SideBarMenu::where("code",$ele["menu"]["code"])->get()->first();
             if(!$side_bar_menu)
             {
                 $side_bar_menu=SideBarMenu::create($ele["menu"]);
 
             }
+            else 
+            {
+                $side_bar_menu->update(
+                    [
+                        "title"=>$ele["menu"]["title"],
+                        "icon"=>$ele["menu"]["icon"],
+                        "user_type"=>$ele["menu"]["user_type"]
+                    ]);
+                
+            }
+
             foreach($ele["menuItems"] as $menuItem)
             {
-                $menu_item=SideBarMenuItem::where("menu_id",$side_bar_menu->id)->where("title",$menuItem["title"])->get()->first();
+                $menu_item=SideBarMenuItem::where("menu_id",$side_bar_menu->id)->where("item_code",$menuItem["item_code"])->get()->first();
                 if(!$menu_item)
                 {
                     $permission=Permission::where("name",$menuItem["permission_name"])->get()->first();
@@ -134,6 +139,15 @@ class DatabaseSeeder extends Seeder
                         "title"=>$menuItem["title"],
                         "link"=>$menuItem["link"],
                         "menu_id"=>$side_bar_menu->id,
+                        "item_code"=>$menuItem["item_code"],
+                        "permission_id"=>$permission?$permission->id:NULL
+                    ]);
+                }
+                else 
+                {
+                    $permission=Permission::where("name",$menuItem["permission_name"])->get()->first();
+                    $menu_item->update([
+                        "link"=>$menuItem["link"],
                         "permission_id"=>$permission?$permission->id:NULL
                     ]);
                 }

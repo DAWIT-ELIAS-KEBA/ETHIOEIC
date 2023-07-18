@@ -71,7 +71,6 @@
                                 </div>
                             </div>
                             <div class="card-footer d-none border-top-0">
-                                <!-- Prism Code -->
                                 <pre class="language-html"><code class="language-html">&lt;div class="table-responsive"&gt;
     &lt;table class="table text-nowrap"&gt;
         &lt;thead&gt;

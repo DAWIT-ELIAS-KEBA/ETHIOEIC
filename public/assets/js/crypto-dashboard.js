@@ -289,10 +289,10 @@ var options = {
     }
   }
 };
-document.getElementById('crypto').innerHTML = '';
+//document.getElementById('crypto').innerHTML = '';
 var chart = new ApexCharts(document.querySelector("#crypto"), options);
 chart.render();
-  
+
 function cryptoCurrency() {
   chart.updateOptions({ plotOptions: {
     candlestick: {
@@ -359,7 +359,7 @@ var spark1 = {
   colors: ['#26bf94'],
 
 }
-document.getElementById('btc-chart').innerHTML = '';
+//document.getElementById('btc-chart').innerHTML = '';
 var spark1 = new ApexCharts(document.querySelector("#btc-chart"), spark1);
 spark1.render();
 
@@ -415,7 +415,7 @@ var spark2 = {
   colors: ['#26bf94'],
 
 }
-document.getElementById('eth-chart').innerHTML = '';
+//document.getElementById('eth-chart').innerHTML = '';
 var spark2 = new ApexCharts(document.querySelector("#eth-chart"), spark2);
 spark2.render();
 
@@ -471,7 +471,7 @@ var spark3 = {
   colors: ['#e6533c'],
 
 }
-document.getElementById('dash-chart').innerHTML = '';
+//document.getElementById('dash-chart').innerHTML = '';
 var spark3 = new ApexCharts(document.querySelector("#dash-chart"), spark3);
 spark3.render();
 /* End:: Main cards charts */
@@ -532,7 +532,7 @@ var spark4 = {
   colors: ['#26bf94'],
 
 }
-document.getElementById('bitcoin-price-graph').innerHTML = '';
+///document.getElementById('bitcoin-price-graph').innerHTML = '';
 var spark4 = new ApexCharts(document.querySelector("#bitcoin-price-graph"), spark4);
 spark4.render();
 
@@ -591,7 +591,7 @@ var spark5 = {
   colors: ['#e6533c'],
 
 }
-document.getElementById('etherium-price-graph').innerHTML = '';
+//document.getElementById('etherium-price-graph').innerHTML = '';
 var spark5 = new ApexCharts(document.querySelector("#etherium-price-graph"), spark5);
 spark5.render();
 
@@ -650,7 +650,7 @@ var spark6 = {
   colors: ['#26bf94'],
 
 }
-document.getElementById('dash-price-graph').innerHTML = '';
+//document.getElementById('dash-price-graph').innerHTML = '';
 var spark6 = new ApexCharts(document.querySelector("#dash-price-graph"), spark6);
 spark6.render();
 
@@ -709,7 +709,7 @@ var spark7 = {
   colors: ['#26bf94'],
 
 }
-document.getElementById('ripple-price-graph').innerHTML = '';
+//document.getElementById('ripple-price-graph').innerHTML = '';
 var spark7 = new ApexCharts(document.querySelector("#ripple-price-graph"), spark7);
 spark7.render();
 
@@ -768,7 +768,7 @@ var spark8 = {
   colors: ['#e6533c'],
 
 }
-document.getElementById('iota-price-graph').innerHTML = '';
+//document.getElementById('iota-price-graph').innerHTML = '';
 var spark8 = new ApexCharts(document.querySelector("#iota-price-graph"), spark8);
 spark8.render();
 
@@ -827,7 +827,7 @@ var spark9 = {
   colors: ['#e6533c'],
 
 }
-document.getElementById('neo-price-graph').innerHTML = '';
+//document.getElementById('neo-price-graph').innerHTML = '';
 var spark9 = new ApexCharts(document.querySelector("#neo-price-graph"), spark9);
 spark9.render();
 /* End:: Crypto Currencies Market Value charts */

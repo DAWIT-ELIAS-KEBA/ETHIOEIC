@@ -187,6 +187,8 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'permission' => App\Http\Middleware\Permission::class,
     ])->toArray(),
+
 
 ];
