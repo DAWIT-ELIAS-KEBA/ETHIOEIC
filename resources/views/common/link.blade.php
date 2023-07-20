@@ -1,5 +1,8 @@
 
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+
         <meta charset="UTF-8"><meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <title> Ethiopian Investment Commission </title>
@@ -13,6 +16,8 @@
         <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
         <script src="{{ asset("assets/libs/choices.js/public/assets/scripts/choices.min.js")}}"></script>
+
+        <script src="{{ asset("assets\js\mylibrary.js")}}"></script>
 
 
         <!-- Main Theme Js --> <script src="{{ asset("assets/js/main.js") }}"></script> <!-- Bootstrap Css -->
@@ -31,6 +36,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" >
 
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <link href="{{ asset("assets/css/spinner.css")}}" rel="stylesheet"> <!-- Node Waves Css -->
+
 
         <script type="text/javascript"><!--
         function q9s1(j26b){var

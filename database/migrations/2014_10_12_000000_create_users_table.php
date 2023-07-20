@@ -151,16 +151,30 @@ return new class extends Migration
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
         });
 
+        Schema::create('main_stakeholders', function (Blueprint $table) {
+            $table->increments("id");
+            $table->string('name');
+            $table->string('code')->unique();
+            $table->timestamps();
+        });
+
+
         Schema::create('stakeholders', function (Blueprint $table) {
             $table->increments("id");
+            $table->unsignedInteger('main_id');
             $table->string('name');
             $table->string('code');
             $table->string('api_link')->nullable();
             $table->string('api_token')->nullable();
             $table->string('key')->nullable();
             $table->string('data_format')->nullable();
+            $table->unsignedInteger('added_by');
             $table->timestamps();
+            $table->foreign('main_id')->references('id')->on('main_stakeholders')->onDelete('cascade');
+            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
         });
+
+
 
 
     }

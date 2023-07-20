@@ -24,8 +24,28 @@ Route::middleware('auth')->group(function () {
     Route::controller(RolePermissionController::class)->group(function(){
         Route::get('/role/view_roles', 'view_roles');
         Route::get('/role/load_roles', 'load_roles');
+        Route::get('/role/load_role_permissions', 'load_role_permissions');
     })->middleware("permission:view_role");
+
+    Route::controller(RolePermissionController::class)->group(function(){
+        Route::get('/role/assign_deassign_permission', 'assign_deassign_permission');
+    })->middleware("permission:assign_role_permission");
+
+    Route::controller(RolePermissionController::class)->group(function(){
+        Route::post('/role/add_new_role', 'add_new_role');
+    })->middleware("permission:create_new_role");
+
+    Route::controller(RolePermissionController::class)->group(function(){
+        Route::post('/role/update_role', 'update_role');
+    })->middleware("permission:update_role");
+    Route::controller(RolePermissionController::class)->group(function(){
+        Route::get('/role/delete_role', 'delete_role');
+    })->middleware("permission:delete_role");
+
 });
+
+
+
 
 
 Route::middleware('auth')->group(function () {

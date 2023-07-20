@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
                                 "permissions"=>
                                     [
                                         ["name"=>"view_role","label"=>"View Role","order_num"=>1],
+                                        ["name"=>"delete_role","label"=>"Delete Role","order_num"=>1],
                                         ["name"=>"create_new_role","label"=>"Creating New Role","order_num"=>2],
                                         ["name"=>"assign_role_permission","label"=>"Assign Permission To Role","order_num"=>3],
                                         ["name"=>"update_role","label"=>"Update Role Information","order_num"=>4],
@@ -106,7 +107,6 @@ class DatabaseSeeder extends Seeder
                                         "permission_name"=>"view_role",
                                         "item_code"=>"MC-01-MI-01"
                                     ]
-
                                 ]
                     ]
                 ];
@@ -118,7 +118,7 @@ class DatabaseSeeder extends Seeder
                 $side_bar_menu=SideBarMenu::create($ele["menu"]);
 
             }
-            else 
+            else
             {
                 $side_bar_menu->update(
                     [
@@ -126,7 +126,6 @@ class DatabaseSeeder extends Seeder
                         "icon"=>$ele["menu"]["icon"],
                         "user_type"=>$ele["menu"]["user_type"]
                     ]);
-                
             }
 
             foreach($ele["menuItems"] as $menuItem)
@@ -143,7 +142,7 @@ class DatabaseSeeder extends Seeder
                         "permission_id"=>$permission?$permission->id:NULL
                     ]);
                 }
-                else 
+                else
                 {
                     $permission=Permission::where("name",$menuItem["permission_name"])->get()->first();
                     $menu_item->update([
