@@ -47,7 +47,7 @@
         </script>
 
 
-
+         <script src="{{ asset("assets/js/jquery.dataTables.min.js")}}"></script>
 
         <meta http-equiv="imagetoolbar" content="no" /><style type="text/css">
 

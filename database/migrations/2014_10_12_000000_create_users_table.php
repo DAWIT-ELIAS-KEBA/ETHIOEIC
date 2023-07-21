@@ -17,11 +17,41 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->date('last_login')->nullable();
             $table->string('user_type')->default('investor');
             $table->string('signature')->nullable();
+            $table->boolean('status')->default(0);
+            $table->unsignedInteger('added_by')->nullable();
+            $table->unsignedInteger('updated_by')->nullable();
+            $table->unsignedInteger('statusChangedBy')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::table('users', function (Blueprint $table)
+        {
+            $table->foreign('added_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('updated_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('statusChangedBy')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+        });
+
+        Schema::create('user_image', function (Blueprint $table) {
+            $table->increments("id");
+            $table->unsignedInteger('user_id');
+            $table->string('approved_photo')->nullable();
+            $table->string('uploaded_photo')->nullable();
+            $table->unsignedInteger('approved_by')->nullable();
+            $table->date('last_approve')->nullable();
+            $table->string('comment');
+            $table->rememberToken();
+            $table->timestamps();
+            $table->foreign('approved_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+        });
+
+
+
+
 
         Schema::create('permission_group', function (Blueprint $table)
         {

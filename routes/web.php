@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Actor\adminController;
 use App\Http\Controllers\Actor\investorController;
 use App\Http\Controllers\Actor\RolePermissionController;
+use App\Http\Controllers\Actor\UsersController;
 use App\Http\Controllers\Actor\TempController;
 Route::get('/test', [TempController::class, 'test']);
 Route::get('/', function () {
@@ -20,29 +21,51 @@ Route::get('/email/verify', function () {
 })->middleware('auth')->name('verification.notice');
 
 
-Route::middleware('auth')->group(function () {
+Route::group(['prefix' => 'role'],function ()
+{
     Route::controller(RolePermissionController::class)->group(function(){
-        Route::get('/role/view_roles', 'view_roles');
-        Route::get('/role/load_roles', 'load_roles');
-        Route::get('/role/load_role_permissions', 'load_role_permissions');
+        Route::get('view_roles', 'view_roles');
+        Route::get('load_roles', 'load_roles');
+        Route::get('load_role_permissions', 'load_role_permissions');
     })->middleware("permission:view_role");
 
     Route::controller(RolePermissionController::class)->group(function(){
-        Route::get('/role/assign_deassign_permission', 'assign_deassign_permission');
+        Route::get('assign_deassign_permission', 'assign_deassign_permission');
+        Route::get('assign_all_role_permission', 'assign_all_role_permission');
+        Route::get('remove_all_role_permission', 'remove_all_role_permission');
     })->middleware("permission:assign_role_permission");
 
-    Route::controller(RolePermissionController::class)->group(function(){
-        Route::post('/role/add_new_role', 'add_new_role');
+    Route::controller(RolePermissionController::class)->group(function()
+    {
+        Route::post('add_new_role', 'add_new_role');
     })->middleware("permission:create_new_role");
 
     Route::controller(RolePermissionController::class)->group(function(){
-        Route::post('/role/update_role', 'update_role');
+        Route::post('update_role', 'update_role');
     })->middleware("permission:update_role");
     Route::controller(RolePermissionController::class)->group(function(){
-        Route::get('/role/delete_role', 'delete_role');
+        Route::get('delete_role', 'delete_role');
     })->middleware("permission:delete_role");
 
-});
+})->middleware('auth');
+
+
+
+
+Route::group(['prefix' => 'user'],function ()
+{
+    Route::controller(UsersController::class)->group(function(){
+        Route::get('view_users', 'view_users');
+    })->middleware("permission:view_users");
+    Route::controller(UsersController::class)->group(function(){
+        Route::get('load_users', 'load_users');
+    })->middleware("permission:view_users");
+    Route::controller(UsersController::class)->group(function(){
+        Route::post('add_new_user', 'add_new_user');
+    })->middleware("permission:add_new_user");
+
+})->middleware('auth');
+
 
 
 

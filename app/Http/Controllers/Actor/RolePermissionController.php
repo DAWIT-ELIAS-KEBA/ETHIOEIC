@@ -15,12 +15,13 @@ class RolePermissionController extends Controller
     function view_roles()
     {
        /** @var \App\Models\Actor\User */
-       if(!Auth::user() || !Auth::user()->hasPermissionWithName("view_role"))
+       if(!Auth::user() || !Auth::user()->hasPermissionWithName("view_users"))
        {
             return view("errors.role_permission_error");
        }
        return view("basic.roles");
     }
+
     function load_roles(Request $request)
     {
        /** @var \App\Models\Actor\User */
@@ -36,6 +37,7 @@ class RolePermissionController extends Controller
        }
        return $roles;
     }
+
     function load_role_permissions(Request $request)
     {
         if(!Auth::user() || !Auth::user()->hasPermissionWithName("view_role"))
@@ -66,6 +68,7 @@ class RolePermissionController extends Controller
                 }
             }
         }
+
         return $permission_groups;
     }
 
@@ -81,14 +84,14 @@ class RolePermissionController extends Controller
 
         if(!$role)
         {
-            return "dd";
+            return "";
         }
 
         $permission=Permission::where("id",$request->permission_id)->get()->first();
 
         if(!$permission)
         {
-            return "ff";
+            return "";
         }
 
         if($role->Permissions->contains($permission))
@@ -97,11 +100,61 @@ class RolePermissionController extends Controller
         }
         else
         {
-            $role->Permissions()->attach($permission,["added_by"=>Auth::user()->id]);
+            if(!$role->Permissions->contains($permission))
+            {
+                $role->Permissions()->attach($permission,["added_by"=>Auth::user()->id]);
+            }
         }
         return "yes";
     }
 
+
+    function assign_all_role_permission(Request $request)
+    {
+        if(!Auth::user() || !Auth::user()->hasPermissionWithName("assign_role_permission"))
+        {
+            return "";
+        }
+        $role=Role::where("id",$request->role_id)->get()->first();
+
+        if(!$role)
+        {
+            return "";
+        }
+
+        $permissions=Permission::all();
+
+        foreach($permissions as $permission)
+        {
+            if(!$role->Permissions->contains($permission))
+            {
+                $role->Permissions()->attach($permission,["added_by"=>Auth::user()->id]);
+            }
+        }
+
+        return "yes";
+
+
+
+    }
+
+    function remove_all_role_permission(Request $request)
+    {
+        if(!Auth::user() || !Auth::user()->hasPermissionWithName("assign_role_permission"))
+        {
+            return "";
+        }
+        $role=Role::where("id",$request->role_id)->get()->first();
+
+        if(!$role)
+        {
+            return "";
+        }
+
+        $role->Permissions()->detach(Permission::all(),["added_by"=>Auth::user()->id]);
+
+        return "yes";
+    }
 
     function add_new_role(Request $request)
     {
@@ -192,12 +245,11 @@ class RolePermissionController extends Controller
             return "Select valid role to delete!!";
         }
 
+        $role->Permissions()->detach(Permission::all(),["added_by"=>Auth::user()->id]);
+        $role->Users()->detach(Permission::all(),["added_by"=>Auth::user()->id]);
 
-
-
-
+        $role->delete();
         return "yes";
     }
-
 
 }

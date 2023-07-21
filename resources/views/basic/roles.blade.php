@@ -9,7 +9,7 @@
     pointer-events: none;
  }
 </style>
-<div class="card custom-card mt-3">
+<div class="card custom-card">
     <div class="card-header ">
         <div class="card-title text-center pl-4"> Role Management</div>
     </div>
@@ -210,7 +210,7 @@
                         <tr>
                             <td>Do you want to assign all the permission for the role of "<span id='assign_all_permission_role_name' style='color:brown;font-weight:bolder'></span>"? <br/>
                             </td>
-                            <td style="width:60px;vertical-align:top" class='pr-3'><button id='assign_all_permission_confirm' onclick='confirm_assigning_all_permission()' class='btn btn-sm btn-primary'>YES</button></td>
+                            <td style="width:60px;vertical-align:top" class='pr-3'><button id='assign_all_permission_confirm' onclick='$("#assign_all_permission_modal").modal("hide");confirm_assigning_all_permission()' class='btn btn-sm btn-primary'>YES</button></td>
                             <td style="width:40px;vertical-align:top"><button class='btn btn-sm btn-danger' onclick="$('#assign_all_permission_modal').modal('hide')">NO</button></td>
                         </tr>
                     </table>
@@ -223,9 +223,9 @@
 
 
 
-<div class='modal fade' id='remove_all_permission_modal' tabindex='-1' aria-labelledby='exampleModalSmLabel' aria-hidden='true'>
-    <div class='modal-dialog  modal-dialog-centered modal-lg'>
-       <div class='modal-content'>
+  <div class='modal fade ' id='remove_all_permission_modal' tabindex='-1' aria-labelledby='exampleModalSmLabel' aria-hidden='true'>
+    <div class='modal-dialog modal-dialog-centered modal-lg'>
+       <div class='modal-content' style='border:5px solid gray'>
           <div class='modal-header'>
               <h6 class='modal-title' id='exampleModalSmLabel'>Remove all permission for Role </h6>
               <button type='button' class='btn-close' data-bs-dismiss='modal'
@@ -238,8 +238,7 @@
                         <tr>
                             <td>Do you want to remove all the permission for the role of "<span id='remove_all_permission_role_name' style='color:brown;font-weight:bolder'></span>"? <br/>
                             </td>
-
-                            <td style="width:60px;vertical-align:top" class='pr-3'><button id='remove_all_permission_confirm' role_id="" onclick='confirm_removing_all_permission()' class='btn btn-sm btn-primary'>YES</button></td>
+                            <td style="width:60px;vertical-align:top" class='pr-3'><button id='remove_all_permission_confirm' onclick='$("#remove_all_permission_modal").modal("hide");confirm_removing_all_permission()' class='btn btn-sm btn-primary'>YES</button></td>
                             <td style="width:40px;vertical-align:top"><button class='btn btn-sm btn-danger' onclick="$('#remove_all_permission_modal').modal('hide')">NO</button></td>
                         </tr>
                     </table>
@@ -249,6 +248,8 @@
       </div>
     </div>
   </div>
+
+
 
 
 <script>
@@ -437,7 +438,29 @@
                     }
                     else
                     {
-                        alert
+                        alert(data);
+                    }
+                }
+            });
+
+        }
+        function confirm_removing_all_permission()
+        {
+            var userURL = '/role/remove_all_role_permission';
+            $.ajax({
+                url: userURL,
+                type: 'GET',
+                dataType: 'text',
+                data:{role_id:$("#role_name_for_permission").attr("role_id")},
+                success: function(data)
+                {
+                    if(data=="yes")
+                    {
+                        view_role_permissions($("#role_name_for_permission").attr("role_id"),$("#role_name_for_permission").html());
+                    }
+                    else
+                    {
+                        alert(data);
                     }
                 }
             });
@@ -572,7 +595,11 @@
                 {
                     if(data=="yes")
                     {
-
+                        load_roles();
+                    }
+                    else
+                    {
+                        alert(data);
                     }
                 }
             });
