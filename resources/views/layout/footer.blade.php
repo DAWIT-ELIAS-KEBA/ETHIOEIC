@@ -1,4 +1,8 @@
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> aadcd5f66a92d4a1f959dc74d875691e0f1525fc
 <footer class="footer mt-auto py-3 bg-white text-center">
     <div class="container"> <span class="text-muted"> Copyright © <span id="year"></span> <a href="javascript:void(0);"
                 class="text-dark fw-semibold"></a>. Developed By <span class="bi bi- text-danger"></span>
@@ -6,7 +10,11 @@
                     class="fw-semibold text-primary text-decoration-underline">Ethiopian Artificial Intelligence Institute</span> </a> All rights reserved
         </span> </div>
 </footer>
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> aadcd5f66a92d4a1f959dc74d875691e0f1525fc
         <!-- Footer End -->
     </div>
     <div class="scrollToTop"> <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span> </div>

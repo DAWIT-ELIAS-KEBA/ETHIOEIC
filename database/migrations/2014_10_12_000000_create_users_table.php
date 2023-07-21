@@ -17,11 +17,41 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->date('last_login')->nullable();
             $table->string('user_type')->default('investor');
             $table->string('signature')->nullable();
+            $table->boolean('status')->default(0);
+            $table->unsignedInteger('added_by')->nullable();
+            $table->unsignedInteger('updated_by')->nullable();
+            $table->unsignedInteger('statusChangedBy')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::table('users', function (Blueprint $table)
+        {
+            $table->foreign('added_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('updated_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('statusChangedBy')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+        });
+
+        Schema::create('user_image', function (Blueprint $table) {
+            $table->increments("id");
+            $table->unsignedInteger('user_id');
+            $table->string('approved_photo')->nullable();
+            $table->string('uploaded_photo')->nullable();
+            $table->unsignedInteger('approved_by')->nullable();
+            $table->date('last_approve')->nullable();
+            $table->string('comment');
+            $table->rememberToken();
+            $table->timestamps();
+            $table->foreign('approved_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
+        });
+
+
+
+
 
         Schema::create('permission_group', function (Blueprint $table)
         {
@@ -151,16 +181,30 @@ return new class extends Migration
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
         });
 
+        Schema::create('main_stakeholders', function (Blueprint $table) {
+            $table->increments("id");
+            $table->string('name');
+            $table->string('code')->unique();
+            $table->timestamps();
+        });
+
+
         Schema::create('stakeholders', function (Blueprint $table) {
             $table->increments("id");
+            $table->unsignedInteger('main_id');
             $table->string('name');
             $table->string('code');
             $table->string('api_link')->nullable();
             $table->string('api_token')->nullable();
             $table->string('key')->nullable();
             $table->string('data_format')->nullable();
+            $table->unsignedInteger('added_by');
             $table->timestamps();
+            $table->foreign('main_id')->references('id')->on('main_stakeholders')->onDelete('cascade');
+            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
         });
+
+
 
 
     }

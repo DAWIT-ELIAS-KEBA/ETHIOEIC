@@ -20,9 +20,8 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     //use HasRoles;
     protected $fillable = [
-        'name',
-        'email',
-        'password', "created_at", 	"updated_at"
+        'name','email','password',"email_verified_at",'last_login','photo',"status","added_by", "updated_by", "statusChangedBy","remember_token","created_at", 	"updated_at"
+
     ];
 
     /**
@@ -55,4 +54,22 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->belongsToMany(Role::class, UserRole::class, 'user_id', 'role_id');
     }
+
+    public function AddedBy()
+    {
+        return $this->belongsTo(self::class, 'added_by');
+    }
+
+    public function UpdatedBy()
+    {
+        return $this->belongsTo(self::class, 'update_by');
+    }
+
+    public function StatusChangedBy()
+    {
+        return $this->belongsTo(self::class, 'statusChangedBy');
+    }
+
+
+
 }

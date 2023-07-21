@@ -8,7 +8,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> aadcd5f66a92d4a1f959dc74d875691e0f1525fc
     Ethiopian Investment Commission </title>
     <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
     <meta name="Author" content="Spruko Technologies Private Limited">

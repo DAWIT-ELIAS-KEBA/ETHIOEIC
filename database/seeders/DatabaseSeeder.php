@@ -6,8 +6,10 @@ namespace Database\Seeders;
 
 use App\Models\Actor\Permission;
 use App\Models\Actor\PermissionGroup;
+use App\Models\Actor\Role;
 use App\Models\Actor\SideBarMenu;
 use App\Models\Actor\SideBarMenuItem;
+use App\Models\Actor\User;
 use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +24,28 @@ class DatabaseSeeder extends Seeder
 
     public function PermissionSeeder()
     {
+        $user=User::where("email","admin@gmail.com")->get()->first();
+        if(!$user)
+        {
+            $user=User::create([
+                "name"=>"Admin",
+                "email"=>"admin@gmail.com",
+                "password"=>"$2y$10\$D.C1lGfc1uHg9smkUdibK.ircCgbA0DiVjgiq9C1UmzCEqalNhCSu",
+                "email_verified_at"=>"2023-8-10",
+                "user_type"=>"user"
+            ]);
+        }
+        $role=Role::where("name","admin")->get()->first();
+        if(!$role)
+        {
+            $role=Role::create([
+                "name"=>"Admin",
+                "added_by"=>$user->id
+            ]);
+        }
+        $role->Users()->attach($user,["added_by"=>$user->id]);
+
+
         $permission_data=[
                             [
                                 "group_name"=>"ROLE PERMISSION MANAGMENT",
@@ -29,6 +53,7 @@ class DatabaseSeeder extends Seeder
                                 "permissions"=>
                                     [
                                         ["name"=>"view_role","label"=>"View Role","order_num"=>1],
+                                        ["name"=>"delete_role","label"=>"Delete Role","order_num"=>1],
                                         ["name"=>"create_new_role","label"=>"Creating New Role","order_num"=>2],
                                         ["name"=>"assign_role_permission","label"=>"Assign Permission To Role","order_num"=>3],
                                         ["name"=>"update_role","label"=>"Update Role Information","order_num"=>4],
@@ -36,23 +61,18 @@ class DatabaseSeeder extends Seeder
                                     ]
                             ],
                             [
-                                "group_name"=>"USER ROLE MANAGMENT",
-                                "group_order_num"=>2,
-                                "permissions"=>
-                                    [
-                                        ["name"=>"assign_user_role","label"=>"Assign User Role","order_num"=>1],
-                                        ["name"=>"remove_user_role","label"=>"Remove User Role","order_num"=>2],
-                                        ["name"=>"view_user_role","label"=>"View User Role","order_num"=>3],
-                                    ]
-                            ],
-                            [
-                                "group_name"=>"USER PERMISSION MANAGMENT",
+                                "group_name"=>"USER MANAGMENT",
                                 "group_order_num"=>3,
                                 "permissions"=>
                                     [
-                                        ["name"=>"view_user_permission","label"=>"View User Permission","order_num"=>1],
+                                        ["name"=>"view_users","label"=>"View user","order_num"=>1],
+                                        ["name"=>"add_new_user","label"=>"Add user","order_num"=>2],
+                                        ["name"=>"update_user","label"=>"Update user","order_num"=>2],
+                                        ["name"=>"delete_user","label"=>"Delete User","order_num"=>2],
+                                        ["name"=>"disable_user","label"=>"Disable user","order_num"=>2],
+                                        ["name"=>"enable_user","label"=>"Enable user","order_num"=>2],
+                                        ["name"=>"assign_user_role","label"=>"Assign User role","order_num"=>2],
                                         ["name"=>"assign_user_permission","label"=>"Assign User Permission","order_num"=>2],
-                                        ["name"=>"remove_user_permission","label"=>"Remove User Permission","order_num"=>3],
                                     ]
                             ],
                             [
@@ -92,9 +112,16 @@ class DatabaseSeeder extends Seeder
                     "order_num"=>$permissions["group_order_num"]
                 ]);
             }
+            else
+            {
+                $permission_group->update(["order_num"=>$permissions["group_order_num"]]);
+            }
             foreach($permissions["permissions"] as $permission)
             {
-                $mypermission=Permission::where("name",$permission["name"])->get()->first();
+                $mypermission=Permission::where("name",$permission["name"])
+                                    ->get()
+                                    ->first();
+
                 if(!$mypermission)
                 {
                     Permission::create([
@@ -106,8 +133,12 @@ class DatabaseSeeder extends Seeder
                 }
                 else
                 {
-                    $mypermission->update(["order_num"=>$permission['order_num']]);
+                    $mypermission->update([
+                        "order_num"=>$permission['order_num'],
+                        "label"=>$permission['label'],
+                        "group_id"=>$permission_group->id]);
                 }
+                $role->Permissions()->attach($mypermission,["added_by"=>$user->id]);
             }
 
         }
@@ -132,7 +163,23 @@ class DatabaseSeeder extends Seeder
                                         "permission_name"=>"view_role",
                                         "item_code"=>"MC-01-MI-01"
                                     ]
-
+                                ]
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"User Management",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-02"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "Users",
+                                        "link"=>"/user/view_users",
+                                        "permission_name"=>"view_user",
+                                        "item_code"=>"MC-02-MI-01"
+                                    ]
                                 ]
                     ],
                     [
@@ -211,7 +258,7 @@ class DatabaseSeeder extends Seeder
                 $side_bar_menu=SideBarMenu::create($ele["menu"]);
 
             }
-            else 
+            else
             {
                 $side_bar_menu->update(
                     [
@@ -219,7 +266,6 @@ class DatabaseSeeder extends Seeder
                         "icon"=>$ele["menu"]["icon"],
                         "user_type"=>$ele["menu"]["user_type"]
                     ]);
-                
             }
 
             foreach($ele["menuItems"] as $menuItem)
@@ -236,7 +282,7 @@ class DatabaseSeeder extends Seeder
                         "permission_id"=>$permission?$permission->id:NULL
                     ]);
                 }
-                else 
+                else
                 {
                     $permission=Permission::where("name",$menuItem["permission_name"])->get()->first();
                     $menu_item->update([
@@ -247,4 +293,7 @@ class DatabaseSeeder extends Seeder
             }
         }
     }
+
+
+
 }
