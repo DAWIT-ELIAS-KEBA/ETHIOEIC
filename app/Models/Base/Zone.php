@@ -16,10 +16,10 @@ class Zone extends Model
     {
         return $this->belongsTo(User::class,'created_by','id');
     }
-    public function Region()
+    public function region()
     {
-        return $this->belongsTo(Zone::class,'region_id','id');
-    }
+        return $this->belongsTo(Region::class, 'region_id', 'id');
+    }    
     public function Woredas()
     {
         return $this->hasMany(Woreda::class,'zone_id','id');
