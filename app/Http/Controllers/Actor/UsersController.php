@@ -10,6 +10,8 @@ use App\Models\Actor\Permission;
 use App\Models\Actor\User;
 use Illuminate\Support\Facades\Validator;
 use DataTables;
+use Illuminate\Support\Facades\Hash;
+
 class UsersController extends Controller
 {
     function view_users(Request $request)
@@ -32,11 +34,16 @@ class UsersController extends Controller
         return DataTables::of($data)
             ->addIndexColumn()
 
+            ->addColumn('name', function($row){
+                return '<table><tr><td style="padding:0px"><img class="rounded-circle circle-img" alt="avatar1" src="'.asset("/assets/avatar.jpg").'" /> </td><td style="padding:0px;padding-left:15px">'.$row->name.'</td></tr></table>';
+             })
             ->addColumn('roles', function($row){
                $html="<table>";
+               $count=0;
                foreach($row->roles as $role)
                {
                     $html.="<tr><td style='padding:0px'>".$role->name."</tr>";
+                    $count+=1;
                }
                $html.="</table>";
                return $html;
@@ -88,9 +95,9 @@ class UsersController extends Controller
             ->addColumn('delete', function($row){
 
                 return '<button class="btn btn-sm btn-danger" onclick=\'delete_user('.$row->id.')\'>delete</button>';
-                })
+            })
 
-            ->rawColumns(['roles','permissions','last_login','user_status','view_permissions','change_status','update','delete'])
+            ->rawColumns(['name','roles','permissions','last_login','user_status','view_permissions','change_status','update','delete'])
 
             ->make(true);
 
@@ -102,7 +109,7 @@ class UsersController extends Controller
             return "";
         }
 
-        $rules=["user_name"=>"required|regex:/^[a-zA-Z\s-]+ $/",
+        $rules=["user_name"=>"required|regex:/^[a-zA-Z\s-]+$/",
                 "email"=>"required|email|unique:App\Models\Actor\User,email"];
 
         $messages=array(
@@ -126,7 +133,7 @@ class UsersController extends Controller
             return $html;
         }
 
-        User::create(["name"=>$request->user_name,"added_by"=>Auth::user()->id]);
+        User::create(["name"=>$request->user_name,"email"=>$request->email,"added_by"=>Auth::user()->id,"password"=>Hash::make("12345678")]);
 
         return "yes";
     }

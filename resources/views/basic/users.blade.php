@@ -24,7 +24,9 @@
             <table  class="table text-nowrap user_table">
                 <thead>
                     <tr>
-                        <th scope="col">No</th>
+
+                        <th scope="col">#</th>
+
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Last Login</th>
@@ -92,7 +94,21 @@
 
 
 
+<style>
 
+
+.circle-img {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.circle-img img {
+  height: 100%;
+  transform: translateX(-50%);
+  margin-left: 0%;
+}
+</style>
 
 
 
@@ -151,6 +167,7 @@
                 url: "/user/load_users"
             },
             columns: [
+
                     {data: 'DT_RowIndex', name: 'DT_RowIndex',orderable: false,searchable: false},
                     {data: 'name', name: 'name'},
                     {data: 'email', name: 'email'},
