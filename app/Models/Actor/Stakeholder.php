@@ -10,7 +10,7 @@ class Stakeholder extends Model
     use HasFactory;
     protected $table='stakeholders';
     protected $id='id';
-    protected $fillable = ['name','main_id', 'code','api_link','api_token','key','data_format','added_by','created_at','updated_at'];
+    protected $fillable = ['name','address','main_id', 'address','api_link','api_token','key','data_format','added_by','created_at','updated_at'];
     public function MainStakeholder()
     {
         return $this->belongsTo(MainStakeholder::class,'main_id','id');

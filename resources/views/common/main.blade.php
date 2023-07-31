@@ -3,6 +3,7 @@
 
 <head><!-- Meta Data -->
     @include('common.link')
+
 </head>
 
 <body>

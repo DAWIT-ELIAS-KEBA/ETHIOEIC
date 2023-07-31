@@ -25,9 +25,11 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedInteger('case_id');
             $table->unsignedInteger('payer_id');
+            $table->unsignedInteger('payed_by')->nullable();
+            $table->unsignedInteger('investment_id')->nul;
             $table->float('amount_birr');
             $table->float('amount_dollar');
-            $table->unsignedInteger('cashier_id')->nullable();               //investment_visa  or work_work_visa
+            $table->unsignedInteger('cashier_id')->nullable();
             $table->string('api_id')->nullable();
             $table->string('api_transaction_id')->nullable();
             $table->date('issued_date')->nullable();
@@ -37,7 +39,9 @@ return new class extends Migration
             $table->timestamps();
             $table->foreign('case_id')->references('id')->on('payment_cases')->onDelete('cascade');
             $table->foreign('payer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('payed_by')->references('id')->on('customers')->onDelete('cascade');
             $table->foreign('cashier_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
         });
 
 

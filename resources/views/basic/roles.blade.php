@@ -338,7 +338,7 @@
 
                     for(i=0;i<data.length;i++)
                     {
-                        html += "<div class='col-6 col-md-6 col-lg-6 col-xl-4'>";
+                        html += "<div class='col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4'>";
 
                         html += "   <div class='row'>";
                         html += "     <div class='col-12 mt-2'  style='font-weight:bolder'>";

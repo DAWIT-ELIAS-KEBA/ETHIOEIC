@@ -10,6 +10,7 @@ use App\Models\Actor\Role;
 use App\Models\Actor\SideBarMenu;
 use App\Models\Actor\SideBarMenuItem;
 use App\Models\Actor\User;
+use App\Models\Letter\LetterCode;
 use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
     {
        $this->PermissionSeeder();
        $this->SideBarData();
+       $this->letter_codes();
     }
 
     public function PermissionSeeder()
@@ -43,12 +45,13 @@ class DatabaseSeeder extends Seeder
                 "added_by"=>$user->id
             ]);
         }
+        $role->Users()->detach($user);
         $role->Users()->attach($user,["added_by"=>$user->id]);
 
 
         $permission_data=[
                             [
-                                "group_name"=>"ROLE PERMISSION MANAGMENT",
+                                "group_name"=>"ROLE PERMISSION MANAGEMENT",
                                 "group_order_num"=>1,
                                 "permissions"=>
                                     [
@@ -61,18 +64,45 @@ class DatabaseSeeder extends Seeder
                                     ]
                             ],
                             [
-                                "group_name"=>"USER MANAGMENT",
+                                "group_name"=>"USER MANAGEMENT",
                                 "group_order_num"=>3,
                                 "permissions"=>
                                     [
-                                        ["name"=>"view_users","label"=>"View user","order_num"=>1],
-                                        ["name"=>"add_new_user","label"=>"Add user","order_num"=>2],
-                                        ["name"=>"update_user","label"=>"Update user","order_num"=>2],
+                                        ["name"=>"view_users","label"=>"View User","order_num"=>1],
+                                        ["name"=>"add_new_user","label"=>"Add User","order_num"=>2],
+                                        ["name"=>"update_user","label"=>"Update User","order_num"=>2],
                                         ["name"=>"delete_user","label"=>"Delete User","order_num"=>2],
-                                        ["name"=>"disable_user","label"=>"Disable user","order_num"=>2],
-                                        ["name"=>"enable_user","label"=>"Enable user","order_num"=>2],
-                                        ["name"=>"assign_user_role","label"=>"Assign User role","order_num"=>2],
+                                        ["name"=>"enable_disable_user","label"=>"Enable Disable User","order_num"=>2],
+                                        ["name"=>"assign_user_role","label"=>"Assign User Role","order_num"=>2],
                                         ["name"=>"assign_user_permission","label"=>"Assign User Permission","order_num"=>2],
+                                    ]
+                            ]
+                            ,
+                            [
+                                "group_name"=>"VISA MANAGEMENT",
+                                "group_order_num"=>3,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"view_other_visa","label"=>"View Other Visa","order_num"=>1],
+                                        ["name"=>"register_other_visa","label"=>"Register Other Visa","order_num"=>2],
+                                        ["name"=>"delete_other_visa","label"=>"Delete Other Visa","order_num"=>2],
+                                        ["name"=>"update_other_visa","label"=>"Update OTHER Visa","order_num"=>2],
+                                    ]
+                            ],
+                            [
+                                "group_name"=>"LETTER MANAGEMENT",
+                                "group_order_num"=>3,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"view_letter_code","label"=>"View Letter Code","order_num"=>1],
+                                        ["name"=>"view_letter_template","label"=>"View Letter Template","order_num"=>2],
+                                        ["name"=>"create_new_letter_template","label"=>"Ctreate New Letter Template","order_num"=>3],
+                                        ["name"=>"update_letter_template","label"=>"Update Letter Template","order_num"=>4],
+                                        ["name"=>"delete_letter_template","label"=>"Delete Letter Template","order_num"=>5],
+                                        ["name"=>"view_initialized_letter","label"=>"View Initialized Letter","order_num"=>6],
+                                        ["name"=>"prepare_letter","label"=>"prepare_letter","order_num"=>7],
+                                        ["name"=>"update_letter","label"=>"Update Letter","order_num"=>8],
+                                        ["name"=>"update_letter","label"=>"Approve Letter","order_num"=>8]
                                     ]
                             ]
                         ];
@@ -98,7 +128,7 @@ class DatabaseSeeder extends Seeder
 
                 if(!$mypermission)
                 {
-                    Permission::create([
+                    $mypermission=Permission::create([
                         "name"=>$permission['name'],
                         "label"=>$permission['label'],
                         "group_id"=>$permission_group->id,
@@ -112,6 +142,7 @@ class DatabaseSeeder extends Seeder
                         "label"=>$permission['label'],
                         "group_id"=>$permission_group->id]);
                 }
+                $role->Permissions()->detach($mypermission);
                 $role->Permissions()->attach($mypermission,["added_by"=>$user->id]);
             }
 
@@ -155,7 +186,42 @@ class DatabaseSeeder extends Seeder
                                         "item_code"=>"MC-02-MI-01"
                                     ]
                                 ]
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"Visa Management",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-03"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "Other Visa",
+                                        "link"=>"/other_visa/view_other_visa",
+                                        "permission_name"=>"view_other_visa",
+                                        "item_code"=>"MC-03-MI-01"
+                                    ]
+                                ]
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"Letter Management",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-04"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "View Letter Types",
+                                        "link"=>"/letter/view_letter_type",
+                                        "permission_name"=>"view_letter_code",
+                                        "item_code"=>"MC-04-MI-01"
+                                    ]
+                                ]
                     ]
+
                 ];
         foreach($data as $ele)
         {
@@ -198,6 +264,32 @@ class DatabaseSeeder extends Seeder
                     ]);
                 }
             }
+        }
+    }
+
+    public function letter_codes()
+    {
+        $datas=[
+                    [
+                        "code"=>"Letter-001",
+                        "description"=>"Letter written for VIP service from EIC to INVEA.",
+                        "letter_type"=>"outgoing",
+                        "with_whom"=>"investor"
+                    ]
+
+                ];
+        foreach($datas as $letter_code)
+        {
+            $letter=LetterCode::where("code",$letter_code["code"])->get()->first();
+            if($letter)
+            {
+                $letter->update($letter_code);
+            }
+            else
+            {
+                LetterCode::create($letter_code);
+            }
+
         }
     }
 
