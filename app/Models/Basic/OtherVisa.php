@@ -1,21 +1,16 @@
 <?php
 
-namespace App\Models\Letter;
+namespace App\Models\Basic;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Actor\User;
-
-class LetterTemplate extends Model
+class OtherVisa extends Model
 {
     use HasFactory;
-    protected $table='letter_template';
+    protected $table='other_visa';
     protected $id='id';
-    protected $fillable = ['letter_code_id','description','added_by','updated_by','subject','conclusion','created_at','updated_at'];
-    public function LetterCode()
-    {
-        return $this->belongsTo(LetterCode::class,'letter_code_id','id');
-    }
+    protected $fillable = [ 'type','added_by','updated_by', 'created_at', 'updated_at'];
     public function AddedBy()
     {
         return $this->belongsTo(User::class,'added_by','id');
@@ -25,4 +20,3 @@ class LetterTemplate extends Model
         return $this->belongsTo(User::class,'updated_by','id');
     }
 }
-

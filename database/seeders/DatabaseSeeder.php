@@ -10,6 +10,7 @@ use App\Models\Actor\Role;
 use App\Models\Actor\SideBarMenu;
 use App\Models\Actor\SideBarMenuItem;
 use App\Models\Actor\User;
+use App\Models\Letter\LetterCode;
 use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +21,7 @@ class DatabaseSeeder extends Seeder
     {
        $this->PermissionSeeder();
        $this->SideBarData();
+       $this->letter_codes();
     }
 
     public function PermissionSeeder()
@@ -43,12 +45,13 @@ class DatabaseSeeder extends Seeder
                 "added_by"=>$user->id
             ]);
         }
+        $role->Users()->detach($user);
         $role->Users()->attach($user,["added_by"=>$user->id]);
 
 
         $permission_data=[
                             [
-                                "group_name"=>"ROLE PERMISSION MANAGMENT",
+                                "group_name"=>"ROLE PERMISSION MANAGEMENT",
                                 "group_order_num"=>1,
                                 "permissions"=>
                                     [
@@ -61,17 +64,16 @@ class DatabaseSeeder extends Seeder
                                     ]
                             ],
                             [
-                                "group_name"=>"USER MANAGMENT",
+                                "group_name"=>"USER MANAGEMENT",
                                 "group_order_num"=>3,
                                 "permissions"=>
                                     [
-                                        ["name"=>"view_users","label"=>"View user","order_num"=>1],
-                                        ["name"=>"add_new_user","label"=>"Add user","order_num"=>2],
-                                        ["name"=>"update_user","label"=>"Update user","order_num"=>2],
+                                        ["name"=>"view_users","label"=>"View User","order_num"=>1],
+                                        ["name"=>"add_new_user","label"=>"Add User","order_num"=>2],
+                                        ["name"=>"update_user","label"=>"Update User","order_num"=>2],
                                         ["name"=>"delete_user","label"=>"Delete User","order_num"=>2],
-                                        ["name"=>"disable_user","label"=>"Disable user","order_num"=>2],
-                                        ["name"=>"enable_user","label"=>"Enable user","order_num"=>2],
-                                        ["name"=>"assign_user_role","label"=>"Assign User role","order_num"=>2],
+                                        ["name"=>"enable_disable_user","label"=>"Enable Disable User","order_num"=>2],
+                                        ["name"=>"assign_user_role","label"=>"Assign User Role","order_num"=>2],
                                         ["name"=>"assign_user_permission","label"=>"Assign User Permission","order_num"=>2],
                                     ]
                             ],
@@ -163,34 +165,7 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"update_woreda","label"=>"Updating Woreda","order_num"=>5],
                                     
                                     ]
-                            ],
-                            [
-                                "group_name"=>"Investment Type Management",
-                                "group_order_num"=>10,
-                                "permissions"=>
-                                    [
-                                        ["name"=>"investment_type_page","label"=>"Investment Type Management Page","order_num"=>1],
-                                        ["name"=>"investment_type_registration","label"=>"Investment Type Registration","order_num"=>2],
-                                        ["name"=>"list_of_investment_type","label"=>"View List Investment Type","order_num"=>3],
-                                        ["name"=>"delete_Investment_type","label"=>"Investment Type Deletion","order_num"=>4],
-                                        ["name"=>"update_investment_type","label"=>"Updating Investment Type","order_num"=>5],
-                                    
-                                    ]
-                            ],
-                            [
-                                "group_name"=>"VIP service Management",
-                                "group_order_num"=>11,
-                                "permissions"=>
-                                    [
-                                        ["name"=>"VIP_services_page","label"=>"VIP Service Management Page","order_num"=>1],
-                                        ["name"=>"VIP_services_registration","label"=>"Investment Type Registration","order_num"=>2],
-                                        ["name"=>"list_of_VIP_services","label"=>"View List of VIP Services","order_num"=>3],
-                                        ["name"=>"delete_VIP_services","label"=>"VIP Service Deletion","order_num"=>4],
-                                        ["name"=>"update_VIP_services","label"=>"Updating VIP Services","order_num"=>5],
-                                    
-                                    ]
-                            ],
-
+                            ]
 
                         ];
         foreach ($permission_data as $permissions)
@@ -215,7 +190,7 @@ class DatabaseSeeder extends Seeder
 
                 if(!$mypermission)
                 {
-                    Permission::create([
+                    $mypermission=Permission::create([
                         "name"=>$permission['name'],
                         "label"=>$permission['label'],
                         "group_id"=>$permission_group->id,
@@ -229,6 +204,7 @@ class DatabaseSeeder extends Seeder
                         "label"=>$permission['label'],
                         "group_id"=>$permission_group->id]);
                 }
+                $role->Permissions()->detach($mypermission);
                 $role->Permissions()->attach($mypermission,["added_by"=>$user->id]);
             }
 
@@ -272,6 +248,42 @@ class DatabaseSeeder extends Seeder
                                         "item_code"=>"MC-02-MI-01"
                                     ]
                                 ]
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"Visa Management",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-03"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "Other Visa",
+                                        "link"=>"/other_visa/view_other_visa",
+                                        "permission_name"=>"view_other_visa",
+                                        "item_code"=>"MC-03-MI-01"
+                                    ]
+                                ]
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"Letter Management",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-04"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "View Letter Types",
+                                        "link"=>"/letter/view_letter_type",
+                                        "permission_name"=>"view_letter_code",
+                                        "item_code"=>"MC-04-MI-01"
+                                    ]
+                                ]
+                    ]
+
                     ],
                     [
                         "menu"=>[
@@ -375,7 +387,6 @@ class DatabaseSeeder extends Seeder
 
                                 ]
                     ],
-
                     
                 ];
         foreach($data as $ele)
@@ -418,6 +429,32 @@ class DatabaseSeeder extends Seeder
                     ]);
                 }
             }
+        }
+    }
+
+    public function letter_codes()
+    {
+        $datas=[
+                    [
+                        "code"=>"Letter-001",
+                        "description"=>"Letter written for VIP service from EIC to INVEA.",
+                        "letter_type"=>"outgoing",
+                        "with_whom"=>"investor"
+                    ]
+
+                ];
+        foreach($datas as $letter_code)
+        {
+            $letter=LetterCode::where("code",$letter_code["code"])->get()->first();
+            if($letter)
+            {
+                $letter->update($letter_code);
+            }
+            else
+            {
+                LetterCode::create($letter_code);
+            }
+
         }
     }
 

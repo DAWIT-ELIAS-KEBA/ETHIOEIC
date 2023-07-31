@@ -184,7 +184,7 @@ return new class extends Migration
         Schema::create('main_stakeholders', function (Blueprint $table) {
             $table->increments("id");
             $table->string('name');
-            $table->string('code')->unique();
+            $table->string('label');
             $table->timestamps();
         });
 
@@ -192,7 +192,8 @@ return new class extends Migration
         Schema::create('stakeholders', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger('main_id');
-            $table->string('name');
+            $table->string('name')->unique();
+            $table->string('address');
             $table->string('code');
             $table->string('api_link')->nullable();
             $table->string('api_token')->nullable();

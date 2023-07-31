@@ -89,6 +89,12 @@ Route::controller(RegisterRegionAndZone::class)->group(function()
         Route::post('/VIP_services/update/', 'update_VIPService')->middleware("permission:update_VIP_services");
     })->middleware('auth');     
 
+use App\Http\Controllers\Actor\UsersController;
+use App\Http\Controllers\Actor\TempController;
+use App\Http\Controllers\Basic\OtherVisaController;
+
+use App\Http\Controllers\Letter\LetterController;
+
 Route::get('/test', [TempController::class, 'test']);
 Route::get('/', function () {
     return view('welcome');
@@ -145,10 +151,74 @@ Route::group(['prefix' => 'user'],function ()
     Route::controller(UsersController::class)->group(function(){
         Route::post('add_new_user', 'add_new_user');
     })->middleware("permission:add_new_user");
+    Route::controller(UsersController::class)->group(function(){
+        Route::get('unassigned_role', 'unassigned_role');
+    })->middleware("permission:assign_user_role");
+    Route::controller(UsersController::class)->group(function(){
+        Route::post('assign_user_role', 'assign_user_role');
+        Route::get('remove_user_role', 'remove_user_role');
+    })->middleware("permission:assign_user_role");
+
+    Route::controller(UsersController::class)->group(function(){
+        Route::get('load_user_permissions', 'load_user_permissions');
+        Route::get('assign_deassign_user_permission', 'assign_deassign_user_permission');
+        Route::get('assign_all_user_permission', 'assign_all_user_permission');
+        Route::get('remove_all_user_permission', 'remove_all_user_permission');
+
+    })->middleware("permission:assign_user_permission");
+
+    Route::controller(UsersController::class)->group(function(){
+        Route::get('enable_disable_user', 'enable_disable_user');
+    })->middleware("permission:enable_disable_user");
+
+    Route::controller(UsersController::class)->group(function(){
+        Route::post('update_user', 'update_user');
+    })->middleware("permission:update_user");
+
+    Route::controller(UsersController::class)->group(function(){
+        Route::get('delete_user', 'delete_user');
+    })->middleware("permission:delete_user");
 
 })->middleware('auth');
 
 
+Route::group(['prefix' => 'other_visa'],function ()
+{
+    Route::controller(OtherVisaController::class)->group(function(){
+        Route::get('view_other_visa', 'view_other_visa');
+    })->middleware("permission:view_other_visa");
+
+    Route::controller(OtherVisaController::class)->group(function(){
+        Route::post('register_other_visa', 'register_other_visa');
+    })->middleware("permission:register_other_visa");
+
+    Route::controller(OtherVisaController::class)->group(function(){
+        Route::post('update_other_visa', 'update_other_visa');
+    })->middleware("permission:update_other_visa");
+
+    Route::controller(OtherVisaController::class)->group(function(){
+        Route::get('delete_other_visa', 'delete_other_visa');
+    })->middleware("permission:delete_other_visa");
+
+})->middleware('auth');
+
+
+
+Route::group(['prefix' => 'letter'],function ()
+{
+    Route::controller(LetterController::class)->group(function(){
+        Route::get('letter', 'createPDF');
+    })->middleware("permission:view_letter_code");
+
+    Route::controller(LetterController::class)->group(function(){
+        Route::get('view_letter_type', 'view_letter_code');
+        Route::get('load_letter_type', 'load_letter_types');
+
+    })->middleware("permission:view_letter_code");
+
+
+
+})->middleware('auth');
 
 
 

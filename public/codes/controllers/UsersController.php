@@ -119,11 +119,11 @@ class UsersController extends Controller
             ->addColumn('user_status', function($row){
                 if($row->status==1)
                 {
-                    return '<span class="badge bg-success">Activated<span>';
+                    return '<span class="badge bg-success">ENABLED<span>';
                 }
                 else
                 {
-                    return '<span class="badge bg-danger">Deactivated<span>';
+                    return '<span class="badge bg-danger">DISABLED<span>';
                 }
             })
             ->addColumn('action', function($row){
@@ -142,11 +142,11 @@ class UsersController extends Controller
                 {
                     if($row->status==1)
                     {
-                        $table.="<tr><td><button type='button' class='btn btn-sm btn-warning btn-block' onclick='disable_user(".$row->id.",\"".$row->name."\")'>Deactivate</button></td></tr>";
+                        $table.="<tr><td><button type='button' class='btn btn-sm btn-warning btn-block' onclick='disable_user(".$row->id.",\"".$row->name."\")'>Disable</button></td></tr>";
                     }
                     else
                     {
-                        $table.="<tr><td><button type='button' class='btn btn-sm btn-success btn-block' onclick='enable_user(".$row->id.",\"".$row->name."\")'>Activate</button></td></tr>";
+                        $table.="<tr><td><button type='button' class='btn btn-sm btn-success btn-block' onclick='enable_user(".$row->id.",\"".$row->name."\")'>Enable</button></td></tr>";
                     }
                 }
 
@@ -173,7 +173,6 @@ class UsersController extends Controller
                                 "container: 'body'".
                             "});";
                 $html.=" </script>";
-
                 return $html;
             })
 

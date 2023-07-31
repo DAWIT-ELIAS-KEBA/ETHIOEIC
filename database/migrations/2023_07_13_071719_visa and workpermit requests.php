@@ -11,6 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::create('other_visa', function (Blueprint $table) {
+
+            $table->increments('id');
+            $table->string('type');
+
+            $table->unsignedInteger('added_by');
+            $table->unsignedInteger('updated_by')->nullable();
+
+            $table->timestamps();
+
+            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('updated_by')->references('id')->on('users')->onDelete('cascade');
+
+        });
+
+
         Schema::create('visa_request', function (Blueprint $table) {
 
             $table->increments('id');

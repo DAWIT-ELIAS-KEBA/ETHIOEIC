@@ -5,21 +5,21 @@ namespace App\Models\Actor;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UserPermission extends Model
+class UserRole extends Model
 {
     use HasFactory;
-    protected $table="user_permissions";
+    protected $table="user_role";
     protected $id="id";
     protected $fillable = [
-        'permission_id','user_id','status','added_by', "created_at", "updated_at"
+        'role_id','user_id','added_by', "created_at", 	"updated_at"
     ];
     public function AddedBy()
     {
         return $this->belongsTo(User::class,'added_by','id');
     }
-    public function Permission()
+    public function Role()
     {
-        return $this->belongsTo(Permission::class,'permission_id','id');
+        return $this->belongsTo(Role::class,'role_id','id');
     }
     public function User()
     {
