@@ -5,6 +5,42 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Actor\adminController;
 use App\Http\Controllers\Actor\investorController;
 use App\Http\Controllers\Actor\RolePermissionController;
+use App\Http\Controllers\Basic\RegisterRegionAndZone;
+//Route::get('/register', [RegisterRegionAndZone::class, 'displayform']);
+
+
+Route::controller(RegisterRegionAndZone::class)->group(function()
+    {  
+
+        // REGION ROUTE
+
+        Route::post('/region/register','register_regions');
+        Route::get('/region/register','register_regions');
+        Route::get('/view/region','view_regions')->name('view_region');
+        Route::get('/edit/region/{id}','edit_regions')->name('edit.region');
+        Route::post('/edit/region/{id}','edit_regions');
+        Route::get('/delete/region/{id}','delete_regions')->name('delete.region');
+
+        //ZONE ROUTE
+        Route::post('/zone/register','register_zones');
+        Route::get('/zone/register','register_zones');
+        Route::get('/view/zone','view_zones')->name('view_zone');
+        Route::get('/edit/zone/{id}','edit_zones')->name('edit.zone');
+        Route::post('/edit/zone/{id}','edit_zones');
+        Route::get('/delete/zone/{id}','delete_zones')->name('delete.zone');
+
+        // WOREDA ROUTE
+        Route::get('/woreda/register','register_woredas');
+        Route::post('/woreda/register','register_woredas');
+        Route::get('/view/woreda','view_woredas')->name('view_woreda');
+        Route::get('/edit/woreda/{id}','edit_woredas')->name('edit.woreda');
+        Route::post('/edit/woreda/{id}','edit_woredas');
+        Route::get('/delete/woreda/{id}','delete_woredas')->name('delete.woreda');
+
+
+    });
+
+
 use App\Http\Controllers\Actor\UsersController;
 use App\Http\Controllers\Actor\TempController;
 use App\Http\Controllers\Basic\OtherVisaController;
@@ -210,7 +246,7 @@ Route::controller(adminController::class)->group(function(){
     Route::get('/quill_editor', 'quill_editor');
     Route::get('/form_validation', 'form_validation');
     Route::get('/form_select2', 'form_select2');
-   Route::get('/tables', 'tables');
+    Route::get('/tables', 'tables');
     Route::get('/grid_tables', 'grid_tables');
     Route::get('/data_tables', 'data_tables');
     Route::get('/modals_closes', 'modals_closes');
@@ -220,18 +256,18 @@ Route::controller(adminController::class)->group(function(){
     Route::get('/full_calendar', 'full_calendar');
     Route::get('/accordions_collpase', 'accordions_collpase');
     Route::get('/draggable_cards', 'draggable_cards');
-     Route::get('/sweet_alerts', 'sweet_alerts');
-     Route::get('/avatars', 'avatars');
-     Route::get('/colors', 'colors');
-     Route::get('/helpers', 'helpers');
-     Route::get('/coming-soon', 'coming_soon');
+    Route::get('/sweet_alerts', 'sweet_alerts');
+    Route::get('/avatars', 'avatars');
+    Route::get('/colors', 'colors');
+    Route::get('/helpers', 'helpers');
+    Route::get('/coming-soon', 'coming_soon');
 
         });
 
 
     Route::get('investors', ['uses'=>'App\Http\Controllers\investorController@index', 'as'=>'investor.index']);
     Route::controller(investorController::class)->group(function(){
-       Route::get('/investors_dashboard', 'investors_dashboard');
+    Route::get('/investors_dashboard', 'investors_dashboard');
       //  Route::get('investors_dashboard', ['uses'=>'App\Http\Controllers\investorController@index', 'as'=>'investor.index']);
              });
        Route::get('/logout',  [adminController::class, 'AdminLogout'] )->name('admin.logout');

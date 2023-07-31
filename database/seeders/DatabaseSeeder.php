@@ -76,6 +76,31 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"assign_user_role","label"=>"Assign User Role","order_num"=>2],
                                         ["name"=>"assign_user_permission","label"=>"Assign User Permission","order_num"=>2],
                                     ]
+                            ],
+                            [
+                                "group_name"=>"Region and Zone",
+                                "group_order_num"=>4,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"register_region","label"=>"Register Region","order_num"=>1],
+                                        ["name"=>"register_zone","label"=>"Register Zone","order_num"=>2],
+                                        ["name"=>"register_woreda","label"=>"Register Woreda","order_num"=>3],
+                                        ["name"=>"view_region","label"=>"View Region","order_num"=>4],
+                                        ["name"=>"create_woreda","label"=>"Create Woreda","order_num"=>5],
+                                        ["name"=>"create_region","label"=>"Create Region","order_num"=>6],
+                                        ["name"=>"create_zone","label"=>"Create Zone","order_num"=>7],
+                                        ["name"=>"edit_region","label"=>"Edit Region","order_num"=>8],
+                                        ["name"=>"edit_region","label"=>"Edit Region","order_num"=>9],
+                                        ["name"=>"view_zone","label"=>"View Zone","order_num"=>10],
+                                        ["name"=>"view_woreda","label"=>"View Woreda","order_num"=>11],
+                                        ["name"=>"edit_zone","label"=>"Edit Zone","order_num"=>12],
+                                        ["name"=>"edit_woreda","label"=>"Edit Woreda","order_num"=>13],
+                                        ["name"=>"delete_woreda","label"=>"Delete Woreda","order_num"=>14],
+                                        ["name"=>"delete_region","label"=>"Delete Region","order_num"=>15],
+                                        ["name"=>"delete_zone","label"=>"Delete Zone","order_num"=>16],
+
+
+                                    ]
                             ]
                             ,
                             [
@@ -105,6 +130,7 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"update_letter","label"=>"Approve Letter","order_num"=>8]
                                     ]
                             ]
+
                         ];
         foreach ($permission_data as $permissions)
         {
@@ -221,6 +247,74 @@ class DatabaseSeeder extends Seeder
                                     ]
                                 ]
                     ]
+
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"Register",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-31"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "Register Region",
+                                        "link"=>"/region/register",
+                                        "permission_name"=>"register_regions",
+                                        "item_code"=>"MC-31-MI-01"
+                                    ],
+                                    [
+                                        "title" => "Register Zone",
+                                        "link"=>"/zone/register",
+                                        "permission_name"=>"register_zones",
+                                        "item_code"=>"MC-31-MI-02"
+                                    ],
+                                    [
+                                        "title" => "View Region",
+                                        "link"=>"/view/region",
+                                        "permission_name"=>"view_regions",
+                                        "item_code"=>"MC-31-MI-03"
+                                    ],
+                                    [
+                                        "title" => "View Zone",
+                                        "link"=>"/view/zone",
+                                        "permission_name"=>"view_zones",
+                                        "item_code"=>"MC-31-MI-04"
+                                    ],
+                                    [
+                                        "title" => "Register Woreda",
+                                        "link"=>"/woreda/register",
+                                        "permission_name"=>"register_woredas",
+                                        "item_code"=>"MC-31-MI-05"
+                                    ],
+                                    [
+                                        "title" => "View Woreda",
+                                        "link"=>"/view/woreda",
+                                        "permission_name"=>"view_zones",
+                                        "item_code"=>"MC-31-MI-06"
+                                    ],
+
+                                ]
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"Item Management",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-32"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "Item Registration",
+                                        "link"=>"/item/register",
+                                        "permission_name"=>"register_items",
+                                        "item_code"=>"MC-32-MI-01"
+                                    ]
+
+                                ]
+                    ],
 
                 ];
         foreach($data as $ele)
