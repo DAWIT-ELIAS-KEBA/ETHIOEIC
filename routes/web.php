@@ -6,43 +6,89 @@ use App\Http\Controllers\Actor\adminController;
 use App\Http\Controllers\Actor\investorController;
 use App\Http\Controllers\Actor\RolePermissionController;
 use App\Http\Controllers\Basic\RegisterRegionAndZone;
-//Route::get('/register', [RegisterRegionAndZone::class, 'displayform']);
+use App\Http\Controllers\Basic\ItemsManagement;
+use App\Http\Controllers\Basic\MeasurmentsManagement;
+use App\Http\Controllers\Actor\UsersController;
+use App\Http\Controllers\Actor\TempController;
+use App\Http\Controllers\Investment\InvestmentTypeController;
+use App\Http\Controllers\Services\VIPService;
 
 
+
+    // Address Management
 Route::controller(RegisterRegionAndZone::class)->group(function()
     {  
 
-        // REGION ROUTE
+          // REGION ROUTE
+        Route::post('/regions/register', 'registerRegions')->middleware("permission:region_registration");
+        Route::get('/region/region_page', 'Regionpages')->middleware("permission:region_page");
+        Route::get('/regions/list', 'getRegions')->middleware("permission:list_of_region");
+        Route::get('/delete/regions/{id}', 'destroy_regions')->middleware("permission:delete_region");
+        Route::post('/regions/update/{id}', 'update_regions')->middleware("permission:update_region");
 
-        Route::post('/region/register','register_regions');
-        Route::get('/region/register','register_regions');
-        Route::get('/view/region','view_regions')->name('view_region');
-        Route::get('/edit/region/{id}','edit_regions')->name('edit.region');
-        Route::post('/edit/region/{id}','edit_regions');
-        Route::get('/delete/region/{id}','delete_regions')->name('delete.region');
-
-        //ZONE ROUTE
-        Route::post('/zone/register','register_zones');
-        Route::get('/zone/register','register_zones');
-        Route::get('/view/zone','view_zones')->name('view_zone');
-        Route::get('/edit/zone/{id}','edit_zones')->name('edit.zone');
-        Route::post('/edit/zone/{id}','edit_zones');
-        Route::get('/delete/zone/{id}','delete_zones')->name('delete.zone');
+          // ZONE ROUTE
+         Route::post('/zones/register', 'registerZones')->middleware("permission:zone_registration");
+         Route::get('/zone/zone_page', 'zonepages')->middleware("permission:zone_page");
+         Route::get('/zones/list', 'getZones')->middleware("permission:list_of_zone");
+         Route::get('/delete/zones/{id}', 'destroy_zones')->middleware("permission:delete_zone");
+         Route::post('/zones/update/{id}', 'update_zones')->middleware("permission:update_zone");
 
         // WOREDA ROUTE
-        Route::get('/woreda/register','register_woredas');
-        Route::post('/woreda/register','register_woredas');
-        Route::get('/view/woreda','view_woredas')->name('view_woreda');
-        Route::get('/edit/woreda/{id}','edit_woredas')->name('edit.woreda');
-        Route::post('/edit/woreda/{id}','edit_woredas');
-        Route::get('/delete/woreda/{id}','delete_woredas')->name('delete.woreda');
+         Route::post('/woredas/register', 'registerWoredas')->middleware("permission:woreda_registration");
+         Route::get('/woreda/woreda_page', 'woredapages')->middleware("permission:woreda_page");
+         Route::get('/woredas/list', 'getWoredas')->middleware("permission:list_of_woreda");
+         Route::get('/delete/woredas/{id}', 'destroy_woredas')->middleware("permission:delete_woreda");
+         Route::post('/woreda/update/{id}', 'update_woredas')->middleware("permission:update_woreda");
 
 
-    });
+    })->middleware('auth');
+
+    // For Investment Type
+    Route::controller(InvestmentTypeController::class)->group(function()
+    {  
+          // REGION ROUTE
+        Route::post('/investment_type/register', 'registerInvestmentType')->middleware("permission:region_registration");
+        Route::get('/investment_type/page', 'InvestmentTypepage')->middleware("permission:investment_type_page");
+        Route::get('/investment_types/list', 'getInvestment_types')->middleware("permission:list_of_investment_type");
+        Route::get('/delete/investment_types/{id}', 'destroy_investment_types')->middleware("permission:delete_Investment_type");
+        Route::post('/investment_types/update/{id}', 'update_investment_type')->middleware("permission:update_investment_type");
 
 
-use App\Http\Controllers\Actor\UsersController;
-use App\Http\Controllers\Actor\TempController;
+    })->middleware('auth'); 
+    //Item Management
+
+    Route::controller(ItemsManagement::class)->group(function()
+    {  
+        Route::post('/items/register', 'registerItems')->middleware("permission:register_item");
+        Route::get('/item/page', 'page')->middleware("permission:item_page");
+        Route::get('/items/list', 'getItems')->middleware("permission:list_of_item");
+        Route::get('/delete/items/{id}', 'destroy_items')->middleware("permission:delete_item");
+        Route::post('/items/update', 'update_items')->middleware("permission:update_item");
+
+    })->middleware('auth');
+
+    //Measurement Management
+    
+    Route::controller(MeasurmentsManagement::class)->group(function()
+    { 
+        Route::post('/measurements/register', 'registerMeasurements')->middleware("permission:measurement_registration"); 
+        Route::get('/measurement/page', 'measurementPage')->middleware("permission:measurement_page");
+        Route::post('/measurement/list', 'getMeasurements')->middleware("permission:list_of_measurement");
+        Route::get('/delete/measurements/{id}', 'destroy_measurements')->middleware("permission:delete_measurement");
+        Route::post('/measurement/update', 'update_measurements')->middleware("permission:update_measurement");
+
+    })->middleware('auth'); 
+
+    Route::controller(VIPService::class)->group(function()
+    {  
+          // REGION ROUTE
+        Route::post('/VIP_services/register', 'registerVIPService')->middleware("permission:VIP_services_registration");
+        Route::get('/VIP_services/page', 'VIPServiepage')->middleware("permission:VIP_services_page");
+        Route::get('/VIP_services/list', 'getVIPService')->middleware("permission:list_of_VIP_services");
+        Route::get('/delete/VIP_services/{id}', 'destroyVIPService')->middleware("permission:delete_VIP_services");
+        Route::post('/VIP_services/update/', 'update_VIPService')->middleware("permission:update_VIP_services");
+    })->middleware('auth');     
+
 Route::get('/test', [TempController::class, 'test']);
 Route::get('/', function () {
     return view('welcome');
@@ -203,9 +249,6 @@ Route::controller(adminController::class)->group(function(){
       //  Route::get('investors_dashboard', ['uses'=>'App\Http\Controllers\investorController@index', 'as'=>'investor.index']);
              });
        Route::get('/logout',  [adminController::class, 'AdminLogout'] )->name('admin.logout');
-
-
-
 
 
 

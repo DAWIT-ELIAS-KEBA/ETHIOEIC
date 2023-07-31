@@ -96,10 +96,101 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"delete_woreda","label"=>"Delete Woreda","order_num"=>14],
                                         ["name"=>"delete_region","label"=>"Delete Region","order_num"=>15],
                                         ["name"=>"delete_zone","label"=>"Delete Zone","order_num"=>16],
-
-
                                     ]
-                            ]
+                            ],
+                            [
+                                "group_name"=>"Item Management",
+                                "group_order_num"=>5,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"register_item","label"=>"Register Item","order_num"=>1],
+                                        ["name"=>"item_page","label"=>"Item Management Page","order_num"=>2],
+                                        ["name"=>"list_of_item","label"=>"View List of Items","order_num"=>3],
+                                        ["name"=>"delete_item","label"=>"Delete Item","order_num"=>4],
+                                        ["name"=>"update_item","label"=>"Update Item","order_num"=>5],
+                                       
+                                    ]
+                           ],
+                           [
+                                "group_name"=>"Measurement Management",
+                                "group_order_num"=>6,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"measurement_page","label"=>"Measurement Management Page","order_num"=>1],
+                                        ["name"=>"measurement_registration","label"=>"Measurement Registration","order_num"=>2],
+                                        ["name"=>"list_of_measurement","label"=>"View List of Measurement","order_num"=>3],
+                                        ["name"=>"delete_measurement","label"=>"Measurement Deletion","order_num"=>4],
+                                        ["name"=>"update_measurement","label"=>"Updating Measurement","order_num"=>5],
+                                    
+                                    ]
+                            ],
+
+                            [
+                                "group_name"=>"Region Management",
+                                "group_order_num"=>7,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"region_page","label"=>"Region Management Page","order_num"=>1],
+                                        ["name"=>"region_registration","label"=>"Region Registration","order_num"=>2],
+                                        ["name"=>"list_of_region","label"=>"View List of Region","order_num"=>3],
+                                        ["name"=>"delete_region","label"=>"Region Deletion","order_num"=>4],
+                                        ["name"=>"update_region","label"=>"Updating Region","order_num"=>5],
+                                    
+                                    ]
+                            ],
+                            [
+                                "group_name"=>"Zone Management",
+                                "group_order_num"=>8,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"zone_page","label"=>"Zone Management Page","order_num"=>1],
+                                        ["name"=>"zone_registration","label"=>"Zone Registration","order_num"=>2],
+                                        ["name"=>"list_of_zone","label"=>"View List of Zone","order_num"=>3],
+                                        ["name"=>"delete_zone","label"=>"Zone Deletion","order_num"=>4],
+                                        ["name"=>"update_zone","label"=>"Updating Zone","order_num"=>5],
+                                    
+                                    ]
+                            ],
+                            [
+                                "group_name"=>"woreda Management",
+                                "group_order_num"=>9,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"woreda_page","label"=>"Woreda Management Page","order_num"=>1],
+                                        ["name"=>"woreda_registration","label"=>"Woreda Registration","order_num"=>2],
+                                        ["name"=>"list_of_woreda","label"=>"View List of Woreda","order_num"=>3],
+                                        ["name"=>"delete_woreda","label"=>"Woreda Deletion","order_num"=>4],
+                                        ["name"=>"update_woreda","label"=>"Updating Woreda","order_num"=>5],
+                                    
+                                    ]
+                            ],
+                            [
+                                "group_name"=>"Investment Type Management",
+                                "group_order_num"=>10,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"investment_type_page","label"=>"Investment Type Management Page","order_num"=>1],
+                                        ["name"=>"investment_type_registration","label"=>"Investment Type Registration","order_num"=>2],
+                                        ["name"=>"list_of_investment_type","label"=>"View List Investment Type","order_num"=>3],
+                                        ["name"=>"delete_Investment_type","label"=>"Investment Type Deletion","order_num"=>4],
+                                        ["name"=>"update_investment_type","label"=>"Updating Investment Type","order_num"=>5],
+                                    
+                                    ]
+                            ],
+                            [
+                                "group_name"=>"VIP service Management",
+                                "group_order_num"=>11,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"VIP_services_page","label"=>"VIP Service Management Page","order_num"=>1],
+                                        ["name"=>"VIP_services_registration","label"=>"Investment Type Registration","order_num"=>2],
+                                        ["name"=>"list_of_VIP_services","label"=>"View List of VIP Services","order_num"=>3],
+                                        ["name"=>"delete_VIP_services","label"=>"VIP Service Deletion","order_num"=>4],
+                                        ["name"=>"update_VIP_services","label"=>"Updating VIP Services","order_num"=>5],
+                                    
+                                    ]
+                            ],
+
 
                         ];
         foreach ($permission_data as $permissions)
@@ -184,7 +275,7 @@ class DatabaseSeeder extends Seeder
                     ],
                     [
                         "menu"=>[
-                                    "title"=>"Register",
+                                    "title"=>"Item Management",
                                     "user_type"=>"user",  ///user or customer
                                     "icon"=>"user",
                                     "code"=>"MC-31"
@@ -192,47 +283,17 @@ class DatabaseSeeder extends Seeder
                         "menuItems"=>
                                 [
                                     [
-                                        "title" => "Register Region",
-                                        "link"=>"/region/register",
-                                        "permission_name"=>"register_regions",
+                                        "title" => "Item Registration",
+                                        "link"=>"/item/page",
+                                        "permission_name"=>"register_item",
                                         "item_code"=>"MC-31-MI-01"
-                                    ],
-                                    [
-                                        "title" => "Register Zone",
-                                        "link"=>"/zone/register",
-                                        "permission_name"=>"register_zones",
-                                        "item_code"=>"MC-31-MI-02"
-                                    ],
-                                    [
-                                        "title" => "View Region",
-                                        "link"=>"/view/region",
-                                        "permission_name"=>"view_regions",
-                                        "item_code"=>"MC-31-MI-03"
-                                    ],
-                                    [
-                                        "title" => "View Zone",
-                                        "link"=>"/view/zone",
-                                        "permission_name"=>"view_zones",
-                                        "item_code"=>"MC-31-MI-04"
-                                    ],
-                                    [
-                                        "title" => "Register Woreda",
-                                        "link"=>"/woreda/register",
-                                        "permission_name"=>"register_woredas",
-                                        "item_code"=>"MC-31-MI-05"
-                                    ],
-                                    [
-                                        "title" => "View Woreda",
-                                        "link"=>"/view/woreda",
-                                        "permission_name"=>"view_zones",
-                                        "item_code"=>"MC-31-MI-06"
-                                    ],
+                                    ]
 
                                 ]
                     ],
                     [
                         "menu"=>[
-                                    "title"=>"Item Management",
+                                    "title"=>"Measurements Management",
                                     "user_type"=>"user",  ///user or customer
                                     "icon"=>"user",
                                     "code"=>"MC-32"
@@ -240,14 +301,81 @@ class DatabaseSeeder extends Seeder
                         "menuItems"=>
                                 [
                                     [
-                                        "title" => "Item Registration",
-                                        "link"=>"/item/register",
-                                        "permission_name"=>"register_items",
+                                        "title" => "Measurement Page",
+                                        "link"=>"/measurement/page",
+                                        "permission_name"=>"measurement_page",
                                         "item_code"=>"MC-32-MI-01"
                                     ]
 
                                 ]
                     ],
+                    [
+                        "menu"=>[
+                                    "title"=>"Address Management",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-33"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "Region Management",
+                                        "link"=>"/region/region_page",
+                                        "permission_name"=>"region_page",
+                                        "item_code"=>"MC-33-MI-01"
+                                    ],
+                                    [
+                                        "title" => "Zone Management",
+                                        "link"=>"/zone/zone_page",
+                                        "permission_name"=>"zone_page",
+                                        "item_code"=>"MC-33-MI-02"
+                                    ],
+                                    [
+                                        "title" => "Woreda Management",
+                                        "link"=>"/woreda/woreda_page",
+                                        "permission_name"=>"woreda_page",
+                                        "item_code"=>"MC-33-MI-03"
+                                    ]
+
+                                ]
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"Investment Type",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-34"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "Investment Type Page",
+                                        "link"=>"/investment_type/page",
+                                        "permission_name"=>"investment_type_page",
+                                        "item_code"=>"MC-34-MI-01"
+                                    ]
+
+                                ]
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"VIP Services",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-35"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "VIP services Page",
+                                        "link"=>"/VIP_services/page",
+                                        "permission_name"=>"VIP_services_page",
+                                        "item_code"=>"MC-35-MI-01"
+                                    ]
+
+                                ]
+                    ],
+
                     
                 ];
         foreach($data as $ele)
@@ -256,7 +384,6 @@ class DatabaseSeeder extends Seeder
             if(!$side_bar_menu)
             {
                 $side_bar_menu=SideBarMenu::create($ele["menu"]);
-
             }
             else
             {
