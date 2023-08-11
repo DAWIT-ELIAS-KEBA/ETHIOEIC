@@ -59,6 +59,25 @@
     @endif
     </ul>
 <div class="tab-content">
+<!-- Hidden modal for delete confirmation -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="deleteConfirmationModalBody">
+                Are you sure you want to delete this Investment Type?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteButton">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
         <!-- Registration Form Tab -->
         @if(Auth::check() && Auth::user()->hasPermissionWithName("investment_type_registration"))
                     <div class="tab-pane fade show active" id="registrationTab">
@@ -118,6 +137,23 @@
             </div>
         </div>
    @endif
+</div>
+<!-- Hidden modal for success and error messages -->
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageModalLabel">Message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="messageModalBody">
+                <!-- Message content will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 @if(Auth::check() && Auth::user()->hasPermissionWithName("update_investment_type"))
@@ -238,7 +274,7 @@
             success: function (response) {
                 console.log(response);
                 // Show success message
-                alert(response.message);
+                showSuccessMessage(response.message);
                 $('#editModal').modal('hide'); // Hide the modal after successful update
                 $('#investmentTypesTable').DataTable().ajax.reload();
             },
@@ -253,7 +289,18 @@
         });
     });
 
+    function showSuccessMessage(message) {
+        $('#messageModalLabel').text('Success');
+        $('#messageModalBody').text(message);
+        $('#messageModal').modal('show');
+    }
 
+    // Function to show error message in the modal
+    function showErrorMessage(message) {
+        $('#messageModalLabel').text('Error');
+        $('#messageModalBody').text(message);
+        $('#messageModal').modal('show');
+    }
     $('#investmentTypesTable').on('click', '.edit-investment_type', function () {
         var row = $(this).closest('tr');
         var investment_type_Id = row.find('td:eq(0)').text(); // Get the item ID from the first column
@@ -286,15 +333,26 @@
         $('#editItemForm')[0].reset();
     });
 
+    function showDeleteConfirmation(callback) {
+        $('#deleteConfirmationModal').modal('show');
 
+        // Set click event for the "Delete" button inside the modal
+        $('#confirmDeleteButton').off('click').on('click', function () {
+            // Hide the modal
+            $('#deleteConfirmationModal').modal('hide');
+
+            // Call the provided callback function (delete action) if it exists
+            if (typeof callback === 'function') {
+                callback();
+            }
+        });
+    }
 
     $('#investmentTypesTable').on('click', '.delete-investment_type', function () {
         var investmentType = $(this).data('id');
         
         // Display a confirmation prompt before deleting the item
-        var confirmation = confirm('Are you sure you want to delete this Investment Type?');
-        
-        if (confirmation) {
+        showDeleteConfirmation(function () {
             // If the user confirms, proceed with the deletion
             $.ajax({
                 type: 'get',
@@ -303,14 +361,14 @@
                     _token: '{{ csrf_token() }}'
                 },
                 success: function (response) {
-                    alert('Investment Type deleted successfully.');
+                    showSuccessMessage('Investment Type deleted successfully.');
                     $('#investmentTypesTable').DataTable().ajax.reload();
                 },
                 error: function (xhr) {
-                    alert('Error deleting investment Type.');
+                    showErrorMessage('Error deleting investment Type.');
                 }
             });
-       }
+       })
     });
 
     $('#registerButton').click(function () {
@@ -328,7 +386,7 @@
         data: formData,
         success: function (response) {
             console.log(response);
-            alert(response.message);
+            showSuccessMessage(response.message);
             $('#investmentTypeForm')[0].reset();
             $('.error-message').empty();
             $('#investmentTypesTable').DataTable().ajax.reload();
@@ -336,14 +394,14 @@
         },
         error: function (xhr) {
             if (xhr.status === 422) {
-                alert('Error occurred during Region registration.');
+                showErrorMessage('Error occurred during Region registration.');
                 var errors = xhr.responseJSON.errors;
                 $.each(errors, function (key, value) {
-                    alert(value[0]);
+                    showErrorMessage(value[0]);
                 });
                 $('#' + key + '_error').text(value[0]);
             } else {
-                alert('Error occurred during Region registration.');
+                showErrorMessage('Error occurred during Region registration.');
             }
         },
     });

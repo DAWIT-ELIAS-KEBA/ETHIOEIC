@@ -98,6 +98,41 @@
             </div>
         @endif
 </div>
+<!-- Hidden modal for success and error messages -->
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageModalLabel">Message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="messageModalBody">
+                <!-- Message content will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hidden modal for delete confirmation -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm Deletion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="deleteConfirmationModalBody">
+                Are you sure you want to delete this Region?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteButton">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- The Modal for Editing Region -->
 @if(Auth::check() && Auth::user()->hasPermissionWithName("update_region"))
@@ -143,6 +178,32 @@
 <script>
 
     $(document).ready(function () {
+        function showDeleteConfirmation(callback) {
+        $('#deleteConfirmationModal').modal('show');
+
+        // Set click event for the "Delete" button inside the modal
+        $('#confirmDeleteButton').off('click').on('click', function () {
+            // Hide the modal
+            $('#deleteConfirmationModal').modal('hide');
+
+            // Call the provided callback function (delete action) if it exists
+            if (typeof callback === 'function') {
+                callback();
+            }
+        });
+    }
+        function showSuccessMessage(message) {
+        $('#messageModalLabel').text('Success');
+        $('#messageModalBody').text(message);
+        $('#messageModal').modal('show');
+    }
+
+    // Function to show error message in the modal
+    function showErrorMessage(message) {
+        $('#messageModalLabel').text('Error');
+        $('#messageModalBody').text(message);
+        $('#messageModal').modal('show');
+    }
         $('#regionsTable').DataTable({
         processing: true,
         serverSide: true,
@@ -208,7 +269,7 @@
             success: function (response) {
                 console.log(response);
                 // Show success message
-                alert(response.message);
+                showSuccessMessage(response.message);
                 $('#editModal').modal('hide'); // Hide the modal after successful update
                 $('#regionsTable').DataTable().ajax.reload();
             },
@@ -254,9 +315,7 @@
         var regionId = $(this).data('id');
         
         // Display a confirmation prompt before deleting the measurement
-        var confirmation = confirm('Are you sure you want to delete this Region?');
-        
-        if (confirmation) {
+        showDeleteConfirmation(function () {
             // If the user confirms, proceed with the deletion
             $.ajax({
                 type: 'get',
@@ -265,14 +324,14 @@
                     _token: '{{ csrf_token() }}'
                 },
                 success: function (response) {
-                    alert('Region deleted successfully.');
+                    showSuccessMessage('Region deleted successfully.');
                     $('#regionsTable').DataTable().ajax.reload();
                 },
                 error: function (xhr) {
-                    alert('Error deleting Region.');
+                    showErrorMessage('Error deleting Region.');
                 }
             });
-       }
+       })
     });
 
     $('#registerButton').click(function () {
@@ -291,7 +350,7 @@
         data: formData,
         success: function (response) {
             console.log(response);
-            alert(response.message);
+            showSuccessMessage(response.message);
             $('#regionForm')[0].reset();
             $('.error-message').empty();
             $('#regionsTable').DataTable().ajax.reload();
@@ -299,14 +358,14 @@
         },
         error: function (xhr) {
             if (xhr.status === 422) {
-                alert('Error occurred during Region registration.');
+                showErrorMessage('Error occurred during Region registration.');
                 var errors = xhr.responseJSON.errors;
                 $.each(errors, function (key, value) {
-                    alert(value[0]);
+                    showErrorMessage(value[0]);
                 });
                 $('#' + key + '_error').text(value[0]);
             } else {
-                alert('Error occurred during Region registration.');
+                showErrorMessage('Error occurred during Region registration.');
             }
         },
     });

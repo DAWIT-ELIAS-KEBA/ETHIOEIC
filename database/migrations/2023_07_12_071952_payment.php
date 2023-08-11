@@ -26,7 +26,7 @@ return new class extends Migration
             $table->unsignedInteger('case_id');
             $table->unsignedInteger('payer_id');
             $table->unsignedInteger('payed_by')->nullable();
-            $table->unsignedInteger('investment_id')->nul;
+            $table->unsignedInteger('investment_id')->nullable();
             $table->float('amount_birr');
             $table->float('amount_dollar');
             $table->unsignedInteger('cashier_id')->nullable();
@@ -41,7 +41,7 @@ return new class extends Migration
             $table->foreign('payer_id')->references('id')->on('customers')->onDelete('cascade');
             $table->foreign('payed_by')->references('id')->on('customers')->onDelete('cascade');
             $table->foreign('cashier_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
+            //$table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
         });
 
 

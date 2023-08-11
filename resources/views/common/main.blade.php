@@ -7,8 +7,8 @@
 </head>
 
 <body>
-    <!-- Start Switcher -->
-    @include('common.switcher')
+    <!-- Start @include('common.switcher')Switcher -->
+    
 
 
     <div class="page">

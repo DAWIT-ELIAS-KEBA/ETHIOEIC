@@ -21,6 +21,10 @@ use DataTables;
 
 class RegisterRegionAndZone extends Controller
 {
+    public function dashboard()
+    {
+        return view("index2");
+    }
     // Region Management Page
     public function Regionpages()
     {
@@ -150,17 +154,15 @@ class RegisterRegionAndZone extends Controller
     //Register Zone
 public function registerZones(Request $request)
     {
-        if(!Auth::user() || !Auth::user()->hasPermissionWithName("register_zone"))
+        if(!Auth::user() || !Auth::user()->hasPermissionWithName("zone_registration"))
        {
             return view("errors.role_permission_error");
        }
-       
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'region_id' => 'required|exists:region,id',
             'created_by'=>'required|exists:users,id'
         ]);
-
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()], 422);
         }
@@ -239,7 +241,7 @@ public function registerZones(Request $request)
     // REGISTER WOREDA
     public function registerWoredas(Request $request)
     {
-        if(!Auth::user() || !Auth::user()->hasPermissionWithName("register_woreda"))
+        if(!Auth::user() || !Auth::user()->hasPermissionWithName("woreda_registration"))
        {
             return view("errors.role_permission_error");
        }

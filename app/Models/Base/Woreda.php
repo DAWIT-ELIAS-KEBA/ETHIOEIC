@@ -20,4 +20,12 @@ class Woreda extends Model
     {
         return $this->belongsTo(Zone::class,'zone_id','id');
     }
+    public function WoredaNameandId()
+    {
+        return self::all(['id', 'name']);
+    }
+    public function WoredaNameAndIdByZone($zoneId)
+    {
+        return $this->where('zone_id', $zoneId)->pluck('name', 'id');
+    }
 }

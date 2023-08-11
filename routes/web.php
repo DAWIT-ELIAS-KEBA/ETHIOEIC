@@ -11,10 +11,11 @@ use App\Http\Controllers\Basic\MeasurmentsManagement;
 use App\Http\Controllers\Actor\UsersController;
 use App\Http\Controllers\Actor\TempController;
 use App\Http\Controllers\Investment\InvestmentTypeController;
-use App\Http\Controllers\Services\VIPService;
+use App\Http\Controllers\Services\VIPServiceController;
+use App\Http\Controllers\Investment\InvestmentRegistration;
 
 
-
+    // 
     // Address Management
 Route::controller(RegisterRegionAndZone::class)->group(function()
     {  
@@ -79,25 +80,41 @@ Route::controller(RegisterRegionAndZone::class)->group(function()
 
     })->middleware('auth'); 
 
-    Route::controller(VIPService::class)->group(function()
+    Route::controller(VIPServiceController::class)->group(function()
     {  
-          // REGION ROUTE
+          // VIP Service Type ROUTE
         Route::post('/VIP_services/register', 'registerVIPService')->middleware("permission:VIP_services_registration");
         Route::get('/VIP_services/page', 'VIPServiepage')->middleware("permission:VIP_services_page");
         Route::get('/VIP_services/list', 'getVIPService')->middleware("permission:list_of_VIP_services");
         Route::get('/delete/VIP_services/{id}', 'destroyVIPService')->middleware("permission:delete_VIP_services");
         Route::post('/VIP_services/update/', 'update_VIPService')->middleware("permission:update_VIP_services");
-    })->middleware('auth');     
 
-use App\Http\Controllers\Actor\UsersController;
-use App\Http\Controllers\Actor\TempController;
+           // VIP Request  
+        Route::get('/Investor/request_vip_service_page', 'VIPServiceRequest')->middleware("permission:investor_vip_request");
+        Route::post('/investor/VIPRequest', 'PostVIPServiceRequest')->middleware("permission:investor_vip_request");
+        Route::get('/investor/VIP_servicesRequest/list', 'ViewVIPServiceRequest')->middleware("permission:investor_vip_request");
+
+
+
+    })->middleware('auth');   
+
+    //Investment Registration Request
+    Route::controller(InvestmentRegistration::class)->group(function()
+    { 
+        Route::post('/investment/request_and_view_investment', 'CheckTab')->name("investment.submit")->middleware("permission:VIP_services_registration");
+        Route::get('/investment/request_and_view_investment', 'displayInvestmentRegistrationPage')->middleware("permission:Investment_registration_page");
+        Route::get('/get-zones/{id}', 'getzonesbyRegionID')->middleware("permission:Investment_registration_page");
+        Route::get('/get-woredas/{id}', 'getworedasbyZoneID')->middleware("permission:Investment_registration_page");
+
+    })->middleware('auth'); 
+
 use App\Http\Controllers\Basic\OtherVisaController;
 
 use App\Http\Controllers\Letter\LetterController;
 
 Route::get('/test', [TempController::class, 'test']);
 Route::get('/', function () {
-    return view('welcome');
+    return view('index2');
 });
 
 Route::get('/dashboard', function () {

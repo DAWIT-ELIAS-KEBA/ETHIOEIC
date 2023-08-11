@@ -78,29 +78,6 @@ class DatabaseSeeder extends Seeder
                                     ]
                             ],
                             [
-                                "group_name"=>"Region and Zone",
-                                "group_order_num"=>4,
-                                "permissions"=>
-                                    [
-                                        ["name"=>"register_region","label"=>"Register Region","order_num"=>1],
-                                        ["name"=>"register_zone","label"=>"Register Zone","order_num"=>2],
-                                        ["name"=>"register_woreda","label"=>"Register Woreda","order_num"=>3],
-                                        ["name"=>"view_region","label"=>"View Region","order_num"=>4],
-                                        ["name"=>"create_woreda","label"=>"Create Woreda","order_num"=>5],
-                                        ["name"=>"create_region","label"=>"Create Region","order_num"=>6],
-                                        ["name"=>"create_zone","label"=>"Create Zone","order_num"=>7],
-                                        ["name"=>"edit_region","label"=>"Edit Region","order_num"=>8],
-                                        ["name"=>"edit_region","label"=>"Edit Region","order_num"=>9],
-                                        ["name"=>"view_zone","label"=>"View Zone","order_num"=>10],
-                                        ["name"=>"view_woreda","label"=>"View Woreda","order_num"=>11],
-                                        ["name"=>"edit_zone","label"=>"Edit Zone","order_num"=>12],
-                                        ["name"=>"edit_woreda","label"=>"Edit Woreda","order_num"=>13],
-                                        ["name"=>"delete_woreda","label"=>"Delete Woreda","order_num"=>14],
-                                        ["name"=>"delete_region","label"=>"Delete Region","order_num"=>15],
-                                        ["name"=>"delete_zone","label"=>"Delete Zone","order_num"=>16],
-                                    ]
-                            ],
-                            [
                                 "group_name"=>"Item Management",
                                 "group_order_num"=>5,
                                 "permissions"=>
@@ -165,7 +142,44 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"update_woreda","label"=>"Updating Woreda","order_num"=>5],
                                     
                                     ]
-                            ]
+                            ],
+                            [
+                                "group_name"=>"Investment Type Management",
+                                "group_order_num"=>10,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"investment_type_page","label"=>"Investment Type Management Page","order_num"=>1],
+                                        ["name"=>"investment_type_registration","label"=>"Investment Type Registration","order_num"=>2],
+                                        ["name"=>"list_of_investment_type","label"=>"View List Investment Type","order_num"=>3],
+                                        ["name"=>"delete_Investment_type","label"=>"Investment Type Deletion","order_num"=>4],
+                                        ["name"=>"update_investment_type","label"=>"Updating Investment Type","order_num"=>5],
+                                    
+                                    ]
+                            ],
+                            [
+                                "group_name"=>"VIP service Management",
+                                "group_order_num"=>11,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"VIP_services_page","label"=>"VIP Service Management Page","order_num"=>1],
+                                        ["name"=>"VIP_services_registration","label"=>"Investment Type Registration","order_num"=>2],
+                                        ["name"=>"list_of_VIP_services","label"=>"View List of VIP Services","order_num"=>3],
+                                        ["name"=>"delete_VIP_services","label"=>"VIP Service Deletion","order_num"=>4],
+                                        ["name"=>"update_VIP_services","label"=>"Updating VIP Services","order_num"=>5],
+                                        ["name"=>"investor_vip_request","label"=>"Request VIP Services","order_num"=>6],
+                                    
+                                    ]
+                            ],
+                            [
+                                "group_name"=>"VIP service Management",
+                                "group_order_num"=>12,
+                                "permissions"=>
+                                    [
+                                        ["name"=>"Investment_registration_request","label"=>"Investment Registration Request","order_num"=>1],
+                                        ["name"=>"Investment_registration_page","label"=>"Investment Registration page","order_num"=>2],
+                                    
+                                    ]
+                            ],
 
                         ];
         foreach ($permission_data as $permissions)
@@ -282,8 +296,6 @@ class DatabaseSeeder extends Seeder
                                         "item_code"=>"MC-04-MI-01"
                                     ]
                                 ]
-                    ]
-
                     ],
                     [
                         "menu"=>[
@@ -365,7 +377,7 @@ class DatabaseSeeder extends Seeder
                                         "link"=>"/investment_type/page",
                                         "permission_name"=>"investment_type_page",
                                         "item_code"=>"MC-34-MI-01"
-                                    ]
+                                    ] 
 
                                 ]
                     ],
@@ -383,6 +395,30 @@ class DatabaseSeeder extends Seeder
                                         "link"=>"/VIP_services/page",
                                         "permission_name"=>"VIP_services_page",
                                         "item_code"=>"MC-35-MI-01"
+                                    ],
+                                    [
+                                        "title" => "Request VIP Service",
+                                        "link"=>"/Investor/request_vip_service_page",
+                                        "permission_name"=>"investor_vip_request",
+                                        "item_code"=>"MC-35-MI-02"
+                                    ]
+
+                                ]
+                    ],
+                    [
+                        "menu"=>[
+                                    "title"=>"Investment",
+                                    "user_type"=>"user",  ///user or customer
+                                    "icon"=>"user",
+                                    "code"=>"MC-36"
+                                ],
+                        "menuItems"=>
+                                [
+                                    [
+                                        "title" => "Investment Registration Request",
+                                        "link"=>"/investment/request_and_view_investment",
+                                        "permission_name"=>"Investment_registration_page",
+                                        "item_code"=>"MC-36-MI-01"
                                     ]
 
                                 ]
@@ -439,6 +475,12 @@ class DatabaseSeeder extends Seeder
                         "code"=>"Letter-001",
                         "description"=>"Letter written for VIP service from EIC to INVEA.",
                         "letter_type"=>"outgoing",
+                        "with_whom"=>"investor"
+                    ],
+                    [
+                        "code"=>"Letter-002",
+                        "description"=>"Letter written for VIP service from Investor to EIC.",
+                        "letter_type"=>"Incoming",
                         "with_whom"=>"investor"
                     ]
 

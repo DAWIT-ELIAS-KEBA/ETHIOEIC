@@ -20,4 +20,11 @@ class VipServiceLetter extends Model
     {
         return $this->belongsTo(VipService::class,'vip_service_id','id');
     }
+    public function saveVipServiceLetter($requestData)
+    {
+
+        $this->fill($requestData);
+        $this->save();
+        return $this;
+    }
 }

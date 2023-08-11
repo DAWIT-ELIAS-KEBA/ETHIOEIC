@@ -16,5 +16,9 @@ class InvestmentType extends Model
     {
         return $this->belongsTo(User::class,'added_by','id');
     }
+    public function InvestmentTypeNameandId()
+    {
+        return self::all(['id', 'name']);
+    }
 
 }

@@ -18,50 +18,110 @@
             .custom-margin-bottom {
                 margin-bottom: 20px; /* Adjust the value as needed */
             }
+            .custom-button {
+                width: 200px; /* Set your desired width here */
+            }
     </style>
 @section('content')
-
 <div class="card custom-card">
     <div class="card-header ">
-        <div class="card-title text-center pl-4"> VIP Service Type Management</div>
+        <div class="card-title text-center pl-4"> VIP Service Request Management</div>
     </div>
     <div class="card-body pl-3">
 
 
     <ul class="nav nav-tabs mb-4">
-    @if(Auth::check() && Auth::user()->hasPermissionWithName("VIP_services_registration"))
+    @if(Auth::check() && Auth::user()->hasPermissionWithName("investor_vip_request"))
             <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#registrationTab">Register VIP Service Type</a>
+                <a class="nav-link active" data-bs-toggle="tab" href="#requestTab">Request VIP Service</a>
             </li>
     @endif
-    @if(Auth::check() && Auth::user()->hasPermissionWithName("list_of_VIP_services"))
+    @if(Auth::check() && Auth::user()->hasPermissionWithName("investor_vip_request"))
+           <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#prepareletter">Prepare Letter</a>
+            </li>
+    @endif
+    @if(Auth::check() && Auth::user()->hasPermissionWithName("investor_vip_request"))
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#listTab">List of VIP Service Type</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#listTab">Requested VIP</a>
             </li>
     @endif
     </ul>
         <div class="tab-content">
         <!-- Registration Form Tab -->
         @if(Auth::check() && Auth::user()->hasPermissionWithName("VIP_services_registration"))
-        <div class="tab-pane fade show active" id="registrationTab">
-            <form id="regionForm">
-                <div class="mb-3">
-                    <label for="VIPService_name" class="form-label">VIP Service Name</label>
-                    <input type="text" class="form-control" id="VIPService_name" placeholder="Enter VIP Service Name">
-                    <div class="error-message" id="VIPService_name_error"></div>
+        <div class="tab-pane fade show active" id="requestTab">
+            <form id="VIPRequestForm">
+            <div class="input-group mb-3"> 
+                <label class="input-group-text" for="viprequest">Select VIP Service</label>
+                <select id="VipService" class="form-select">
+                    <option value="">choose</option>
+                     @foreach ($VipServiceTypeData as $investment)
+                        <option value="{{ $investment->id }}">{{ $investment->service }}</option>
+                     @endforeach
+                </select>
+            </div>
+            <div class="input-group mb-3"> 
+                <label class="input-group-text" for="viprequest">Select Investment</label>
+                <select id="investment" class="form-select">
+                    <option value="">choose</option>
+                     @foreach ($investments as $investment)
+                        <option value="{{ $investment->investment_id }}">{{ $investment->Investment->service }}</option>
+                     @endforeach
+                 </select>
+            </div>
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="landing_date">Choose Landing Date</label>
+                <input type="date" name="landing_date" id = "landing_date" class="form-control">
+            </div>
+                <input type="hidden" id="created_by" value="{{ Auth::user()->id }}">
+                <input type="hidden" id="letter_code_id" value="2">
+                <div class="text-center">
+                        <button type="button" class="btn btn-success custom-button" id="requestVIPServiceButton">Next</button>
                 </div>
-                
-                <input type="hidden" name="user_id" id="created_by" value="{{ Auth::user()->id }}">
-                <button type="button" class="btn btn-primary" id="registerButton">Register VIP Service</button>
-            </form>
+        </form>
         </div>
         @endif
 
         <!-- List of VIP Service Tab -->
         @if(Auth::check() && Auth::user()->hasPermissionWithName("list_of_VIP_services"))
         <div class="tab-pane fade" id="listTab">
+        @if ($vipServices->isEmpty())
+               <p>There is no VIP Service request created yet!!</p>
+        @else
+        <div class="table-responsive mt-3">
+        <table class="table text-nowrap table-sm" id="ViewVIPServiceRequest">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>VIP Service Type</th>
+                    <th>Investment</th>
+                    <th>Company Name</th>
+                    <th>Investor</th>
+                    <th>Letter</th>
+                    <th>Reviewed By</th>
+                    <th>Reviewed Status</th>
+                    <th>Approved By</th>
+                    <th>Approve Status</th>
+                    <th>Landing Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id='role_table_body'>
+                
+                <!-- Add other rows with data here if available -->
+            </tbody>
+        </table>
+    </div>
+    @endif
+   </div>
+        @endif
+</div>
+
+<div class="tab-pane fade" id="prepareletter">
     <div class="table-responsive mt-3">
-        <table class="table text-nowrap table-sm" id="VIPServiceTypesTable">
+        <table class="table text-nowrap table-sm" id="ViewVIPService">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -79,8 +139,8 @@
         </table>
     </div>
 </div>
-        @endif
-</div>
+
+
 <!-- Hidden modal for success and error messages -->
 <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -176,40 +236,52 @@
             $('#messageModalBody').text(message);
             $('#messageModal').modal('show');
         }
-        $('#VIPServiceTypesTable').DataTable({
+        // VIEW REQUESTED VIP SERVICE
+        $('#ViewVIPServiceRequest').DataTable({
         processing: true,
         serverSide: true,
         responsive: true, 
         ajax: {
-            url: '/VIP_services/list',
+            url: '/investor/VIP_servicesRequest/list',
             type: 'get',
             data: {
                 _token: '{{ csrf_token() }}',
             },
         },
         columns: [
-            { data: 'id', name: 'id' },
-            { data: 'service', name: 'service'},
+        { data: 'id', name: 'id' }, // ID column
+        { data: 'service_type_id', name: 'service_type_id' }, // Service Type ID column
+        { data: 'investment_id', name: 'investment_id' }, // Investment ID column
+        { data: 'customer_id', name: 'customer_id' }, // Customer ID column
+        { data: 'landing_date', name: 'landing_date' }, // Landing Date column
+        { data: 'letter_id', name: 'letter_id' }, // Letter ID column
+        { data: 'reviewed_by', name: 'reviewed_by' }, // Reviewed By column
+        { data: 'review_status', name: 'review_status' }, // Review Status column
+        { data: 'approved_by', name: 'approved_by' }, // Approved By column
+        { data: 'approve_status', name: 'approve_status' }, // Approve Status column
+        { data: 'approved_date', name: 'approved_date' },
             {
                 data: null,
-                render: function (data, type, row) {
-                    @if (Auth::check() && Auth::user()->hasPermissionWithName("update_VIP_services"))
-                        return '<a href="#" class="btn btn-sm btn-primary edit-VIPService" data-id="' + row.id + '">Edit</a>';
+                render: function (data, type, row) 
+                {
+                    @if (Auth::check() && Auth::user()->hasPermissionWithName("update_item"))
+                        return '<button class="btn btn-sm btn-primary edit-item" data-id="' + row.id + '">Edit</button>';
                     @else
-                        return '';
+                        return ''; 
                     @endif
                 }
             },
             {
                 data: null,
                 render: function (data, type, row) {
-                    @if (Auth::check() && Auth::user()->hasPermissionWithName("delete_VIP_services"))
-                        return '<button class="btn btn-sm btn-danger delete-VIPService" data-id="' + row.id + '">Delete</button>';
+                    @if (Auth::check() && Auth::user()->hasPermissionWithName("delete_item"))
+                        return '<button class="btn btn-sm btn-danger delete-item" data-id="' + row.id + '">Delete</button>';
                     @else
-                        return '';
+                        return ''; 
                     @endif
                 }
             },
+
         ],
         paging: true, // Enable pagination
         pageLength: 10, // Number of rows per page
@@ -236,7 +308,7 @@
                 // Show success message
                 showSuccessMessage(response.message);
                 $('#editModal').modal('hide'); // Hide the modal after successful update
-                $('#VIPServiceTypesTable').DataTable().ajax.reload();
+                $('#ViewVIPServiceRequest').DataTable().ajax.reload();
             },
             error: function (xhr) {
                 if (xhr.status === 422) {
@@ -250,7 +322,7 @@
     });
 
 
-    $('#VIPServiceTypesTable').on('click', '.edit-VIPService', function () {
+    $('#ViewVIPServiceRequest').on('click', '.edit-VIPService', function () {
         var row = $(this).closest('tr');
         var VIPServiceId = row.find('td:eq(0)').text(); // Get the region ID from the first column
         var VIPServiceName = row.find('td:eq(1)').text(); // Get the measurement name from the second column
@@ -270,7 +342,7 @@
 
 
 
-    $('#VIPServiceTypesTable').on('click', '.delete-VIPService', function () {
+    $('#ViewVIPServiceRequest').on('click', '.delete-VIPService', function () {
         var regionId = $(this).data('id');
         
         // Display a confirmation prompt before deleting the measurement
@@ -284,7 +356,7 @@
                 },
                 success: function (response) {
                     showSuccessMessage("VIP Service deleted successfully");
-                    $('#VIPServiceTypesTable').DataTable().ajax.reload();
+                    $('#ViewVIPServiceRequest').DataTable().ajax.reload();
                 },
                 error: function (xhr) {
                     showErrorMessage('Error occurred during VIP Service deletion.');
@@ -293,39 +365,36 @@
        })
     });
 
-    $('#registerButton').click(function () {
+    $('#requestVIPServiceButton').click(function () {
     $('.error-message').empty();
     var formData = {
             _token: '{{ csrf_token() }}',
-            service: $('#VIPService_name').val(),
-            created_by: $('#created_by').val(),
-      };
-
-    $.ajax({
-        type: 'POST',
-        url: '/VIP_services/register',
-        data: formData,
-        success: function (response) {
-            console.log(response);
-            showSuccessMessage(response.message);
-            $('#regionForm')[0].reset();
-            $('.error-message').empty();
-            $('#VIPServiceTypesTable').DataTable().ajax.reload();
-
-        },
-        error: function (xhr) {
-            if (xhr.status === 422) {
-                showErrorMessage('Error occurred during VIP Service registration.');
-                var errors = xhr.responseJSON.errors;
-                $.each(errors, function (key, value) {
-                    alert(value[0]);
-                });
-                $('#' + key + '_error').text(value[0]);
-            } else {
-                showErrorMessage('Error occurred during VIP Service registration.');
-            }
-        },
-    });
+            customer_id: $('#created_by').val(),
+            letter_code_id: $('#letter_code_id').val(),
+            investment: $('#investment option:selected').val(),
+            service_type_id: $('#VipService option:selected').val(),
+            landing_date: $('#landing_date').val(),
+        };
+        $.ajax({
+            type: 'post',
+            url: '/investor/VIPRequest', // The route to handle the measurement update on the server
+            data: formData,
+            success: function (response) {
+                console.log(response);
+                // Show success message
+                showSuccessMessage(response.message);
+                $('#editModal').modal('hide'); // Hide the modal after successful update
+                $('#ViewVIPServiceRequest').DataTable().ajax.reload();
+            },
+            error: function (xhr) {
+                if (xhr.status === 422) {
+                    var errors = xhr.responseJSON.errors;
+                    $.each(errors, function (key, value) {
+                        $('#edit_' + key + '_error').text(value[0]);
+                    });
+                }
+            },
+        });
 });
 });
 </script>

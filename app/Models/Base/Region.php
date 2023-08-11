@@ -19,4 +19,8 @@ class Region extends Model
     {
         return $this->hasMany(Zone::class,'region_id','id');
     }
+    public function RegionNameandId()
+    {
+        return self::all(['id', 'name']);
+    }
 }

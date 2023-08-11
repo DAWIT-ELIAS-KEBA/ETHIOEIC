@@ -75,7 +75,6 @@ class ItemsManagement extends Controller
             $Data=['name'=>$validatedData['name']];
             $id=($validatedData['id']);
             $item = Item::findOrFail($id);
-            dd($item);
             $result = $item->update($Data);
             return response()->json(['message' => 'Item is updated successfully']); 
         }
