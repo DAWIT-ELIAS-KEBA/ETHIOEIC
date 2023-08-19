@@ -26,7 +26,6 @@ return new class extends Migration
             $table->unsignedInteger('payer_id');
             $table->unsignedInteger('payed_by')->nullable();
             $table->unsignedInteger('investment_id')->nullable();
-            $table->unsignedInteger('investment_id')->nullable();
             $table->float('amount_birr');
             $table->float('amount_dollar');
             $table->unsignedInteger('cashier_id')->nullable();

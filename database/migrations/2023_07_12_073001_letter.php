@@ -19,13 +19,13 @@ return new class extends Migration
             $table->string('description');
             $table->string('letter_type');    //incoming or outgoing
             $table->string('with_whom');      //investor or stakeholder or investment  to identify communication with whom
-            $table->string('template_subject');
-            $table->string('template_content');
-            $table->string('template_closure');
-            $table->boolean('is_cc_to_investor');
-            $table->boolean('is_cc_to_investment');
-            $table->unsignedInteger('template_added_by');
-            $table->unsignedInteger('template_updated_by');
+            $table->string('template_subject')->nullable();
+            $table->string('template_content')->nullable();
+            $table->string('template_closure')->nullable();
+            $table->boolean('is_cc_to_investor')->default(0);
+            $table->boolean('is_cc_to_investment')->default(0);
+            $table->unsignedInteger('template_added_by')->nullable();
+            $table->unsignedInteger('template_updated_by')->nullable();
             $table->timestamps();
         });
 
