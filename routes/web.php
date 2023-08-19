@@ -10,7 +10,7 @@ use App\Http\Controllers\Basic\RegisterRegionAndZone;
 
 
 Route::controller(RegisterRegionAndZone::class)->group(function()
-    {  
+    {
 
         // REGION ROUTE
 
@@ -170,8 +170,22 @@ Route::group(['prefix' => 'letter'],function ()
 
 
 
+    Route::controller(LetterController::class)->group(function(){
+        Route::post('create_new_letter_template', 'create_new_letter_template');
+        Route::post('view_new_template_preview', 'view_new_template_preview');
+    })->middleware("permission:create_new_letter_template");
+
 })->middleware('auth');
 
+Route::group(['prefix' => 'data'],function ()
+{
+    Route::controller(LetterController::class)->group(function(){
+        Route::get('generate_migrations_and_models', 'generate_migrations_and_models');
+    });
+
+
+
+});
 
 
 

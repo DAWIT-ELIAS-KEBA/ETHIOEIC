@@ -28,12 +28,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::table('users', function (Blueprint $table)
-        {
-            $table->foreign('added_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('updated_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('statusChangedBy')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-        });
+
 
         Schema::create('user_image', function (Blueprint $table) {
             $table->increments("id");
@@ -45,8 +40,6 @@ return new class extends Migration
             $table->string('comment');
             $table->rememberToken();
             $table->timestamps();
-            $table->foreign('approved_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });
 
 
@@ -69,7 +62,6 @@ return new class extends Migration
             $table->string('label');
             $table->integer('order_num');
             $table->unsignedInteger('group_id');
-            $table->foreign('group_id')->references('id')->on('permission_group')->onDelete('cascade');
             $table->timestamps();
         });
 
@@ -79,7 +71,6 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->unsignedInteger('added_by');
             $table->timestamps();
-            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
         });
 
         Schema::create('role_permissions', function (Blueprint $table) {
@@ -88,9 +79,7 @@ return new class extends Migration
             $table->unsignedInteger('permission_id');
             $table->unsignedInteger('added_by');
             $table->timestamps();
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
-            $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade');
-            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
+
         });
 
         Schema::create('user_role', function (Blueprint $table) {
@@ -99,9 +88,7 @@ return new class extends Migration
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('added_by');
             $table->timestamps();
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
+
         });
 
         Schema::create('user_permissions', function (Blueprint $table) {
@@ -111,9 +98,7 @@ return new class extends Migration
             $table->boolean('status')->default(1); // for permission that allowed or disallowed
             $table->unsignedInteger('added_by');
             $table->timestamps();
-            $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
+
         });
 
         Schema::create('sidebar_menu', function (Blueprint $table) {
@@ -133,8 +118,6 @@ return new class extends Migration
             $table->string('link');
             $table->string('item_code');
             $table->timestamps();
-            $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade');
-            $table->foreign('menu_id')->references('id')->on('sidebar_menu')->onDelete('cascade');
         });
 
 
@@ -148,7 +131,6 @@ return new class extends Migration
             $table->string('photo');
             $table->string('id_card')->nullable();
             $table->string('passport')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
 
@@ -164,7 +146,6 @@ return new class extends Migration
             $table->string('residence_permit_file');
             $table->date('rp_expired_date');
             $table->boolean('rp_status');
-            $table->foreign('customer_id')->references('id')->on('customers');
             $table->timestamps();
         });
 
@@ -178,13 +159,19 @@ return new class extends Migration
             $table->date('expired_date');
             $table->boolean('status');
             $table->timestamps();
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
         });
 
-        Schema::create('main_stakeholders', function (Blueprint $table) {
+        Schema::create('main_stakeholders', function (Blueprint $table)
+        {
             $table->increments("id");
             $table->string('name');
             $table->string('label');
+            $table->string('address');
+            $table->string('code');
+            $table->string('api_link')->nullable();
+            $table->string('api_token')->nullable();
+            $table->string('key')->nullable();
+            $table->string('data_format')->nullable();
             $table->timestamps();
         });
 
@@ -201,9 +188,10 @@ return new class extends Migration
             $table->string('data_format')->nullable();
             $table->unsignedInteger('added_by');
             $table->timestamps();
-            $table->foreign('main_id')->references('id')->on('main_stakeholders')->onDelete('cascade');
-            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
+
         });
+
+
 
 
 

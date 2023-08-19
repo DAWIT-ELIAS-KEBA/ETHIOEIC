@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class ShareHolder extends Model
 {
     use HasFactory;
-    protected $table='Table_name';
+    protected $table='shareholders';
     protected $id='id';
     protected $fillable = ['investment_id','customer_id','is_signed','created_at','updated_at'];
     public function Investment()

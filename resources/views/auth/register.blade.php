@@ -13,9 +13,9 @@
     <meta name="keywords"
         content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,
         jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
- 
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
-  
+
+    <link rel="icon" href="logo.png" type="image/x-icon">
+
     <script src="../assets/js/authentication-main.js"></script>
     <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Style Css -->
     <link href="../assets/css/styles.min.css" rel="stylesheet"> <!-- Icons Css -->
@@ -51,7 +51,7 @@
 
                             <div class="row gy-3">
                                 <div class="col-xl-12">
-                        
+
                                     <input type="text" class="form-control form-control-lg" name="name"
                                         :value="old('name')" required autofocus autocomplete="name"
                                         placeholder="Full Name">
@@ -73,7 +73,7 @@
 </div>
 
                                 <div class="col-xl-12">
-                               
+
                                 <select id="country" class="form-select"  name="country" onchange="toggleInput()">
                                 <option value="none">Select Country</option>
                                 <option value="Afghanistan">Afghanistan</option>
@@ -340,7 +340,7 @@ function toggleInput() {
     document.getElementById("inputField").required = true;
     document.getElementById("inputContainer2").style.display = "none";
     document.getElementById("inputField2").required = false;
-  } 
+  }
 
    else  {
       document.getElementById("inputContainer").style.display = "none";
@@ -358,22 +358,22 @@ function toggleInput() {
 <div class="input-group mb-3"> <input type="file" name="id_card" class="form-control"                                                 id="inputField"> <label class="input-group-text"
                                                 for="inputGroupFile02">ID</label> </div>
 
- 
-  
+
+
 </div>
 
 
 
 <div class="col-xl-12" id="inputContainer2" style="display: none;">
 
-<div class="input-group mb-3"> <input type="file" name="passport" class="form-control" 
+<div class="input-group mb-3"> <input type="file" name="passport" class="form-control"
                                                 id="inputGroupFile02"> <label class="input-group-text"
                                                 for="inputGroupFile02">Passport</label> </div>
 </div>
 
 
 <div class="col-xl-12"  >
-   
+
 
 <div class="input-group mb-3"> <input type="file" name="photo" class="form-control" required
                                                 id="inputGroupFile02"> <label class="input-group-text"

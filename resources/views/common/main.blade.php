@@ -8,7 +8,6 @@
 
 <body>
     <!-- Start Switcher -->
-    @include('common.switcher')
 
 
     <div class="page">

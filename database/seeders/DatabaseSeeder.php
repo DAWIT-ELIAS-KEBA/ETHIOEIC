@@ -121,7 +121,7 @@ class DatabaseSeeder extends Seeder
                                     [
                                         ["name"=>"view_letter_code","label"=>"View Letter Code","order_num"=>1],
                                         ["name"=>"view_letter_template","label"=>"View Letter Template","order_num"=>2],
-                                        ["name"=>"create_new_letter_template","label"=>"Ctreate New Letter Template","order_num"=>3],
+                                        ["name"=>"create_new_letter_template","label"=>"Create New Letter Template","order_num"=>3],
                                         ["name"=>"update_letter_template","label"=>"Update Letter Template","order_num"=>4],
                                         ["name"=>"delete_letter_template","label"=>"Delete Letter Template","order_num"=>5],
                                         ["name"=>"view_initialized_letter","label"=>"View Initialized Letter","order_num"=>6],
@@ -248,7 +248,7 @@ class DatabaseSeeder extends Seeder
                                 ]
                     ]
 
-                    ],
+                    ,
                     [
                         "menu"=>[
                                     "title"=>"Register",

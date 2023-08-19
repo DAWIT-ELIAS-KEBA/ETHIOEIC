@@ -2,10 +2,10 @@
          <!-- Start::main-sidebar-header -->
          <div class="main-sidebar-header">
              <a href="index" class="header-logo">
-                 <img src="{{ asset("logo.jpg") }}" alt="logo" class="desktop-logo">
-                 <img src="{{ asset("logo.jpg") }}" alt="logo" class="toggle-logo">
-                 <img src="{{ asset("logo.jpg") }}" alt="logo" class="desktop-dark">
-                 <img src="{{ asset("logo.jpg") }}" alt="logo" class="toggle-dark">
+                 <img src="{{ asset("logo.png") }}" alt="logo" class="desktop-logo">
+                 <img src="{{ asset("logo.png") }}" alt="logo" class="toggle-logo">
+                 <img src="{{ asset("logo.png") }}" alt="logo" class="desktop-dark">
+                 <img src="{{ asset("logo.png") }}" alt="logo" class="toggle-dark">
              </a>
          </div>
 

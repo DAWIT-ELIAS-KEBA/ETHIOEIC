@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('type');    // chartered_city or regional_state
             $table->unsignedInteger('created_by');
             $table->timestamps();
-            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
         });
 
         Schema::create('zone', function (Blueprint $table) {
@@ -27,8 +26,7 @@ return new class extends Migration
             $table->unsignedInteger('region_id');    // Code for regions
             $table->unsignedInteger('created_by');
             $table->timestamps();
-            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('region_id')->references('id')->on('region')->onDelete('cascade');
+
         });
 
         Schema::create('woreda', function (Blueprint $table) {
@@ -37,8 +35,7 @@ return new class extends Migration
             $table->unsignedInteger('zone_id');    // Code for regions
             $table->unsignedInteger('created_by');
             $table->timestamps();
-            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('zone_id')->references('id')->on('zone')->onDelete('cascade');
+
         });
 
 

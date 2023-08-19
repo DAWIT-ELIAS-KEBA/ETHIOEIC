@@ -13,13 +13,13 @@
     <meta name="keywords"
         content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
     <!-- Favicon -->
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link rel="icon" href="logo.png" type="image/x-icon">
     <!-- Main Theme Js -->
     <script src="../assets/js/authentication-main.js"></script> <!-- Bootstrap Css -->
     <link id="style" href="../assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Style Css -->
     <link href="../assets/css/styles.min.css" rel="stylesheet"> <!-- Icons Css -->
     <link href="../assets/css/icons.min.css" rel="stylesheet">
- 
+
     </script><noscript>
         <p>To display this page you need a browser that supports JavaScript.</p>
     </noscript>
@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    
+
     <div class="container">
         <div class="row justify-content-center align-items-center authentication authentication-basic h-100">
             <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-6 col-sm-8 col-12">
@@ -50,34 +50,34 @@
                             <div class="col-xl-12"> <label for="signin-username" class="form-label text-default">User
                                     Name</label> <input type="text" class="form-control form-control-lg"
                                   type="email"  name="email" :value="old('email')" required autofocus autocomplete="username"      placeholder="Email *"> </div>
-                           
+
                                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                           
+
                                     <div class="col-xl-12 mb-2">
 
 
             <div class="input-group"> <input type="password" class="form-control form-control-lg"
-            name="password" required autocomplete="current-password"  placeholder="password"> 
+            name="password" required autocomplete="current-password"  placeholder="password">
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                                        
-                                        
+
+
                                         <button class="btn btn-light"
                                         type="button" onclick="createpassword('signin-password',this)"
                                         id="button-addon2"><i class="ri-eye-off-line align-middle"></i></button> </div>
                                 <div class="mt-2">
                                 <Br>
                                     <div class="form-check"> <input class="form-check-input" type="checkbox" value=""
-                                            id="defaultCheck1"> 
+                                            id="defaultCheck1">
 
-                                       
+
                                             <label for="signin-password"
                                     class="form-label text-default d-block">Remember Me<a href="forgot-password"
                                         class="float-end text-danger">Forgot Password ?</a></label>
                                 </div>
                             </div>
       <div class="col-xl-12 d-grid mt-2">
-      
+
       <button type="submit"   class="btn btn-lg btn-primary">
                                     {{ __('Log in') }}
                                     </button>
@@ -87,7 +87,7 @@
                             <p class="fs-12 text-muted mt-3">Dont have an account? <a href="register"
                                     class="text-primary">Register</a></p>
 
-     
+
 
 
 

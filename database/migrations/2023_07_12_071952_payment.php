@@ -18,7 +18,6 @@ return new class extends Migration
             $table->integer('amount_birr');
             $table->unsignedInteger('amount_set_by');
             $table->timestamps();
-            $table->foreign('amount_set_by')->references('id')->on('users')->onDelete('cascade');
         });
 
         Schema::create('payment', function (Blueprint $table) {
@@ -26,7 +25,7 @@ return new class extends Migration
             $table->unsignedInteger('case_id');
             $table->unsignedInteger('payer_id');
             $table->unsignedInteger('payed_by')->nullable();
-            $table->unsignedInteger('investment_id')->nul;
+            $table->unsignedInteger('investment_id')->nullable();
             $table->float('amount_birr');
             $table->float('amount_dollar');
             $table->unsignedInteger('cashier_id')->nullable();
@@ -37,11 +36,7 @@ return new class extends Migration
             $table->string('payment_slip')->nullable();
             $table->string('processed_by')->nullable();                     // wether by manual or api
             $table->timestamps();
-            $table->foreign('case_id')->references('id')->on('payment_cases')->onDelete('cascade');
-            $table->foreign('payer_id')->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign('payed_by')->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign('cashier_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
+
         });
 
 

@@ -21,8 +21,7 @@ return new class extends Migration
 
             $table->timestamps();
 
-            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('updated_by')->references('id')->on('users')->onDelete('cascade');
+
 
         });
 
@@ -62,28 +61,10 @@ return new class extends Migration
             $table->string('other_visa_file')->nullable();// if process type is conversion
 
             $table->timestamps();
-            $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
-            $table->foreign('letter_id')->references('id')->on('letters')->onDelete('cascade');
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign('pm_approved_by')->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign('reviewed_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('approved_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('payment_id')->references('id')->on('payment')->onDelete('cascade');
-            $table->foreign('converting_visa_type_id')->references('id')->on('visa_type')->onDelete('cascade');
-        });
-
-        Schema::create('visa_letters', function (Blueprint $table) {
-
-            $table->increments('id');
-            $table->unsignedInteger('request_id');
-            $table->unsignedInteger('letter_id');
-
-            $table->timestamps();
-            $table->foreign('request_id')->references('id')->on('visa_request')->onDelete('cascade');
-            $table->foreign('letter_id')->references('id')->on('letters')->onDelete('cascade');
-
 
         });
+
+
 
         Schema::create('work_permit_request', function (Blueprint $table) {
 
@@ -119,27 +100,9 @@ return new class extends Migration
 
 
             $table->timestamps();
-            $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
-            $table->foreign('letter_id')->references('id')->on('letters')->onDelete('cascade');
-            $table->foreign('employee_id')->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign('pm_approved_by')->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign('reviewed_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('approved_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('payment_id')->references('id')->on('payment')->onDelete('cascade');
-        });
-
-        Schema::create('work_permit_letters', function (Blueprint $table) {
-
-            $table->increments('id');
-            $table->unsignedInteger('request_id');
-            $table->unsignedInteger('letter_id');
-
-            $table->timestamps();
-            $table->foreign('request_id')->references('id')->on('work_permit_request')->onDelete('cascade');
-            $table->foreign('letter_id')->references('id')->on('letters')->onDelete('cascade');
-
 
         });
+
 
 
 
