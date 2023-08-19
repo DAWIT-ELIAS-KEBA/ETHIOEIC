@@ -83,27 +83,16 @@
                     <div class="tab-pane fade show active" id="registrationTab">
                         <form id="investmentTypeForm">
                         <div class="mb-3">
-                        <label for="region_name" class="form-label">Investment Type Name</label>
+                        <label for="region_name" class="form-label">Name</label>
                         <input type="text" class="form-control" id="investment_type_name" placeholder="Enter Investment Type Name" required>
                         <div class="error-message" id="region_name_error"></div>
                     </div>
-                    <label class="form-label">Is Shareholder?</label>
-                    <div class ="container">
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="shareholder_yes" name="shareholder_value" value="1" required> 
-                            <label class="form-check-label" for="shareholder_yes">YES</label> 
-                        </div>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="shareholder_no" name="shareholder_value" value="0" required> 
-                            <label class="form-check-label" for="shareholder_no">NO</label> 
-                        </div>
-                    </div>
                 <div class="input-group mb-3"> 
-                     <label class="input-group-text" for="inputGroupSelect01">Memorandum Type</label>
+                     <label class="input-group-text" for="inputGroupSelect01">Business</label>
                         <select class="form-select" id="memorandum_type">
                               <option selected>Choose </option>
-                              <option value="MoU">Memorundum of Understanding</option>
-                              <option value="MoA">Memorandum of Association</option>
+                              <option value="BT">Business Type</option>
+                              <option value="BA">Business Area</option>
                         </select>
                         <div class="error-message" id="memorundum_type_error"></div>
                   </div>
@@ -121,9 +110,8 @@
                     <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Investment Type Name</th>
-                                <th>Is Shareholders?</th>
-                                <th>Type of Memorandum</th>
+                                <th>Name</th>
+                                <th>Business</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -172,23 +160,12 @@
                             <div class="error-message" id="edit_investment_type_name_error"></div>
                         </div>
                         <div class="mb-3">
-                            <label for="edit_memorandum_type" class="form-label">Memorandum Type</label>
+                            <label for="edit_memorandum_type" class="form-label">Business Form</label>
                             <select class="form-select" id="edit_memorandum_type">
-                                <option value="MoA">Memorandum of Association</option>
-                                <option value="MoU">Memorandum of Understanding</option>
+                                <option value="BT">Business Type</option>
+                                <option value="BA">Business Area</option>
                                 <!-- Add more options as needed -->
                             </select>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Is Shareholder?</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="edit_is_shareholder" id="edit_is_shareholder_yes" value="1">
-                                <label class="form-check-label" for="edit_is_shareholder_yes">Yes</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="edit_is_shareholder" id="edit_is_shareholder_no" value="0">
-                                <label class="form-check-label" for="edit_is_shareholder_no">No</label>
-                            </div>
                         </div>
                         <input type="hidden" name="item_id" id="edit_investment_type_id" value="">
                     </form>
@@ -223,8 +200,7 @@
         columns: [
             { data: 'id', name: 'id' },
             { data: 'name', name: 'name' },
-            { data: 'is_shareholders', name: 'is_shareholders' },
-            { data: 'memorandum_type', name: 'memorandum_type' },
+            { data: 'investment_or_business', name: 'investment_or_business' },
             {
                 data: null,
                 render: function (data, type, row) 

@@ -32,7 +32,8 @@ class ItemsManagement extends Controller
             }
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'created_by'=>'required|exists:users,id'
+            'created_by'=>'required|exists:users,id',
+            'items_or_material'=>'required'
         ]);
 
         if ($validator->fails())
@@ -40,11 +41,10 @@ class ItemsManagement extends Controller
             return response()->json(['errors' => $validator->errors()], 422);
         }
         $existingItem = Item::where('name', $request->name)->first();
-
         if ($existingItem) {
             return response()->json(['errors' => ['name' => ['Item with the same name already exists.']]], 422);
         }
-        Item::create(['name' => $request->name,'created_by' => $request->created_by]);
+        Item::create(['name' => $request->name,'type' => $request->items_or_material,'created_by' => $request->created_by]);
 
         return response()->json(['message' => 'Item registered successfully']);
 
@@ -56,7 +56,7 @@ class ItemsManagement extends Controller
             {
                     return view("errors.role_permission_error");
             }
-        $items = Item::select('id', 'name')->get();
+        $items = Item::select('id', 'name','type')->get();
         return DataTables::of($items)   
             ->make(true);
     }

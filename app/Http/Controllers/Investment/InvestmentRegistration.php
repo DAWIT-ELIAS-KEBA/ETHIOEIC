@@ -10,6 +10,7 @@ use App\Models\Investment\Shareholder;
 use App\Models\Base\Region;
 use App\Models\Base\Zone;
 use App\Models\Base\Woreda;
+use App\Models\Investment\CompanyName;
 
 
 
@@ -26,8 +27,11 @@ class InvestmentRegistration extends Controller
         $shareholders =  $shareholderInfo->CustomerNameandId();
         // Investment Type
         $investmentType = new InvestmentType();
-        $InvestmentTypes = $investmentType->InvestmentTypeNameandId();
-        // Region
+        $InvestmentTypes = $investmentType->InvestmentTypeNameandId('BT');
+        
+        $BusinessType = new InvestmentType();
+        $BusinessTypes = $investmentType->InvestmentTypeNameandId('BA');
+
         $RegionInfo = new Region();
         $Regions =  $RegionInfo->RegionNameandId();
         // Zone
@@ -37,7 +41,7 @@ class InvestmentRegistration extends Controller
         $WoredaInfo = new Woreda();
         $Woredas =  $WoredaInfo->WoredaNameandId();
 
-        return view("Investment.InvestmentRegistration",compact('InvestmentTypes','shareholders','Regions','Woredas','Zones'));
+        return view("Investment.InvestmentRegistration",compact('InvestmentTypes','BusinessTypes','shareholders','Regions','Woredas','Zones'));
     }
     public function getzonesbyRegionID(Request $request,$id)
     {
@@ -48,12 +52,34 @@ class InvestmentRegistration extends Controller
     }
     public function getworedasbyZoneID(Request $request,$id)
     {
-        $woredaInfo = new Woreda();
+       $woredaInfo = new Woreda();
        $Woredas =  $woredaInfo->WoredaNameAndIdByZone($id);
        return response()->json($Woredas);
     }
     public function RequestInvestmentRegistration(Request $request)
     {
-        if(!Auth::user() || !Auth::user()->hasPermissionWithName())
+        $formData = $request->all();
+        $userId = Auth::user()->id;
+        $companyNameData = [
+                'name1'=>$formData['companyName1'],
+                'name2'=>$formData['companyName2'],
+                'name3'=>$formData['companyName3'],
+            ];
+            $investmentData = [
+                'investment_type_id'=>$formData['businessForm'],
+                'trade_name'=>$formData['tradeName'],
+                'business_type_id'=>$formData['fieldOfBusiness'],
+                'manager_id'=>$formData['generalManager'],
+                'created_by'=>$userId,
+                'attorney_name'=>$formData['Authorized_PersonName']
+               
+            ];
+            $result = CompanyName::saveInvestmentWithCompanyNames($investmentData,$companyNameData);
+        // ... and so on
+        // Process the data and perform necessary actions
+        // For example, you can save the data to the database
+    
+        // Return a response (you can customize the response based on your needs)
+        return response()->json(['message' =>  "Registered Successfully"]);  
     }
 }

@@ -30,8 +30,7 @@ class InvestmentTypeController extends Controller
          $validator = Validator::make($request->all(), [
              'name' => 'required|string|max:255',
              'created_by'=>'required|exists:users,id',
-             'is_shareholders'=>'required',
-             'memorandum_type'=>'required'
+             'memorandum_type'=> 'required',
          ]);
  
          if ($validator->fails())
@@ -43,7 +42,7 @@ class InvestmentTypeController extends Controller
          if ($existingInvestmentType) {
              return response()->json(['errors' => ['name' => ['Investment Type with the same name already exists.']]], 422);
          }
-         InvestmentType::create(['name' => $request->name,'added_by' => $request->created_by,'is_shareholders'=>$request->is_shareholders,'memorandum_type'=>$request->memorandum_type]);
+         InvestmentType::create(['name' => $request->name,'added_by' => $request->created_by,'investment_or_business'=>$request->memorandum_type]);
          return response()->json(['message' => 'Investment type registered successfully']);
      }
      // Investment Type List
@@ -53,26 +52,16 @@ class InvestmentTypeController extends Controller
              {
                      return view("errors.role_permission_error");
              }
-         $investment_type = InvestmentType::select('id', 'name','is_shareholders','memorandum_type')->get();
+         $investment_type = InvestmentType::select('id', 'name','investment_or_business')->get();
          return DataTables::of($investment_type)->addIndexColumn()
-                 ->addColumn('is_shareholders', function($row){
-                        if($row->is_shareholders==1)
+                  ->addColumn('investment_or_business', function($row){
+                        if($row->memorandum_type=='BA')
                             {
-                                return "YES";
+                                return "Business Area";
                             }
                         else
                             {
-                                return "NO";
-                            }
-                    })
-                  ->addColumn('memorandum_type', function($row){
-                        if($row->memorandum_type=='MoA')
-                            {
-                                return "Memorandum of Association";
-                            }
-                        else
-                            {
-                                return "Memorundam of Understanding";
+                                return "Investment Type";
                             }
                     }) 
                  ->make(true);

@@ -30,13 +30,15 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('type');
             $table->unsignedInteger('created_by');
             $table->timestamps();
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
         });
 
-        Schema::create('materials', function (Blueprint $table) {
+        Schema::create('materials_items', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('type');
             $table->string('name');
             $table->unsignedInteger('created_by');
             $table->timestamps();
@@ -55,6 +57,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('comment');
+            $table->string('type');
             $table->unsignedInteger('sent_by');
             $table->timestamps();
             $table->foreign('sent_by')->references('id')->on('customers')->onDelete('cascade');

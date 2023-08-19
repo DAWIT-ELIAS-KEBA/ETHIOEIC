@@ -28,13 +28,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::table('users', function (Blueprint $table)
-        {
-            $table->foreign('added_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('updated_by')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('statusChangedBy')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
-        });
-
+       
         Schema::create('user_image', function (Blueprint $table) {
             $table->increments("id");
             $table->unsignedInteger('user_id');

@@ -101,7 +101,7 @@ Route::controller(RegisterRegionAndZone::class)->group(function()
     //Investment Registration Request
     Route::controller(InvestmentRegistration::class)->group(function()
     { 
-        Route::post('/investment/request_and_view_investment', 'CheckTab')->name("investment.submit")->middleware("permission:VIP_services_registration");
+        Route::post('/investment/request_and_view_investment', 'RequestInvestmentRegistration')->middleware("permission:request_investment_registration");
         Route::get('/investment/request_and_view_investment', 'displayInvestmentRegistrationPage')->middleware("permission:Investment_registration_page");
         Route::get('/get-zones/{id}', 'getzonesbyRegionID')->middleware("permission:Investment_registration_page");
         Route::get('/get-woredas/{id}', 'getworedasbyZoneID')->middleware("permission:Investment_registration_page");

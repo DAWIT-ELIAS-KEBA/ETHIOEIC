@@ -175,7 +175,7 @@ class DatabaseSeeder extends Seeder
                                 "group_order_num"=>12,
                                 "permissions"=>
                                     [
-                                        ["name"=>"Investment_registration_request","label"=>"Investment Registration Request","order_num"=>1],
+                                        ["name"=>"request_investment_registration","label"=>"Investment Registration Request","order_num"=>1],
                                         ["name"=>"Investment_registration_page","label"=>"Investment Registration page","order_num"=>2],
                                     
                                     ]

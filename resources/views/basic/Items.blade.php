@@ -73,6 +73,13 @@
                         <div class="error-message" id="item_name_error"></div>
                     </div>
                     <input type="hidden" name="user_id" id="created_by" value="{{ Auth::user()->id }}">
+                    <div class="mb-3">
+                            <label for="edit_memorandum_type" class="form-label">Investment Item or Material</label>
+                            <select class="form-select" id="item_or_material">
+                                <option value="IR">Item Registration</option>
+                                <option value="MR">Material Registration</option>
+                            </select>
+                        </div>
                     <button type="button" class="btn btn-primary" id="registerButton">Register Item</button>
                 </form>
             </div>
@@ -80,12 +87,13 @@
     @if(Auth::check() && Auth::user()->hasPermissionWithName("list_of_item"))
         <!-- List of Items Tab -->
         <div class="tab-pane fade" id="listTab">
-            <div class="table-responsive mt-3">
-                <table class="table text-nowrap table-sm" id="itemsTable">
+            <div class="table-responsive mt-3" style = 'width:100%'>
+                <table class="table text-nowrap user_table" id="itemsTable">
                     <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Item Name</th>
+                                <th>Type</th>
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
@@ -152,6 +160,7 @@
                             <div class="error-message" id="edit_item_name_error"></div>
                         </div>
                         <input type="hidden" name="item_id" id="edit_item_id" value="">
+                        
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -212,6 +221,8 @@
         columns: [
             { data: 'id', name: 'id' },
             { data: 'name', name: 'name' },
+            { data: 'type', name: 'type' },
+
             {
                 data: null,
                 render: function (data, type, row) 
@@ -225,7 +236,8 @@
             },
             {
                 data: null,
-                render: function (data, type, row) {
+                render: function (data, type, row)
+                {
                     @if (Auth::check() && Auth::user()->hasPermissionWithName("delete_item"))
                         return '<button class="btn btn-sm btn-danger delete-item" data-id="' + row.id + '">Delete</button>';
                     @else
@@ -321,6 +333,7 @@
     var formData = {
         _token: '{{ csrf_token() }}',
         name: $('#item_name').val(),
+        items_or_material: $('#item_or_material option:selected').val(),
         created_by: $('#created_by').val(),
     };
 

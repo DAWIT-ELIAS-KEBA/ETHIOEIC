@@ -11,14 +11,17 @@ class InvestmentType extends Model
     use HasFactory;
     protected $table='investment_type';
     protected $id='id';
-    protected $fillable = ['name','is_shareholders','added_by','memorandum_type','created_at','updated_at'];
+    protected $fillable = ['name','added_by','investment_or_business','created_at','updated_at'];
     public function AddedBy()
     {
         return $this->belongsTo(User::class,'added_by','id');
     }
-    public function InvestmentTypeNameandId()
+    public function InvestmentTypeNameandId($condition)
     {
-        return self::all(['id', 'name']);
+    
+            // Apply the condition to the query
+            $query=self::where('investment_or_business', $condition)->select('id', 'name')->get();
+            return $query;
     }
-
+    
 }

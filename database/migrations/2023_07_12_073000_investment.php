@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('investment_type', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->unique();
-            $table->boolean('is_shareholders');
+            $table->boolean('investment_or_business');
             $table->unsignedInteger('added_by');
-            $table->string('memorandum_type');
             $table->timestamps();
             $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
         });
@@ -44,28 +43,27 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedInteger("investment_type_id");
             $table->unsignedInteger('company_name_id')->nullable();
-            $table->boolean('company_name_status')->default(0);         // approve or not approved
             $table->string('trade_name');
             $table->unsignedInteger("business_type_id");
-            $table->unsignedInteger('manager_id')->nullable();
+            $table->unsignedInteger('manager_id');
             $table->unsignedInteger('created_by');
-            $table->string('attorney_name')->nullable();
+            $table->string('attorney_name');
             $table->unsignedInteger('reviewed_by')->nullable();
             $table->boolean('review_status');
             $table->unsignedInteger('approved_by')->nullable();
-            $table->boolean('approve_status');
-            $table->string('comment');
+            $table->boolean('approve_status')->nullable();;
+            $table->string('comment')->nullable();;
             $table->unsignedInteger('payment_id')->nullable();
             $table->string('license_file')->nullable();
-            $table->unsignedInteger('license_prepared_by');
+            $table->unsignedInteger('license_prepared_by')->nullable();;
             $table->string('issued_date')->nullable();
             $table->string('expired_date')->nullable();
             $table->string('license_code')->nullable();
 
-            $table->string('investment_status')->default(1);
+            $table->string('investment_status')->nullable();
             $table->unsignedInteger('status_changed_by')->nullable();
 
-            $table->foreign('business_type_id')->references('id')->on('business_type')->onDelete('cascade');
+            $table->foreign('business_type_id')->references('id')->on('investment_type')->onDelete('cascade');
             $table->foreign('manager_id')->references('id')->on('customers')->onDelete('cascade');
             $table->foreign('created_by')->references('id')->on('customers')->onDelete('cascade');
             $table->foreign('reviewed_by')->references('id')->on('users')->onDelete('cascade');
@@ -82,9 +80,17 @@ return new class extends Migration
 
         Schema::create('company_name', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->unsignedInteger("sent_by")->nullable();
+            $table->unsignedInteger("viewed_by")->nullable();
+            $table->string("comment")->nullable();
+            $table->string('name1');
+            $table->string('name2');
+            $table->string('name3');
+            $table->string('selected_name')->nullable();;
             $table->unsignedInteger('investment_id');
             $table->timestamps();
+            $table->foreign('sent_by')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('viewed_by')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
         });
 
@@ -109,10 +115,9 @@ return new class extends Migration
             $table->string('finance_source_equity');
             $table->string('finance_source_loan');
             $table->string('estimated_employee');
-            $table->unsignedInteger('info_source_id');
+            $table->unsignedInteger('info_source');
 
             $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
-            $table->foreign('info_source_id')->references('id')->on('info_source')->onDelete('cascade');
 
             $table->timestamps();
         });
@@ -146,6 +151,7 @@ return new class extends Migration
             $table->unsignedInteger("investment_id");
             $table->unsignedInteger("item_id");
             $table->unsignedInteger("measurement_id");
+            $table->integer("quantity");
             $table->integer("local_share");
             $table->integer("export_share");
             $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
@@ -159,10 +165,11 @@ return new class extends Migration
             $table->unsignedInteger("investment_id");
             $table->unsignedInteger("material_id");
             $table->unsignedInteger("measurement_id");
+            $table->integer("quantity");
             $table->integer("local_share");
             $table->integer("export_share");
             $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
-            $table->foreign('material_id')->references('id')->on('materials')->onDelete('cascade');
+            $table->foreign('material_id')->references('id')->on('materials_items')->onDelete('cascade');
             $table->foreign('measurement_id')->references('id')->on('measurement_unit')->onDelete('cascade');
             $table->timestamps();
         });
@@ -183,20 +190,32 @@ return new class extends Migration
             $table->unsignedInteger("investment_id");
             $table->unsignedInteger("customer_id");
             $table->boolean("is_signed");
+            $table->string("telephone1");
+            $table->string("telephone2");
             $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
             $table->timestamps();
         });
 
+        Schema::create('company_Representative', function (Blueprint $table) {
+            $table->increments('id');
+            $table->unsignedInteger("investment_id");
+            $table->unsignedInteger("representative_id");
+            $table->boolean("is_signed");
+            $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
+            $table->foreign('representative_id')->references('id')->on('users')->onDelete('cascade');
+            $table->timestamps();
+        });
+        
+
 
         Schema::create('investement_documents', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger("investment_id");
-            $table->unsignedInteger("document_type_id");
+            $table->string("document_path");
             $table->boolean("status");
             $table->string("comment");
             $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
-            $table->foreign('document_type_id')->references('id')->on('document_type')->onDelete('cascade');
             $table->timestamps();
         });
 

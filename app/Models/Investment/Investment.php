@@ -26,10 +26,6 @@ class Investment extends Model
     {
         return $this->belongsTo(CompanyName::class,'company_name_id','id');
     }
-    public function BusinessType()
-    {
-        return $this->belongsTo(BusinessType::class,'business_type_id','id');
-    }
     public function Manager()
     {
         return $this->belongsTo(Customer::class,'manager_id','id');

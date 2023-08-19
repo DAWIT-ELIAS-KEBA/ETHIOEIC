@@ -10,7 +10,7 @@ class Item extends Model
     use HasFactory;
     protected $table='items';
     protected $id='id';
-    protected $fillable = ['name','created_by','created_at' ,'updated_at'];
+    protected $fillable = ['name','created_by','type','created_at' ,'updated_at'];
     public function CreatedBy()
     {
         return $this->belongsTo(User::class,'created_by','id');
