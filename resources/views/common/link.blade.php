@@ -12,12 +12,13 @@
 
 
         <link rel="icon" href="" type="image/x-icon">
-
+        <script src="{{ asset("assets/vendor/ckeditor/ckeditor.js")}}"></script>
         <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
         <script src="{{ asset("assets/libs/choices.js/public/assets/scripts/choices.min.js")}}"></script>
 
         <script src="{{ asset("assets\js\mylibrary.js")}}"></script>
+        <script src="{{ asset("assets\js\pdf.js")}}"></script>
 
 
         <!-- Main Theme Js --> <script src="{{ asset("assets/js/main.js") }}"></script> <!-- Bootstrap Css -->
@@ -48,6 +49,10 @@
 
 
          <script src="{{ asset("assets/js/jquery.dataTables.min.js")}}"></script>
+
+
+
+
 
         <meta http-equiv="imagetoolbar" content="no" /><style type="text/css">
 

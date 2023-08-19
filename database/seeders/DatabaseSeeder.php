@@ -87,7 +87,7 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"list_of_item","label"=>"View List of Items","order_num"=>3],
                                         ["name"=>"delete_item","label"=>"Delete Item","order_num"=>4],
                                         ["name"=>"update_item","label"=>"Update Item","order_num"=>5],
-                                       
+
                                     ]
                            ],
                            [
@@ -100,7 +100,7 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"list_of_measurement","label"=>"View List of Measurement","order_num"=>3],
                                         ["name"=>"delete_measurement","label"=>"Measurement Deletion","order_num"=>4],
                                         ["name"=>"update_measurement","label"=>"Updating Measurement","order_num"=>5],
-                                    
+
                                     ]
                             ],
 
@@ -114,7 +114,7 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"list_of_region","label"=>"View List of Region","order_num"=>3],
                                         ["name"=>"delete_region","label"=>"Region Deletion","order_num"=>4],
                                         ["name"=>"update_region","label"=>"Updating Region","order_num"=>5],
-                                    
+
                                     ]
                             ],
                             [
@@ -127,7 +127,7 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"list_of_zone","label"=>"View List of Zone","order_num"=>3],
                                         ["name"=>"delete_zone","label"=>"Zone Deletion","order_num"=>4],
                                         ["name"=>"update_zone","label"=>"Updating Zone","order_num"=>5],
-                                    
+
                                     ]
                             ],
                             [
@@ -140,7 +140,7 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"list_of_woreda","label"=>"View List of Woreda","order_num"=>3],
                                         ["name"=>"delete_woreda","label"=>"Woreda Deletion","order_num"=>4],
                                         ["name"=>"update_woreda","label"=>"Updating Woreda","order_num"=>5],
-                                    
+
                                     ]
                             ],
                             [
@@ -153,7 +153,7 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"list_of_investment_type","label"=>"View List Investment Type","order_num"=>3],
                                         ["name"=>"delete_Investment_type","label"=>"Investment Type Deletion","order_num"=>4],
                                         ["name"=>"update_investment_type","label"=>"Updating Investment Type","order_num"=>5],
-                                    
+
                                     ]
                             ],
                             [
@@ -167,7 +167,7 @@ class DatabaseSeeder extends Seeder
                                         ["name"=>"delete_VIP_services","label"=>"VIP Service Deletion","order_num"=>4],
                                         ["name"=>"update_VIP_services","label"=>"Updating VIP Services","order_num"=>5],
                                         ["name"=>"investor_vip_request","label"=>"Request VIP Services","order_num"=>6],
-                                    
+
                                     ]
                             ],
                             [
@@ -177,7 +177,7 @@ class DatabaseSeeder extends Seeder
                                     [
                                         ["name"=>"request_investment_registration","label"=>"Investment Registration Request","order_num"=>1],
                                         ["name"=>"Investment_registration_page","label"=>"Investment Registration page","order_num"=>2],
-                                    
+
                                     ]
                             ],
 
@@ -377,7 +377,7 @@ class DatabaseSeeder extends Seeder
                                         "link"=>"/investment_type/page",
                                         "permission_name"=>"investment_type_page",
                                         "item_code"=>"MC-34-MI-01"
-                                    ] 
+                                    ]
 
                                 ]
                     ],
@@ -423,7 +423,7 @@ class DatabaseSeeder extends Seeder
 
                                 ]
                     ],
-                    
+
                 ];
         foreach($data as $ele)
         {

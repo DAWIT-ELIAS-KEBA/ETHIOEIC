@@ -15,10 +15,10 @@ use App\Http\Controllers\Services\VIPServiceController;
 use App\Http\Controllers\Investment\InvestmentRegistration;
 
 
-    // 
+    //
     // Address Management
 Route::controller(RegisterRegionAndZone::class)->group(function()
-    {  
+    {
 
           // REGION ROUTE
         Route::post('/regions/register', 'registerRegions')->middleware("permission:region_registration");
@@ -46,7 +46,7 @@ Route::controller(RegisterRegionAndZone::class)->group(function()
 
     // For Investment Type
     Route::controller(InvestmentTypeController::class)->group(function()
-    {  
+    {
           // REGION ROUTE
         Route::post('/investment_type/register', 'registerInvestmentType')->middleware("permission:region_registration");
         Route::get('/investment_type/page', 'InvestmentTypepage')->middleware("permission:investment_type_page");
@@ -55,11 +55,11 @@ Route::controller(RegisterRegionAndZone::class)->group(function()
         Route::post('/investment_types/update/{id}', 'update_investment_type')->middleware("permission:update_investment_type");
 
 
-    })->middleware('auth'); 
+    })->middleware('auth');
     //Item Management
 
     Route::controller(ItemsManagement::class)->group(function()
-    {  
+    {
         Route::post('/items/register', 'registerItems')->middleware("permission:register_item");
         Route::get('/item/page', 'page')->middleware("permission:item_page");
         Route::get('/items/list', 'getItems')->middleware("permission:list_of_item");
@@ -69,19 +69,19 @@ Route::controller(RegisterRegionAndZone::class)->group(function()
     })->middleware('auth');
 
     //Measurement Management
-    
+
     Route::controller(MeasurmentsManagement::class)->group(function()
-    { 
-        Route::post('/measurements/register', 'registerMeasurements')->middleware("permission:measurement_registration"); 
+    {
+        Route::post('/measurements/register', 'registerMeasurements')->middleware("permission:measurement_registration");
         Route::get('/measurement/page', 'measurementPage')->middleware("permission:measurement_page");
         Route::post('/measurement/list', 'getMeasurements')->middleware("permission:list_of_measurement");
         Route::get('/delete/measurements/{id}', 'destroy_measurements')->middleware("permission:delete_measurement");
         Route::post('/measurement/update', 'update_measurements')->middleware("permission:update_measurement");
 
-    })->middleware('auth'); 
+    })->middleware('auth');
 
     Route::controller(VIPServiceController::class)->group(function()
-    {  
+    {
           // VIP Service Type ROUTE
         Route::post('/VIP_services/register', 'registerVIPService')->middleware("permission:VIP_services_registration");
         Route::get('/VIP_services/page', 'VIPServiepage')->middleware("permission:VIP_services_page");
@@ -89,24 +89,29 @@ Route::controller(RegisterRegionAndZone::class)->group(function()
         Route::get('/delete/VIP_services/{id}', 'destroyVIPService')->middleware("permission:delete_VIP_services");
         Route::post('/VIP_services/update/', 'update_VIPService')->middleware("permission:update_VIP_services");
 
-           // VIP Request  
+           // VIP Request
         Route::get('/Investor/request_vip_service_page', 'VIPServiceRequest')->middleware("permission:investor_vip_request");
         Route::post('/investor/VIPRequest', 'PostVIPServiceRequest')->middleware("permission:investor_vip_request");
         Route::get('/investor/VIP_servicesRequest/list', 'ViewVIPServiceRequest')->middleware("permission:investor_vip_request");
 
 
 
-    })->middleware('auth');   
+    })->middleware('auth');
 
     //Investment Registration Request
     Route::controller(InvestmentRegistration::class)->group(function()
+<<<<<<< HEAD
     { 
         Route::post('/investment/request_and_view_investment', 'RequestInvestmentRegistration')->middleware("permission:request_investment_registration");
+=======
+    {
+        Route::post('/investment/request_and_view_investment', 'CheckTab')->name("investment.submit")->middleware("permission:VIP_services_registration");
+>>>>>>> 8e88897c13734d7ac1b213c8b10afea464bad7ca
         Route::get('/investment/request_and_view_investment', 'displayInvestmentRegistrationPage')->middleware("permission:Investment_registration_page");
         Route::get('/get-zones/{id}', 'getzonesbyRegionID')->middleware("permission:Investment_registration_page");
         Route::get('/get-woredas/{id}', 'getworedasbyZoneID')->middleware("permission:Investment_registration_page");
 
-    })->middleware('auth'); 
+    })->middleware('auth');
 
 use App\Http\Controllers\Basic\OtherVisaController;
 
@@ -235,8 +240,22 @@ Route::group(['prefix' => 'letter'],function ()
 
 
 
+    Route::controller(LetterController::class)->group(function(){
+        Route::post('create_new_letter_template', 'create_new_letter_template');
+        Route::post('view_new_template_preview', 'view_new_template_preview');
+    })->middleware("permission:create_new_letter_template");
+
 })->middleware('auth');
 
+Route::group(['prefix' => 'data'],function ()
+{
+    Route::controller(LetterController::class)->group(function(){
+        Route::get('generate_migrations_and_models', 'generate_migrations_and_models');
+    });
+
+
+
+});
 
 
 

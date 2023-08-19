@@ -15,7 +15,6 @@ return new class extends Migration
             $table->increments('id');
             $table->string('service');
             $table->unsignedInteger('added_by');
-            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
 
@@ -33,10 +32,7 @@ return new class extends Migration
             $table->boolean('approved_date');
 
             $table->timestamps();
-            $table->foreign('service_type_id')->references('id')->on('vip_service_type')->onDelete('cascade');
-            $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign('letter_id')->references('id')->on('customers')->onDelete('cascade');
+
         });
 
         Schema::create('vip_service_letters', function (Blueprint $table) {
@@ -44,12 +40,8 @@ return new class extends Migration
             $table->unsignedInteger('vip_service_id');
             $table->unsignedInteger('letter_id');
             $table->timestamps();
-            $table->foreign('vip_service_id')->references('id')->on('vip_service')->onDelete('cascade');
-            $table->foreign('letter_id')->references('id')->on('letters')->onDelete('cascade');
 
         });
-
-
 
 
     }

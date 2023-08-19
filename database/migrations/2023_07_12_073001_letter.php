@@ -19,8 +19,25 @@ return new class extends Migration
             $table->string('description');
             $table->string('letter_type');    //incoming or outgoing
             $table->string('with_whom');      //investor or stakeholder or investment  to identify communication with whom
+            $table->string('template_subject')->nullable();
+            $table->string('template_content')->nullable();
+            $table->string('template_closure')->nullable();
+            $table->boolean('is_cc_to_investor')->default(0);
+            $table->boolean('is_cc_to_investment')->default(0);
+            $table->unsignedInteger('template_added_by')->nullable();
+            $table->unsignedInteger('template_updated_by')->nullable();
             $table->timestamps();
         });
+
+        Schema::create('letter_code_cc', function (Blueprint $table)
+        {
+            $table->increments('id');
+            $table->unsignedInteger('letter_code_id');
+            $table->unsignedInteger('stakeholder_id')->nullable();
+            $table->unsignedInteger('main_stakeholder_id')->nullable();
+            $table->timestamps();
+        });
+
 
 
 
@@ -66,27 +83,15 @@ return new class extends Migration
 
 
 
-            $table->boolean('view_status');
-            $table->string('comment');
-            $table->string('letter_path');
+            $table->boolean('view_status')->default(0);
+            $table->string('comment')->nullable();
+            $table->string('letter_path')->nullable();
 
             $table->unsignedInteger('viewed_by')->nullable();
 
             $table->timestamps();
 
-            $table->foreign('letter_code_id')->references('id')->on('letter_code')->onDelete('cascade');
-            $table->foreign('initialized_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('prepared_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('updated_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('approved_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('stakeholder_sender_id')->references('id')->on('stakeholders')->onDelete('cascade');
-            $table->foreign('stakeholder_reciever_id')->references('id')->on('stakeholders')->onDelete('cascade');
-            $table->foreign('investment_sender_id')->references('id')->on('investments')->onDelete('cascade');
-            $table->foreign('investment_reciever_id')->references('id')->on('investments')->onDelete('cascade');
-            $table->foreign('investor_sender_id')->references('id')->on('customers')->onDelete('cascade');
-            $table->foreign('investor_reciever_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('archiever_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('viewed_by')->references('id')->on('users')->onDelete('cascade');
+
         });
 
 
@@ -95,9 +100,7 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedInteger('letter_id');
             $table->text('content');
-            $table->text('content_type'); // paragraph or table
             $table->timestamps();
-            $table->foreign('letter_id')->references('id')->on('letters')->onDelete('cascade');
         });
 
 
@@ -111,10 +114,7 @@ return new class extends Migration
             $table->unsignedInteger('investment_id')->nullable();
             $table->unsignedInteger('investor_id')->nullable();
             $table->timestamps();
-            $table->foreign('letter_id')->references('id')->on('letters')->onDelete('cascade');
-            $table->foreign('stakeholder_id')->references('id')->on('stakeholders')->onDelete('cascade');
-            $table->foreign('investment_id')->references('id')->on('investments')->onDelete('cascade');
-            $table->foreign('investor_id')->references('id')->on('customers')->onDelete('cascade');
+
         });
 
 
@@ -129,9 +129,6 @@ return new class extends Migration
             $table->string('subject');
             $table->string('conclusion');
             $table->timestamps();
-            $table->foreign('letter_code_id')->references('id')->on('letter_code')->onDelete('cascade');
-            $table->foreign('added_by')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('updated_by')->references('id')->on('users')->onDelete('cascade');
         });
 
         Schema::create('template_body', function (Blueprint $table) {
@@ -140,7 +137,6 @@ return new class extends Migration
             $table->string('content_type');
             $table->text('content');
             $table->timestamps();
-            $table->foreign('template_id')->references('id')->on('letter_template')->onDelete('cascade');
         });
 
 
