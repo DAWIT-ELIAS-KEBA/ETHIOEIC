@@ -15,4 +15,8 @@ class VipServiceType extends Model
     {
         return $this->belongsTo(User::class,'added_by','id');
     }
+    public static function getIdAndService()
+    {
+        return self::all(['id', 'service']);
+    }
 }

@@ -34,13 +34,8 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
      
 
-=======
-
-
->>>>>>> aadcd5f66a92d4a1f959dc74d875691e0f1525fc
                 <div class="">
                     <p class="switcher-style-head">Navigation Styles:</p>
                     <div class="row switcher-style gx-0">
@@ -314,23 +309,13 @@
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
             <div class="d-flex justify-content-between canvas-footer flex-wrap"> 
               
                     
-=======
-            <div class="d-flex justify-content-between canvas-footer flex-wrap">
-
-
->>>>>>> aadcd5f66a92d4a1f959dc74d875691e0f1525fc
                     <a href="javascript:void(0);" id="reset-all"
                     class="btn btn-danger m-1">Reset</a> </div>
         </div>
     </div>
 </div> <!-- End Switcher -->
 <div class="page">
-<<<<<<< HEAD
     <!-- app-header -->
-=======
-    <!-- app-header -->
->>>>>>> aadcd5f66a92d4a1f959dc74d875691e0f1525fc

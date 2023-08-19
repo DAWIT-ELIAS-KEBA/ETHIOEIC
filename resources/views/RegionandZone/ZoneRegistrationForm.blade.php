@@ -25,9 +25,9 @@
                         <div class="error-message" id="region_id_error"></div>
                   </div>
             </div>
-         <div class="d-grid gap-2 mb-4"> 
+        <div class="d-grid gap-2 mb-4"> 
             <button class="btn btn-secondary btn-wave" type="button" id="submitButton">Register</button>
-         </div>
+        </div>
      </form>
    </div>
 

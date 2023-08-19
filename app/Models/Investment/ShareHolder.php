@@ -18,6 +18,20 @@ class ShareHolder extends Model
     }
     public function Customer()
     {
-        return $this->belongsTo(Customer::class,'customer_id','id');
+        return $this->belongsTo(Customer::class,'customer_id','id')->with('user:id,name');
+    }
+    public static function getIdAndInvestmentIdByCustomerId($customerId)
+    {
+        return self::where('customer_id', $customerId)
+            ->with('Investment:id,investment_name')
+            ->select('investment_id')
+            ->get();
+    }
+    public function CustomerNameandId()
+    {
+        return Customer::with('user:id,name')
+        ->select('id', 'user_id')
+        ->whereIn('id', $this->pluck('customer_id'))
+        ->get();
     }
 }

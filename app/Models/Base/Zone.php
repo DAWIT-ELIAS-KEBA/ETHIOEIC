@@ -24,4 +24,12 @@ class Zone extends Model
     {
         return $this->hasMany(Woreda::class,'zone_id','id');
     }
+    public function ZoneNameandId()
+    {
+        return self::all(['id', 'name']);
+    }
+    public function ZoneNameAndIdByRegion($regionId)
+    {
+        return $this->where('region_id', $regionId)->pluck('name', 'id');
+    }
 }

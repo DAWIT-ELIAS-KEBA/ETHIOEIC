@@ -558,19 +558,19 @@
                                     <div class="form-check"> <input type="radio" class="form-check-input"
                                             id="validationFormCheck2" name="radio-stacked" required=""> <label
                                             class="form-check-label" for="validationFormCheck2">Toggle this
-                                            radio</label> </div>
+                                            radio</label> 
+                                    </div>
                                     <div class="form-check mb-3"> <input type="radio" class="form-check-input"
                                             id="validationFormCheck3" name="radio-stacked" required=""> <label
                                             class="form-check-label" for="validationFormCheck3">Or toggle this other
                                             radio</label>
                                         <div class="invalid-feedback">More example invalid feedback text</div>
                                     </div>
-                                    <div class="mb-3"> <select class="form-select" required=""
-                                            aria-label="select example">
-                                            <option value="">Open this select menu</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                    <div class="mb-3">
+                                         <select class="form-select" required="" aria-label="select example">
+                                            <option value="">Select one</option>
+                                            <option value="MoU">Memorandum of Understanding</option>
+                                            <option value="MoA">Memorandum of Association</option>
                                         </select>
                                         <div class="invalid-feedback">Example invalid select feedback</div>
                                     </div>
